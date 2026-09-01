@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+  <title id="title">Transformations of a quadratic parent function</title>
+  <desc id="desc">Three coordinate panels compare y equals x squared, a right shift y equals open parenthesis x minus 2 close parenthesis squared, and a reflected, stretched, upward shifted graph y equals negative 2 x squared plus 3. Vertices and transformation directions are labeled.</desc>
+  <rect width="900" height="420" fill="#faf9f6"/>
+  <g font-family="Verdana, sans-serif" fill="#202124">
+    <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold">One parent graph, three representations</text>
+    <g transform="translate(20 55)">
+      <rect x="0" y="0" width="270" height="320" fill="#ffffff" stroke="#b8b8b8"/>
+      <line x1="25" y1="250" x2="250" y2="250" stroke="#555" stroke-width="2"/>
+      <line x1="135" y1="285" x2="135" y2="35" stroke="#555" stroke-width="2"/>
+      <path d="M55 70 Q135 250 215 70" fill="none" stroke="#176b87" stroke-width="4"/>
+      <circle cx="135" cy="250" r="5" fill="#176b87"/>
+      <text x="135" y="304" text-anchor="middle" font-size="16">Parent: y = x²</text>
+      <text x="145" y="242" font-size="13">vertex (0, 0)</text>
+      <text x="238" y="242" font-size="13">x</text>
+      <text x="143" y="50" font-size="13">y</text>
+    </g>
+    <g transform="translate(315 55)">
+      <rect x="0" y="0" width="270" height="320" fill="#ffffff" stroke="#b8b8b8"/>
+      <line x1="25" y1="250" x2="250" y2="250" stroke="#555" stroke-width="2"/>
+      <line x1="95" y1="285" x2="95" y2="35" stroke="#555" stroke-width="2"/>
+      <path d="M105 70 Q185 250 255 100" fill="none" stroke="#a33b20" stroke-width="4"/>
+      <circle cx="185" cy="250" r="5" fill="#a33b20"/>
+      <line x1="105" y1="225" x2="175" y2="225" stroke="#202124" stroke-width="2" marker-end="url(#arrow)"/>
+      <text x="140" y="214" text-anchor="middle" font-size="13">right 2</text>
+      <text x="135" y="304" text-anchor="middle" font-size="16">y = (x - 2)²</text>
+      <text x="192" y="242" font-size="13">(2, 0)</text>
+      <text x="238" y="242" font-size="13">x</text>
+      <text x="103" y="50" font-size="13">y</text>
+    </g>
+    <g transform="translate(610 55)">
+      <rect x="0" y="0" width="270" height="320" fill="#ffffff" stroke="#b8b8b8"/>
+      <line x1="25" y1="170" x2="250" y2="170" stroke="#555" stroke-width="2"/>
+      <line x1="135" y1="285" x2="135" y2="35" stroke="#555" stroke-width="2"/>
+      <path d="M65 285 Q135 70 205 285" fill="none" stroke="#6b4c9a" stroke-width="4" stroke-dasharray="9 5"/>
+      <circle cx="135" cy="70" r="5" fill="#6b4c9a"/>
+      <line x1="220" y1="240" x2="220" y2="90" stroke="#202124" stroke-width="2" marker-end="url(#arrow)"/>
+      <text x="215" y="165" text-anchor="end" font-size="13">up 3</text>
+      <text x="135" y="304" text-anchor="middle" font-size="16">y = -2x² + 3</text>
+      <text x="143" y="62" font-size="13">(0, 3)</text>
+      <text x="238" y="162" font-size="13">x</text>
+      <text x="143" y="50" font-size="13">y</text>
+      <text x="255" y="265" text-anchor="end" font-size="12">dashed: reflected</text>
+    </g>
+    <text x="450" y="405" text-anchor="middle" font-size="14">Inside changes move inputs. Outside changes move or scale outputs.</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#202124"/>
+    </marker>
+  </defs>
+</svg>

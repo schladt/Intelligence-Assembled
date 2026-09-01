@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc" width="100%" style="height: auto;">
+  <title id="title">Double-counting incidence grid with row and column sums</title>
+  <desc id="desc">A four-record by three-shard grid contains six marked incidences. Row sums two, one, one, two and column sums two, two, two both lead to the shared total six.</desc>
+  <defs>
+    <pattern id="markPattern" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#315b49" stroke-width="3"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#27364a"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .cell { fill: #ffffff; stroke: #27364a; stroke-width: 2; }
+      .marked { fill: url(#markPattern); stroke: #315b49; stroke-width: 3; }
+      .sumBox { fill: #edf2f6; stroke: #38566f; stroke-width: 2; }
+      .totalBox { fill: #183a4a; stroke: #102b38; stroke-width: 3; }
+      .line { fill: none; stroke: #27364a; stroke-width: 2.5; marker-end: url(#arrow); }
+      .title { fill: #152536; font: 700 25px Georgia, serif; text-anchor: middle; }
+      .head { fill: #152536; font: 700 18px Georgia, serif; text-anchor: middle; }
+      .text { fill: #243447; font: 17px Georgia, serif; text-anchor: middle; }
+      .total { fill: #ffffff; font: 700 19px Georgia, serif; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="560"/>
+  <text class="title" x="480" y="42">One incidence set, counted by records and by shards</text>
+
+  <text class="head" x="330" y="88">s0</text>
+  <text class="head" x="430" y="88">s1</text>
+  <text class="head" x="530" y="88">s2</text>
+  <text class="head" x="655" y="88">row sum</text>
+
+  <text class="head" x="225" y="145">r0</text>
+  <text class="head" x="225" y="225">r1</text>
+  <text class="head" x="225" y="305">r2</text>
+  <text class="head" x="225" y="385">r3</text>
+
+  <rect class="marked" x="280" y="105" width="100" height="80"/>
+  <rect class="cell" x="380" y="105" width="100" height="80"/>
+  <rect class="marked" x="480" y="105" width="100" height="80"/>
+
+  <rect class="marked" x="280" y="185" width="100" height="80"/>
+  <rect class="cell" x="380" y="185" width="100" height="80"/>
+  <rect class="cell" x="480" y="185" width="100" height="80"/>
+
+  <rect class="cell" x="280" y="265" width="100" height="80"/>
+  <rect class="marked" x="380" y="265" width="100" height="80"/>
+  <rect class="cell" x="480" y="265" width="100" height="80"/>
+
+  <rect class="cell" x="280" y="345" width="100" height="80"/>
+  <rect class="marked" x="380" y="345" width="100" height="80"/>
+  <rect class="marked" x="480" y="345" width="100" height="80"/>
+
+  <rect class="sumBox" x="615" y="115" width="80" height="60" rx="4"/>
+  <text class="head" x="655" y="151">2</text>
+  <rect class="sumBox" x="615" y="195" width="80" height="60" rx="4"/>
+  <text class="head" x="655" y="231">1</text>
+  <rect class="sumBox" x="615" y="275" width="80" height="60" rx="4"/>
+  <text class="head" x="655" y="311">1</text>
+  <rect class="sumBox" x="615" y="355" width="80" height="60" rx="4"/>
+  <text class="head" x="655" y="391">2</text>
+
+  <text class="head" x="225" y="470">column sum</text>
+  <rect class="sumBox" x="290" y="440" width="80" height="60" rx="4"/>
+  <text class="head" x="330" y="476">2</text>
+  <rect class="sumBox" x="390" y="440" width="80" height="60" rx="4"/>
+  <text class="head" x="430" y="476">2</text>
+  <rect class="sumBox" x="490" y="440" width="80" height="60" rx="4"/>
+  <text class="head" x="530" y="476">2</text>
+
+  <rect class="totalBox" x="765" y="225" width="155" height="90" rx="5"/>
+  <text class="total" x="842" y="261">shared total</text>
+  <text class="total" x="842" y="292">|I| = 6</text>
+
+  <path class="line" d="M695 265 C730 265 740 265 765 265"/>
+  <path class="line" d="M570 475 C680 475 720 360 780 310"/>
+  <text class="text" x="740" y="185">2 + 1 + 1 + 2</text>
+  <text class="text" x="710" y="515">2 + 2 + 2</text>
+
+  <rect class="marked" x="55" y="105" width="38" height="38"/>
+  <text class="text" x="130" y="130">marked cell = one incidence</text>
+</svg>

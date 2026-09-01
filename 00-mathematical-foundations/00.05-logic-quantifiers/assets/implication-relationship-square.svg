@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 650" role="img" aria-labelledby="title desc">
+  <title id="title">Implication, converse, inverse, and contrapositive relationship square</title>
+  <desc id="desc">Four labeled formula cards occupy the corners of a square. Horizontal arrows swap antecedent and consequent. Vertical arrows negate both statements. Solid diagonal links show that the original is equivalent to the contrapositive and the converse is equivalent to the inverse.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#263642"/>
+    </marker>
+    <style>
+      .name { font: 700 21px Georgia, serif; fill: #17212b; text-anchor: middle; }
+      .formula { font: 24px "DejaVu Sans", sans-serif; fill: #17212b; text-anchor: middle; }
+      .note { font: 15px Georgia, serif; fill: #344454; text-anchor: middle; }
+      .edge { font: 700 15px Georgia, serif; fill: #263642; text-anchor: middle; }
+      .equiv { font: 700 16px Georgia, serif; fill: #733c18; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect x="55" y="55" width="300" height="135" rx="6" fill="#eaf5f2" stroke="#23646a" stroke-width="3"/>
+  <text x="205" y="92" class="name">Original</text>
+  <text x="205" y="132" class="formula">P implies Q</text>
+  <text x="205" y="164" class="note">P sufficient; Q necessary</text>
+
+  <rect x="565" y="55" width="300" height="135" rx="6" fill="#fff1db" stroke="#9a5715" stroke-width="2" stroke-dasharray="9 5"/>
+  <text x="715" y="92" class="name">Converse</text>
+  <text x="715" y="132" class="formula">Q implies P</text>
+  <text x="715" y="164" class="note">not generally equivalent</text>
+
+  <rect x="55" y="460" width="300" height="135" rx="6" fill="#fff1db" stroke="#9a5715" stroke-width="2" stroke-dasharray="9 5"/>
+  <text x="205" y="497" class="name">Inverse</text>
+  <text x="205" y="537" class="formula">not P implies not Q</text>
+  <text x="205" y="569" class="note">equivalent to converse</text>
+
+  <rect x="565" y="460" width="300" height="135" rx="6" fill="#eaf5f2" stroke="#23646a" stroke-width="3"/>
+  <text x="715" y="497" class="name">Contrapositive</text>
+  <text x="715" y="537" class="formula">not Q implies not P</text>
+  <text x="715" y="569" class="note">equivalent to original</text>
+
+  <line x1="365" y1="122" x2="555" y2="122" stroke="#263642" stroke-width="2" stroke-dasharray="5 5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="402" y="96" width="116" height="22" fill="#ffffff"/>
+  <text x="460" y="112" class="edge">swap P, Q</text>
+
+  <line x1="365" y1="528" x2="555" y2="528" stroke="#263642" stroke-width="2" stroke-dasharray="5 5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="402" y="502" width="116" height="22" fill="#ffffff"/>
+  <text x="460" y="518" class="edge">swap P, Q</text>
+
+  <line x1="205" y1="200" x2="205" y2="450" stroke="#263642" stroke-width="2" stroke-dasharray="5 5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="142" y="311" width="126" height="24" fill="#ffffff"/>
+  <text x="205" y="328" class="edge">negate both</text>
+
+  <line x1="715" y1="200" x2="715" y2="450" stroke="#263642" stroke-width="2" stroke-dasharray="5 5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="652" y="311" width="126" height="24" fill="#ffffff"/>
+  <text x="715" y="328" class="edge">negate both</text>
+
+  <line x1="330" y1="205" x2="590" y2="445" stroke="#9a5715" stroke-width="4"/>
+  <rect x="422" y="376" width="246" height="28" fill="#ffffff" stroke="#9a5715" stroke-width="1"/>
+  <text x="545" y="396" class="equiv">original = contrapositive</text>
+
+  <line x1="590" y1="205" x2="330" y2="445" stroke="#23646a" stroke-width="4"/>
+  <rect x="252" y="326" width="216" height="28" fill="#ffffff" stroke="#23646a" stroke-width="1"/>
+  <text x="360" y="346" class="equiv">converse = inverse</text>
+
+  <text x="460" y="625" class="note">Solid diagonals mark equivalence; dashed sides mark transformations.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc" width="100%" style="height: auto;">
+  <title id="title">Generalized pigeonhole capacity visualization</title>
+  <desc id="desc">Six labeled categories each show four filled capacity slots, totaling twenty-four. A separate twenty-fifth item cannot fit under the assumption that every category has load at most four, so some category must reach at least five.</desc>
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#355d49" stroke-width="3"/>
+    </pattern>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .box { fill: #ffffff; stroke: #27364a; stroke-width: 2; }
+      .slot { fill: url(#hatch); stroke: #355d49; stroke-width: 2; }
+      .extra { fill: #fff0e9; stroke: #9a3f35; stroke-width: 3; }
+      .brace { fill: none; stroke: #27364a; stroke-width: 2.5; }
+      .arrow { fill: none; stroke: #9a3f35; stroke-width: 3; stroke-dasharray: 9 5; }
+      .title { fill: #152536; font: 700 24px Georgia, serif; text-anchor: middle; }
+      .head { fill: #152536; font: 700 17px Georgia, serif; text-anchor: middle; }
+      .body { fill: #243447; font: 16px Georgia, serif; text-anchor: middle; }
+      .bad { fill: #812f28; font: 700 17px Georgia, serif; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="520"/>
+  <text class="title" x="480" y="45">Capacity contradiction for N = 25 and k = 6</text>
+  <text class="body" x="480" y="76">Suppose every category holds at most r = 4 items.</text>
+
+  <g transform="translate(45,120)">
+    <rect class="box" x="0" y="0" width="120" height="230" rx="5"/>
+    <text class="head" x="60" y="30">Category 1</text>
+    <rect class="slot" x="20" y="50" width="80" height="30"/><rect class="slot" x="20" y="88" width="80" height="30"/><rect class="slot" x="20" y="126" width="80" height="30"/><rect class="slot" x="20" y="164" width="80" height="30"/>
+    <text class="body" x="60" y="218">load 4</text>
+  </g>
+  <g transform="translate(185,120)">
+    <rect class="box" x="0" y="0" width="120" height="230" rx="5"/>
+    <text class="head" x="60" y="30">Category 2</text>
+    <rect class="slot" x="20" y="50" width="80" height="30"/><rect class="slot" x="20" y="88" width="80" height="30"/><rect class="slot" x="20" y="126" width="80" height="30"/><rect class="slot" x="20" y="164" width="80" height="30"/>
+    <text class="body" x="60" y="218">load 4</text>
+  </g>
+  <g transform="translate(325,120)">
+    <rect class="box" x="0" y="0" width="120" height="230" rx="5"/>
+    <text class="head" x="60" y="30">Category 3</text>
+    <rect class="slot" x="20" y="50" width="80" height="30"/><rect class="slot" x="20" y="88" width="80" height="30"/><rect class="slot" x="20" y="126" width="80" height="30"/><rect class="slot" x="20" y="164" width="80" height="30"/>
+    <text class="body" x="60" y="218">load 4</text>
+  </g>
+  <g transform="translate(465,120)">
+    <rect class="box" x="0" y="0" width="120" height="230" rx="5"/>
+    <text class="head" x="60" y="30">Category 4</text>
+    <rect class="slot" x="20" y="50" width="80" height="30"/><rect class="slot" x="20" y="88" width="80" height="30"/><rect class="slot" x="20" y="126" width="80" height="30"/><rect class="slot" x="20" y="164" width="80" height="30"/>
+    <text class="body" x="60" y="218">load 4</text>
+  </g>
+  <g transform="translate(605,120)">
+    <rect class="box" x="0" y="0" width="120" height="230" rx="5"/>
+    <text class="head" x="60" y="30">Category 5</text>
+    <rect class="slot" x="20" y="50" width="80" height="30"/><rect class="slot" x="20" y="88" width="80" height="30"/><rect class="slot" x="20" y="126" width="80" height="30"/><rect class="slot" x="20" y="164" width="80" height="30"/>
+    <text class="body" x="60" y="218">load 4</text>
+  </g>
+  <g transform="translate(745,120)">
+    <rect class="box" x="0" y="0" width="120" height="230" rx="5"/>
+    <text class="head" x="60" y="30">Category 6</text>
+    <rect class="slot" x="20" y="50" width="80" height="30"/><rect class="slot" x="20" y="88" width="80" height="30"/><rect class="slot" x="20" y="126" width="80" height="30"/><rect class="slot" x="20" y="164" width="80" height="30"/>
+    <text class="body" x="60" y="218">load 4</text>
+  </g>
+
+  <path class="brace" d="M45 378 C45 400 70 400 90 400 L420 400 C450 400 450 425 480 425 C510 425 510 400 540 400 L820 400 C845 400 865 400 865 378"/>
+  <text class="head" x="455" y="455">Total assumed capacity: 6 x 4 = 24</text>
+
+  <circle class="extra" cx="905" cy="270" r="25"/>
+  <text class="bad" x="905" y="276">25</text>
+  <path class="arrow" d="M895 240 C885 195 875 170 855 165"/>
+  <text class="bad" x="690" y="490">The 25th item forces some load to at least 5.</text>
+</svg>

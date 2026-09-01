@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" role="img" aria-labelledby="title desc">
+  <title id="title">Complex multiplication as scaling and rotation</title>
+  <desc id="desc">A complex plane shows an input vector z with modulus one and argument 30 degrees, a multiplier w with modulus two and argument 60 degrees, and the product wz with modulus two and argument 90 degrees. Curved and radial annotations show that arguments add and moduli multiply.</desc>
+  <rect width="860" height="460" fill="#faf9f6"/>
+  <g font-family="Verdana, sans-serif" fill="#202124">
+    <text x="430" y="30" text-anchor="middle" font-size="20" font-weight="bold">Multiply magnitudes, add arguments</text>
+    <g transform="translate(55 55)">
+      <rect x="0" y="0" width="520" height="350" fill="#ffffff" stroke="#b8b8b8"/>
+      <line x1="35" y1="200" x2="490" y2="200" stroke="#555" stroke-width="2" marker-end="url(#axisArrow)"/>
+      <line x1="210" y1="325" x2="210" y2="25" stroke="#555" stroke-width="2" marker-end="url(#axisArrow)"/>
+      <circle cx="210" cy="200" r="70" fill="none" stroke="#b8b8b8" stroke-dasharray="5 5"/>
+      <circle cx="210" cy="200" r="140" fill="none" stroke="#d1d1d1" stroke-dasharray="5 5"/>
+      <line x1="210" y1="200" x2="271" y2="165" stroke="#176b87" stroke-width="4" marker-end="url(#blueArrow)"/>
+      <line x1="210" y1="200" x2="210" y2="60" stroke="#a33b20" stroke-width="4" stroke-dasharray="10 5" marker-end="url(#redArrow)"/>
+      <path d="M250 200 A40 40 0 0 0 245 180" fill="none" stroke="#176b87" stroke-width="2"/>
+      <path d="M264 169 A63 63 0 0 0 210 137" fill="none" stroke="#a33b20" stroke-width="2" stroke-dasharray="7 4"/>
+      <text x="277" y="162" font-size="15" fill="#176b87">z = e^(iπ/6)</text>
+      <text x="225" y="75" font-size="15" fill="#a33b20">wz = 2e^(iπ/2)</text>
+      <text x="244" y="191" font-size="13">π/6</text>
+      <text x="270" y="142" font-size="13">add π/3</text>
+      <text x="475" y="222" font-size="14">real</text>
+      <text x="222" y="38" font-size="14">imaginary</text>
+      <text x="282" y="213" font-size="12">radius 1</text>
+      <text x="218" y="95" font-size="12">radius 2</text>
+    </g>
+    <g transform="translate(610 85)">
+      <rect x="0" y="0" width="215" height="285" fill="#ffffff" stroke="#b8b8b8"/>
+      <text x="108" y="32" text-anchor="middle" font-size="16" font-weight="bold">Multiplier</text>
+      <text x="108" y="70" text-anchor="middle" font-size="17">w = 2e^(iπ/3)</text>
+      <line x1="30" y1="95" x2="185" y2="95" stroke="#b8b8b8"/>
+      <text x="25" y="130" font-size="14">modulus:</text>
+      <text x="150" y="130" font-size="14" text-anchor="end">2</text>
+      <text x="25" y="165" font-size="14">argument:</text>
+      <text x="190" y="165" font-size="14" text-anchor="end">π/3</text>
+      <text x="108" y="210" text-anchor="middle" font-size="15" font-weight="bold">Effect on z</text>
+      <text x="108" y="240" text-anchor="middle" font-size="14">length: 1 × 2 = 2</text>
+      <text x="108" y="266" text-anchor="middle" font-size="14">angle: π/6 + π/3 = π/2</text>
+    </g>
+  </g>
+  <defs>
+    <marker id="axisArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#555"/></marker>
+    <marker id="blueArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#176b87"/></marker>
+    <marker id="redArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#a33b20"/></marker>
+  </defs>
+</svg>

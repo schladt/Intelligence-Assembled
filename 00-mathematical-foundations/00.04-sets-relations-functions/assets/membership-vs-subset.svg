@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Membership versus subset in nested sets</title>
+  <desc id="desc">A large set A contains a dot x, a dashed singleton set containing x, an empty set symbol, and a nested set B. Labels distinguish x being a member of A from the singleton of x and B being subsets of A.</desc>
+  <rect width="960" height="520" fill="#fbfaf6"/>
+  <text x="480" y="42" text-anchor="middle" font-family="Verdana, sans-serif" font-size="25" font-weight="700" fill="#17212b">Objects and collections live at different levels</text>
+  <rect x="72" y="78" width="816" height="370" rx="28" fill="#eaf2f0" stroke="#1d5c63" stroke-width="4"/>
+  <text x="102" y="116" font-family="Verdana, sans-serif" font-size="26" font-weight="700" fill="#164950">A</text>
+  <circle cx="220" cy="235" r="11" fill="#a33c2f" stroke="#17212b" stroke-width="3"/>
+  <text x="220" y="210" text-anchor="middle" font-family="Verdana, sans-serif" font-size="22" font-weight="700" fill="#17212b">x</text>
+  <ellipse cx="220" cy="235" rx="76" ry="70" fill="none" stroke="#a33c2f" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="220" y="331" text-anchor="middle" font-family="Verdana, sans-serif" font-size="19" fill="#6c2a22">singleton {x}</text>
+  <rect x="510" y="155" width="270" height="202" rx="22" fill="#fff7df" stroke="#8a6418" stroke-width="4" stroke-dasharray="14 8"/>
+  <text x="540" y="194" font-family="Verdana, sans-serif" font-size="25" font-weight="700" fill="#6b4c10">B</text>
+  <circle cx="598" cy="252" r="10" fill="#315aa6" stroke="#17212b" stroke-width="3"/>
+  <text x="598" y="230" text-anchor="middle" font-family="Verdana, sans-serif" font-size="19" fill="#17212b">b1</text>
+  <path d="M 687 242 l 11 20 h -22 z" fill="#315aa6" stroke="#17212b" stroke-width="3"/>
+  <text x="687" y="230" text-anchor="middle" font-family="Verdana, sans-serif" font-size="19" fill="#17212b">b2</text>
+  <text x="392" y="265" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#17212b">∅</text>
+  <line x1="112" y1="472" x2="848" y2="472" stroke="#9aa3a8" stroke-width="2"/>
+  <text x="150" y="503" font-family="Verdana, sans-serif" font-size="19" fill="#17212b">dot: x ∈ A</text>
+  <text x="373" y="503" font-family="Verdana, sans-serif" font-size="19" fill="#17212b">dashed boundary: {x} ⊆ A</text>
+  <text x="705" y="503" font-family="Verdana, sans-serif" font-size="19" fill="#17212b">nested B ⊆ A</text>
+  <text x="392" y="301" text-anchor="middle" font-family="Verdana, sans-serif" font-size="17" fill="#17212b">∅ ∈ A here</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="title desc" width="100%" style="height: auto;">
+  <title id="title">Acyclic proof dependency graph contrasted with circular reasoning</title>
+  <desc id="desc">The left panel shows assumptions and a definition supporting two lemmas that support a target. The right panel shows a target and lemma with a dashed back edge labeled illegal circular dependency.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#26394d"/>
+    </marker>
+    <marker id="badArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9a3f35"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .panel { fill: #ffffff; stroke: #b4aa98; stroke-width: 2; }
+      .source { fill: #e9f0e6; stroke: #3e694e; stroke-width: 2; }
+      .lemma { fill: #edf2f6; stroke: #38566f; stroke-width: 2; }
+      .target { fill: #183a4a; stroke: #102b38; stroke-width: 3; }
+      .bad { fill: #fff0e9; stroke: #9a3f35; stroke-width: 2; }
+      .line { fill: none; stroke: #26394d; stroke-width: 2.5; marker-end: url(#arrow); }
+      .badline { fill: none; stroke: #9a3f35; stroke-width: 3; stroke-dasharray: 10 6; marker-end: url(#badArrow); }
+      .panelTitle { fill: #152536; font: 700 22px Georgia, serif; text-anchor: middle; }
+      .text { fill: #243447; font: 17px Georgia, serif; text-anchor: middle; }
+      .targetText { fill: #ffffff; font: 700 18px Georgia, serif; text-anchor: middle; }
+      .badText { fill: #812f28; font: 700 15px Georgia, serif; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="500"/>
+  <rect class="panel" x="25" y="25" width="555" height="445" rx="6"/>
+  <rect class="panel" x="600" y="25" width="335" height="445" rx="6"/>
+
+  <text class="panelTitle" x="302" y="66">Checkable forward dependencies</text>
+  <text class="panelTitle" x="767" y="66">Circular dependency</text>
+
+  <rect class="source" x="60" y="110" width="165" height="62" rx="5"/>
+  <text class="text" x="142" y="148">Assumption A</text>
+  <rect class="source" x="60" y="245" width="165" height="62" rx="5"/>
+  <text class="text" x="142" y="283">Definition D</text>
+
+  <rect class="lemma" x="285" y="110" width="170" height="62" rx="5"/>
+  <text class="text" x="370" y="148">Lemma 1</text>
+  <rect class="lemma" x="285" y="245" width="170" height="62" rx="5"/>
+  <text class="text" x="370" y="283">Lemma 2</text>
+
+  <rect class="target" x="380" y="365" width="165" height="66" rx="5"/>
+  <text class="targetText" x="462" y="405">Target T</text>
+
+  <path class="line" d="M225 141 L285 141"/>
+  <path class="line" d="M225 276 L285 276"/>
+  <path class="line" d="M430 172 C445 235 458 292 462 365"/>
+  <path class="line" d="M430 307 C443 330 451 345 458 365"/>
+
+  <text class="text" x="300" y="455">Every path starts at permitted sources.</text>
+
+  <rect class="source" x="630" y="110" width="130" height="62" rx="5"/>
+  <text class="text" x="695" y="148">Assumption A</text>
+  <rect class="bad" x="775" y="215" width="130" height="62" rx="5"/>
+  <text class="text" x="840" y="253">Lemma L</text>
+  <rect class="target" x="630" y="330" width="130" height="66" rx="5"/>
+  <text class="targetText" x="695" y="370">Target T</text>
+
+  <path class="line" d="M735 172 C775 184 795 199 815 215"/>
+  <path class="line" d="M815 277 C790 315 765 340 760 350"/>
+  <path class="badline" d="M675 330 C645 270 675 225 775 242"/>
+  <text class="badText" x="690" y="208">illegal: T supports L</text>
+  <text class="badText" x="768" y="440">T depends on L, while L depends on T.</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Equivalence relation classes form a partition</title>
+  <desc id="desc">A rounded rectangle representing set A is divided into three labeled blocks. Each block contains distinct geometric markers connected only to markers in the same block, showing that equivalence links stay within disjoint classes.</desc>
+  <rect width="960" height="520" fill="#fbfaf6"/>
+  <text x="480" y="42" text-anchor="middle" font-family="Verdana, sans-serif" font-size="25" font-weight="700" fill="#17212b">One relation, two views</text>
+  <rect x="55" y="76" width="850" height="354" rx="28" fill="#ffffff" stroke="#253746" stroke-width="4"/>
+  <text x="82" y="112" font-family="Verdana, sans-serif" font-size="24" font-weight="700" fill="#253746">A</text>
+  <rect x="95" y="130" width="225" height="245" rx="24" fill="#e7f1ef" stroke="#1d5c63" stroke-width="4"/>
+  <rect x="368" y="130" width="225" height="245" rx="24" fill="#fff6dd" stroke="#8a6418" stroke-width="4" stroke-dasharray="12 7"/>
+  <rect x="641" y="130" width="225" height="245" rx="24" fill="#f3e9e7" stroke="#8b3f35" stroke-width="4" stroke-dasharray="4 7"/>
+  <text x="208" y="165" text-anchor="middle" font-family="Verdana, sans-serif" font-size="21" font-weight="700" fill="#164950">[a]</text>
+  <text x="480" y="165" text-anchor="middle" font-family="Verdana, sans-serif" font-size="21" font-weight="700" fill="#6b4c10">[b]</text>
+  <text x="754" y="165" text-anchor="middle" font-family="Verdana, sans-serif" font-size="21" font-weight="700" fill="#702f28">[c]</text>
+  <line x1="158" y1="238" x2="256" y2="286" stroke="#1d5c63" stroke-width="4"/>
+  <line x1="158" y1="238" x2="184" y2="326" stroke="#1d5c63" stroke-width="4"/>
+  <line x1="184" y1="326" x2="256" y2="286" stroke="#1d5c63" stroke-width="4"/>
+  <circle cx="158" cy="238" r="13" fill="#1d5c63" stroke="#17212b" stroke-width="3"/>
+  <rect x="244" y="274" width="24" height="24" fill="#1d5c63" stroke="#17212b" stroke-width="3"/>
+  <path d="M 184 311 l 15 28 h -30 z" fill="#1d5c63" stroke="#17212b" stroke-width="3"/>
+  <line x1="424" y1="248" x2="530" y2="248" stroke="#8a6418" stroke-width="4"/>
+  <circle cx="424" cy="248" r="13" fill="#c18b20" stroke="#17212b" stroke-width="3"/>
+  <path d="M 530 232 l 16 29 h -32 z" fill="#c18b20" stroke="#17212b" stroke-width="3"/>
+  <line x1="702" y1="238" x2="797" y2="300" stroke="#8b3f35" stroke-width="4"/>
+  <rect x="690" y="226" width="24" height="24" fill="#b85c50" stroke="#17212b" stroke-width="3"/>
+  <circle cx="797" cy="300" r="13" fill="#b85c50" stroke="#17212b" stroke-width="3"/>
+  <text x="480" y="405" text-anchor="middle" font-family="Verdana, sans-serif" font-size="18" fill="#17212b">links never cross a block boundary</text>
+  <text x="480" y="462" text-anchor="middle" font-family="Verdana, sans-serif" font-size="20" font-weight="700" fill="#17212b">classes are nonempty, disjoint, and cover A</text>
+  <text x="480" y="494" text-anchor="middle" font-family="Verdana, sans-serif" font-size="18" fill="#4f5b63">line patterns and labels distinguish all three classes without color</text>
+</svg>

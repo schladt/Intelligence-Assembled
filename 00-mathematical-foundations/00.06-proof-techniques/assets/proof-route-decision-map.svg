@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc" width="100%" style="height: auto;">
+  <title id="title">Proof route decision map based on logical target</title>
+  <desc id="desc">A central target node branches to implication, biconditional, universal, existential, equality, finite assignment, and indexed-family targets. Each branch lists candidate proof routes and a note says the map suggests rather than prescribes.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#27364a"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .root { fill: #183a4a; stroke: #102b38; stroke-width: 3; }
+      .form { fill: #ffffff; stroke: #27364a; stroke-width: 2; }
+      .route { fill: #e9f0e6; stroke: #3f684f; stroke-width: 2; }
+      .warning { fill: #fff4cf; stroke: #8a6422; stroke-width: 2; stroke-dasharray: 8 5; }
+      .line { fill: none; stroke: #27364a; stroke-width: 2.2; marker-end: url(#arrow); }
+      .title { fill: #ffffff; font: 700 24px Georgia, serif; text-anchor: middle; }
+      .head { fill: #152536; font: 700 18px Georgia, serif; text-anchor: middle; }
+      .body { fill: #243447; font: 15px Georgia, serif; text-anchor: middle; }
+      .note { fill: #614817; font: 700 16px Georgia, serif; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="620"/>
+
+  <rect class="root" x="355" y="26" width="250" height="66" rx="6"/>
+  <text class="title" x="480" y="67">What is the target?</text>
+
+  <path class="line" d="M420 92 C330 125 225 125 160 158"/>
+  <path class="line" d="M450 92 C420 128 390 128 355 158"/>
+  <path class="line" d="M480 92 L480 158"/>
+  <path class="line" d="M510 92 C545 128 575 128 605 158"/>
+  <path class="line" d="M540 92 C630 125 735 125 800 158"/>
+
+  <rect class="form" x="45" y="160" width="220" height="70" rx="5"/>
+  <text class="head" x="155" y="187">Implication</text>
+  <text class="body" x="155" y="211">P implies Q</text>
+
+  <rect class="form" x="285" y="160" width="160" height="70" rx="5"/>
+  <text class="head" x="365" y="187">Biconditional</text>
+  <text class="body" x="365" y="211">P iff Q</text>
+
+  <rect class="form" x="465" y="160" width="160" height="70" rx="5"/>
+  <text class="head" x="545" y="187">Quantified</text>
+  <text class="body" x="545" y="211">for all / exists</text>
+
+  <rect class="form" x="645" y="160" width="125" height="70" rx="5"/>
+  <text class="head" x="707" y="187">Equality</text>
+  <text class="body" x="707" y="211">A = B</text>
+
+  <rect class="form" x="790" y="160" width="130" height="70" rx="5"/>
+  <text class="head" x="855" y="187">Finite or</text>
+  <text class="body" x="855" y="211">indexed</text>
+
+  <path class="line" d="M155 230 L155 280"/>
+  <path class="line" d="M365 230 L365 280"/>
+  <path class="line" d="M545 230 L545 280"/>
+  <path class="line" d="M707 230 L707 280"/>
+  <path class="line" d="M855 230 L855 280"/>
+
+  <rect class="route" x="35" y="282" width="240" height="148" rx="5"/>
+  <text class="head" x="155" y="312">Candidate routes</text>
+  <text class="body" x="155" y="341">Direct: assume P, derive Q</text>
+  <text class="body" x="155" y="368">Contrapositive: not Q to not P</text>
+  <text class="body" x="155" y="395">Contradiction: assume P and not Q</text>
+
+  <rect class="route" x="285" y="282" width="160" height="148" rx="5"/>
+  <text class="head" x="365" y="312">Directions</text>
+  <text class="body" x="365" y="345">Prove both arrows</text>
+  <text class="body" x="365" y="375">or build a</text>
+  <text class="body" x="365" y="399">complete cycle</text>
+
+  <rect class="route" x="455" y="282" width="180" height="148" rx="5"/>
+  <text class="head" x="545" y="312">Objects</text>
+  <text class="body" x="545" y="345">Universal:</text>
+  <text class="body" x="545" y="369">choose arbitrary x</text>
+  <text class="body" x="545" y="394">Existential: give witness</text>
+
+  <rect class="route" x="645" y="282" width="125" height="148" rx="5"/>
+  <text class="head" x="707" y="312">Pointwise</text>
+  <text class="body" x="707" y="346">Set:</text>
+  <text class="body" x="707" y="370">membership iff</text>
+  <text class="body" x="707" y="398">Function: all x</text>
+
+  <rect class="route" x="780" y="282" width="145" height="148" rx="5"/>
+  <text class="head" x="852" y="312">Structure</text>
+  <text class="body" x="852" y="345">Cases / capacity</text>
+  <text class="body" x="852" y="371">Double count</text>
+  <text class="body" x="852" y="397">Diagonal disagree</text>
+
+  <path class="line" d="M155 430 C205 480 310 480 360 505"/>
+  <path class="line" d="M365 430 L420 505"/>
+  <path class="line" d="M545 430 L510 505"/>
+  <path class="line" d="M707 430 L600 505"/>
+  <path class="line" d="M852 430 C795 478 690 480 625 505"/>
+
+  <rect class="warning" x="250" y="507" width="460" height="82" rx="5"/>
+  <text class="note" x="480" y="538">Suggestions, not a mechanical prescription</text>
+  <text class="body" x="480" y="566">Choose the route that exposes usable assumptions and definitions.</text>
+</svg>

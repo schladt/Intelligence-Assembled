@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" role="img" aria-labelledby="title desc">
+  <title id="title">Sixth roots of unity on the complex unit circle</title>
+  <desc id="desc">A complex plane contains a unit circle and six labeled points at equal 60 degree intervals. The points form a regular hexagon. A curved arrow indicates multiplication by omega rotates one root to the next.</desc>
+  <rect width="760" height="500" fill="#faf9f6"/>
+  <g font-family="Verdana, sans-serif" fill="#202124">
+    <text x="380" y="30" text-anchor="middle" font-size="20" font-weight="bold">The sixth roots of unity</text>
+    <g transform="translate(40 55)">
+      <rect x="0" y="0" width="470" height="400" fill="#ffffff" stroke="#b8b8b8"/>
+      <line x1="25" y1="200" x2="445" y2="200" stroke="#555" stroke-width="2" marker-end="url(#axisArrow)"/>
+      <line x1="235" y1="375" x2="235" y2="25" stroke="#555" stroke-width="2" marker-end="url(#axisArrow)"/>
+      <circle cx="235" cy="200" r="145" fill="none" stroke="#176b87" stroke-width="3"/>
+      <polygon points="380,200 307.5,74.4 162.5,74.4 90,200 162.5,325.6 307.5,325.6" fill="none" stroke="#a33b20" stroke-width="3" stroke-dasharray="9 5"/>
+      <g fill="#202124" stroke="#ffffff" stroke-width="2">
+        <circle cx="380" cy="200" r="7"/>
+        <circle cx="307.5" cy="74.4" r="7"/>
+        <circle cx="162.5" cy="74.4" r="7"/>
+        <circle cx="90" cy="200" r="7"/>
+        <circle cx="162.5" cy="325.6" r="7"/>
+        <circle cx="307.5" cy="325.6" r="7"/>
+      </g>
+      <path d="M365 165 A145 145 0 0 0 325 105" fill="none" stroke="#6b4c9a" stroke-width="4" marker-end="url(#rotateArrow)"/>
+      <text x="392" y="205" font-size="14">ω₀ = 1</text>
+      <text x="316" y="66" font-size="14">ω₁</text>
+      <text x="126" y="66" font-size="14">ω₂</text>
+      <text x="34" y="205" font-size="14">ω₃ = -1</text>
+      <text x="126" y="347" font-size="14">ω₄</text>
+      <text x="316" y="347" font-size="14">ω₅</text>
+      <text x="345" y="123" font-size="13" fill="#6b4c9a">× ω₁</text>
+      <text x="415" y="222" font-size="13">real</text>
+      <text x="246" y="38" font-size="13">imaginary</text>
+    </g>
+    <g transform="translate(535 95)">
+      <rect x="0" y="0" width="195" height="315" fill="#ffffff" stroke="#b8b8b8"/>
+      <text x="98" y="35" text-anchor="middle" font-size="16" font-weight="bold">Definition</text>
+      <text x="98" y="70" text-anchor="middle" font-size="15">ωₖ = e^(i2πk/6)</text>
+      <text x="98" y="100" text-anchor="middle" font-size="14">k = 0, 1, ..., 5</text>
+      <line x1="20" y1="120" x2="175" y2="120" stroke="#b8b8b8"/>
+      <text x="20" y="155" font-size="14">Each point:</text>
+      <text x="30" y="185" font-size="14">• has modulus 1</text>
+      <text x="30" y="215" font-size="14">• satisfies z⁶ = 1</text>
+      <text x="30" y="245" font-size="14">• is 2π/6 apart</text>
+      <text x="30" y="275" font-size="14">• maps to the next</text>
+      <text x="45" y="298" font-size="14">under × ω₁</text>
+    </g>
+    <text x="380" y="485" text-anchor="middle" font-size="14">The circle, labels, and dashed hexagon all encode equal angular spacing.</text>
+  </g>
+  <defs>
+    <marker id="axisArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#555"/></marker>
+    <marker id="rotateArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#6b4c9a"/></marker>
+  </defs>
+</svg>
