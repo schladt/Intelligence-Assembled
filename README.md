@@ -85,20 +85,7 @@ The full [roadmap](ROADMAP.md) goes much deeper: over 240 topic modules with gra
 
 ## Module Structure
 
-```
-module/
-├── README.md        # Overview and learning objectives
-├── notes/           # Explanations and derivations
-├── exercises/       # Problems
-├── solutions/       # Worked solutions
-├── notebooks/       # Jupyter notebooks
-├── code/            # Implementations
-└── resources/       # References and further reading
-```
-
-Each topic aims to move through: **Intuition → Mathematics → Derivation → Implementation → Experimentation → Exercises**
-
-Not every topic needs all six, but that is the path I am aiming for.
+The [module file structure and content layout](STYLE_GUIDE.md#module-file-structure) live in the style guide so there is one source of truth as the project evolves. The general progression remains: **Intuition → Mathematics → Derivation → Implementation → Experimentation → Exercises**.
 
 ## Who Is This For
 

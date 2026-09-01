@@ -1216,22 +1216,9 @@ Stated explicitly, because scope creep is the failure mode of a project this siz
 
 ## Module Structure
 
-```
-NN-section-name/
-├── README.md              # Section overview, module table, objectives
-└── NN.MM-topic-name/
-    ├── README.md          # YAML front matter, intuition, objectives
-    ├── notes/             # Explanations and full derivations
-    ├── exercises/         # Tagged by type and difficulty
-    ├── solutions/         # Committed, in a sibling directory so they are skippable
-    ├── notebooks/         # Executable prose with math and code
-    ├── code/              # From-scratch implementations
-    └── resources/         # Annotated references, one line on why each matters
-```
+The [module file structure, directory responsibilities, metadata, and content layout](STYLE_GUIDE.md#module-file-structure) are defined in the style guide. Keeping that detail in one place avoids drift as the module format evolves.
 
-Exercises are tagged by type and difficulty, for example `E05.06.1 [derivation ★★★]`, `E05.06.2 [implementation ★★]`, `E05.06.3 [experiment ★★★★]`. Types are conceptual, derivation, proof, implementation, experiment, and applied.
-
-Repository-level files maintained from the start, because they are cheap now and expensive to retrofit: `NOTATION.md`, `GLOSSARY.md`, `PREREQUISITES.md`, `STYLE_GUIDE.md`, `CONTRIBUTING.md` with a topic template, and `ERRATA/`.
+Repository-level files maintained from the start, because they are cheap now and expensive to retrofit: `NOTATION.md`, `GLOSSARY.md`, `PREREQUISITES.md`, `STYLE_GUIDE.md`, `SOURCES.md`, `CONTRIBUTING.md` with a topic template, and `ERRATA/`.
 
 ---
 
