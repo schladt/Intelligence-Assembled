@@ -88,67 +88,36 @@ These are the choices that make this curriculum different from the twenty or so 
 
 ## Dependency Graph
 
-A linear list of fifteen sections implies a strictness that is not real. This is what actually depends on what.
+A linear list of fifteen sections implies a strictness that is not real. The graph below intentionally shows only the **primary route** from foundations to large language models. Section 9 (Evolutionary Computation) and Section 14 (Beyond) are parallel branches, so forcing them into the main path only makes the picture harder to read.
 
 ```mermaid
-graph TD
-  S0["§0 Math Foundations<br/>notation, logic, proofs, counting"]
-  C0["§0.13-0.15 Computational Foundations<br/>programming, algorithms, complexity"]
-  S1a["§1.01-1.08 Single-Variable Calculus"]
-  S2a["§2.01-2.11 Linear Algebra"]
-  S1b["§1.09-1.13 Multivariable Calculus"]
-  S2b["§2.12-2.13 Matrix Calculus + Autodiff"]
-  S3["§3 Probability"]
+flowchart TD
+  F0["§0 Foundations"]
+  M12["§1-2 Calculus and Linear Algebra"]
+  P3["§3 Probability"]
   S4["§4 Statistics"]
-  S5["§5 Optimization"]
-  S6["§6 Information Theory"]
-  S7["§7 Data Analysis"]
-  S8["§8 Machine Learning"]
-  S9["§9 Evolutionary Computation"]
-  S10["§10 Neural Networks"]
-  S11["§11 Deep Learning"]
-  S12["§12 Transformers"]
-  S13["§13 Large Language Models"]
-  S14["§14 Beyond"]
+  O5["§5 Optimization"]
+  I6["§6 Information Theory"]
+  D7["§7 Data Analysis"]
+  M8["§8 Machine Learning"]
+  N10["§10 Neural Networks"]
+  D11["§11 Deep Learning"]
+  T12["§12 Transformers"]
+  L13["§13 Large Language Models"]
 
-  S0 --> S1a
-  S0 --> S2a
-  S0 --> S3
-  C0 --> S7
-  C0 --> S8
-  C0 --> S10
-  C0 --> S14
-  S1a --> S2a
-  S2a --> S1b
-  S1a --> S1b
-  S1b --> S2b
-  S2a --> S2b
-  S1a --> S3
-  S2a --> S3
-  S1b -.->|"advanced probability"| S3
-  S3 --> S4
-  S1b --> S5
-  S2a --> S5
-  S3 --> S6
-  S4 --> S7
-  S2a --> S7
-  S4 --> S8
-  S5 --> S8
-  S6 --> S8
-  S7 --> S8
-  S5 --> S9
-  S2b --> S10
-  S8 --> S10
-  S10 --> S11
-  S11 --> S12
-  S12 --> S13
-  S9 -.-> S14
-  S11 --> S14
-  S13 --> S14
-  S3 -.->|"MDPs, bandits"| S14
+  F0 --> M12
+  M12 --> P3 --> S4 --> D7
+  M12 --> O5
+  P3 --> I6
+  O5 --> I6
+  S4 --> M8
+  O5 --> M8
+  I6 --> M8
+  D7 --> M8
+  M8 --> N10 --> D11 --> T12 --> L13
 ```
 
-Solid edges are hard prerequisites. Dotted edges are strong but not blocking.
+Each section below has its own prerequisite graph. Every graph terminates at the section it belongs to and answers one question: **what should I learn before I start this section?** Solid arrows indicate material needed at entry; dotted arrows indicate material needed later for advanced modules within the section.
 
 **Recommended interleaving.** The one deviation from reading top to bottom: do §1.01 through §1.08 (single-variable calculus), then all of §2.01 through §2.11 (linear algebra), then come back for §1.09 through §1.13 (multivariable), then §2.12 and §2.13 (matrix calculus and autodiff). Section 0 runs in parallel with everything from the start.
 
@@ -162,6 +131,13 @@ This is the section almost every self-study AI curriculum omits, and it is the o
 
 **Prerequisites:** none. Runs in parallel with §1 and §2.
 **Anchor references:** MIT 6.042J / 6.1200J (Mathematics for Computer Science) and 6.006 (Introduction to Algorithms), Stanford CS103 and CS106B, Berkeley CS61B and CS70, CMU 21-127/21-128; Velleman *How to Prove It*; Rosen *Discrete Mathematics*; Sedgewick & Wayne *Algorithms*; Sipser *Introduction to the Theory of Computation*; Deisenroth, Faisal & Ong *Mathematics for Machine Learning*.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  START["No prerequisites"] --> S0["Start §0<br/>Mathematical Foundations"]
+```
 
 ### 0.01 Mathematical Notation and How to Read Mathematics
 Standard number sets (ℕ, ℤ, ℚ, ℝ, ℂ); intervals; absolute value; floor and ceiling. Summation and product notation: Σ and Π, index manipulation, reindexing, splitting, swapping order of summation, telescoping, empty sums and products. Function notation: domain, codomain, image, preimage, restriction, composition, identity. Indicator functions, the Kronecker delta, the Iverson bracket. Subscript and superscript conventions, and how to tell an index from an exponent. Reading a paper's notation section without stalling. Index notation and the Einstein summation convention (needed later for tensors).
@@ -221,6 +197,16 @@ The chain rule is the local mathematical rule underlying backpropagation; backpr
 **Prerequisites:** §0.02, §0.03, §0.09. Modules §1.09 onward assume §2.01 through §2.08.
 **Anchor references:** MIT 18.01 and 18.02, Harvard Math 21a, CMU 21-266 (Vector Calculus using Matrix Algebra) and 21-268; Stewart; Spivak; Apostol.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  A["§0.02 Algebra"] --> S1["Start §1<br/>Calculus"]
+  E["§0.03 Exponents and Logs"] --> S1
+  Q["§0.09 Sequences and Series"] --> S1
+  LA["§2.01-2.08 Linear Algebra"] -.->|"needed from §1.09"| S1
+```
+
 ### 1.01 Limits and Continuity
 Intuitive limits; one-sided limits; limits at infinity. The ε-δ definition (introduced here, made rigorous in §1.13). Limit laws and the squeeze theorem. Trigonometric limits: sin(x)/x, (1 − cos x)/x. Indeterminate forms: 0/0, ∞/∞, 0·∞, ∞−∞, 1^∞, 0⁰, ∞⁰. Continuity and types of discontinuity. The intermediate value theorem. The extreme value theorem.
 
@@ -272,6 +258,16 @@ Modules §2.01 through §2.11 are standard linear algebra with the ML-relevant p
 
 **Prerequisites:** §0.01, §0.02, §1.01 through §1.04. §2.12 additionally requires §1.09 through §1.11.
 **Anchor references:** MIT 18.06 (Strang) and 18.700 (Axler track), MIT **18.S096 / 18.063 Matrix Calculus for Machine Learning and Beyond** (Edelman & Johnson), Harvard Math 21b, CMU 21-241/21-242/21-266; Strang *Introduction to Linear Algebra*; Axler *Linear Algebra Done Right*; Trefethen & Bau *Numerical Linear Algebra*; Oppenheim & Schafer *Discrete-Time Signal Processing*; Bright, Edelman & Johnson *Matrix Calculus (for Machine Learning and Beyond)*.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  N["§0.01 Notation"] --> S2["Start §2<br/>Linear Algebra"]
+  A["§0.02 Algebra"] --> S2
+  C["§1.01-1.04 Differential Calculus"] --> S2
+  MC["§1.09-1.11 Multivariable Calculus"] -.->|"needed for §2.12"| S2
+```
 
 ### 2.01 Vectors and Vector Spaces
 Scalars, vectors, and geometric intuition in ℝ², ℝ³, ℝⁿ. Vector addition and scalar multiplication. Vector spaces: the axioms, and why the abstraction pays off. Subspaces. Linear combinations, span, linear independence. Basis and dimension. Coordinates relative to a basis, and change of basis. Norms: ℓ₁, ℓ₂, ℓ∞, ℓ_p, and the geometry of their unit balls (which is exactly why lasso produces sparsity). Inner products; angle; the Cauchy-Schwarz inequality. Orthogonality.
@@ -344,6 +340,16 @@ Harvard STAT 110's central pedagogical move is worth stealing outright: define e
 **Prerequisites:** §0.04, §0.08, §0.09, §0.10, and §1.05 through §1.07 support the introductory path through §3.05. Joint and multivariate work in §3.06 and §3.07 additionally uses §2.08; multivariate change of variables in §3.08 uses §1.11. Modules §3.10 through §3.13 assume increasing proof maturity, with §3.13 explicitly optional depth.
 **Anchor references:** Harvard STAT 110 (Blitzstein), MIT 18.600 and 6.041, Stanford CS109, Berkeley CS70; Blitzstein & Hwang *Introduction to Probability*; Wasserman *All of Statistics* Ch. 1-5; Murphy *Probabilistic Machine Learning* Ch. 2-3; Durrett *Probability: Theory and Examples*.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  D["§0.04, §0.08-0.10<br/>Sets, Counting, Series, Inequalities"] --> S3["Start §3<br/>Probability"]
+  I["§1.05-1.07<br/>Integration and Series"] --> S3
+  LA["§2.08 Symmetric Matrices"] -.->|"needed from §3.06"| S3
+  CV["§1.11 Change of Variables"] -.->|"needed for §3.08"| S3
+```
+
 ### 3.01 Probability Spaces and Axioms
 Sample spaces, outcomes, events; event algebra. Kolmogorov's axioms. Monotonicity, the complement rule, inclusion-exclusion. Countable additivity; continuity of probability from above and below. The naive equally-likely definition and its failure modes. Counting-based probability (this is where §0.08 pays off). Classic problems as calibration: birthday, matching/derangement, Monty Hall, gambler's ruin. **Log probabilities and numerical underflow**, taught here rather than discovered later in a debugger.
 
@@ -397,6 +403,15 @@ MIT 18.05 makes an ordering choice worth copying: probability, then **Bayesian i
 
 **Prerequisites:** §3 and §2.05. Numerical MLE in §4.02 draws on derivative and Newton-method material from §1.04 and §2.12; §5 develops those optimization methods systematically rather than serving as a prerequisite for this section.
 **Anchor references:** MIT 18.05 and 18.650, Stanford STATS 200, CMU 36-705 (Wasserman) and 36-401; Wasserman *All of Statistics*; Casella & Berger *Statistical Inference*; Gelman et al. *Bayesian Data Analysis*; Efron & Hastie *Computer Age Statistical Inference*.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  P["§3 Probability"] --> S4["Start §4<br/>Statistics"]
+  LS["§2.05 Least Squares"] --> S4
+  D["§1.04 and §2.12<br/>Derivatives and Matrix Calculus"] -.->|"needed for numerical MLE"| S4
+```
 
 ### 4.01 The Statistical Model
 Population versus sample. What a statistical model is. Parametric versus nonparametric. Statistic, estimator, estimate; the sampling distribution. The three fundamental problems: point estimation, set estimation, hypothesis testing. The empirical CDF; Glivenko-Cantelli; the DKW inequality. Statistical functionals and the **plug-in principle**. Anscombe's quartet and the limits of summary statistics.
@@ -453,6 +468,14 @@ CMU 10-725's stated objective is the right frame for this whole section: given a
 **Prerequisites:** §1.09, §1.10, §2.08, §2.10, §2.12.
 **Anchor references:** Stanford EE364A/B (Boyd), CMU 10-725 (Tibshirani), Berkeley EE227C (Hardt), MIT 6.7220J and 18.335J; Boyd & Vandenberghe *Convex Optimization*; Nocedal & Wright *Numerical Optimization*; Bertsekas *Nonlinear Programming*; Goodfellow et al. Ch. 4 and 8.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  C["§1.09-1.10<br/>Multivariable Calculus and Optimization"] --> S5["Start §5<br/>Optimization"]
+  L["§2.08, §2.10, §2.12<br/>Definiteness, Numerical LA, Matrix Calculus"] --> S5
+```
+
 ### 5.01 The Optimization Problem
 General form: objective, decision variables, constraints, feasible set. Local versus global optima. Weierstrass's theorem (existence of a minimum). Why optimization is the unifying language: every learning algorithm in §8 through §13 is an objective plus a hypothesis class plus a solver. Well-posedness. Computational considerations, and what "solved" means for a nonconvex problem.
 
@@ -505,6 +528,15 @@ MIT 18.600 teaches entropy inside the probability course rather than deferring i
 **Prerequisites:** §3, §0.03, §0.10, §5.03.
 **Anchor references:** MIT 6.441 (Polyanskiy), Stanford EE376A (Weissman); Cover & Thomas *Elements of Information Theory*; MacKay *Information Theory, Inference, and Learning Algorithms*.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  P["§3 Probability"] --> S6["Start §6<br/>Information Theory"]
+  M["§0.03 and §0.10<br/>Logarithms and Inequalities"] --> S6
+  C["§5.03 Convex Functions"] --> S6
+```
+
 ### 6.01 Information and Entropy
 Self-information / surprisal −log p(x), and the axiomatic derivation of why it has to be a logarithm. **Shannon entropy** H(X) = −Σ p log p. Units: bits, nats, bans, and converting between them. Properties: nonnegativity, maximum at the uniform distribution, concavity, the effect of deterministic transformations. Entropy of standard distributions: Bernoulli (and the binary entropy function), uniform, geometric. Joint entropy. **Conditional entropy** H(Y|X) and the chain rule for entropy. Entropy as expected code length, previewing §6.06.
 
@@ -547,6 +579,16 @@ This section exists because of a gap that is glaring once you look for it: Berke
 
 **Prerequisites:** §2.09, §3, §4.01, §4.08.
 **Anchor references:** Berkeley Data 100 and STAT 153, Stanford CS246 (Mining Massive Data Sets), CMU 36-708; Tukey *Exploratory Data Analysis*; Wickham on tidy data; Hyndman & Athanasopoulos *Forecasting: Principles and Practice*.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  C["§0.13 Scientific Computing"] --> S7["Start §7<br/>Data Analysis"]
+  L["§2.09 SVD"] --> S7
+  P["§3 Probability"] --> S7
+  S["§4.01 and §4.08<br/>Statistical Models and Resampling"] --> S7
+```
 
 ### 7.01 Data Representation and Provenance
 Where data came from and what that implies. Granularity, scope, temporality, faithfulness. Formats: CSV, TSV, fixed-width, JSON, Parquet, Arrow, HDF5. Structured, semi-structured, unstructured. Relational thinking: primary and foreign keys, joins, grouping, normalization. **SQL as a first-class data-analysis skill**: SELECT, WHERE, GROUP BY, HAVING, JOIN, window functions. Data types and their traps: floats for money, timezones, integer overflow, string encodings, Unicode normalization. Schemas, contracts, and versioning. Documentation: datasheets for datasets, model cards.
@@ -611,6 +653,19 @@ The organizing principle here follows Stanford CS229 and MIT 6.390: every method
 
 **Prerequisites:** The core path uses §0.13 through §0.15; single- and multivariable derivatives from §1; linear algebra through §2.09 plus §2.12; probability through §3.11; statistics through §4.10 and §4.13; and the optimization ideas in §5.01, §5.03, §5.06, and §5.09. Section §7 should be learned alongside the applied modules rather than treated as one large gate. Advanced modules name their additional dependencies locally.
 **Anchor references:** Stanford CS229, CMU 10-601/10-701/10-715, MIT 6.390 and 9.520, Berkeley CS189/289A, Cornell CS4780; Hastie, Tibshirani & Friedman *Elements of Statistical Learning*; James et al. *Introduction to Statistical Learning*; Bishop *PRML*; Murphy *Probabilistic Machine Learning*; Shalev-Shwartz & Ben-David *Understanding Machine Learning*.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart TD
+  C["§0.13-0.15<br/>Computational Foundations"] --> S8["Start §8<br/>Machine Learning"]
+  D["§1 Derivatives"] --> S8
+  L["§2.01-2.09 and §2.12<br/>Linear Algebra and Matrix Calculus"] --> S8
+  P["§3.01-3.11<br/>Probability"] --> S8
+  ST["§4.01-4.10 and §4.13<br/>Statistics and Decision Theory"] --> S8
+  O["§5.01, §5.03, §5.06, §5.09<br/>Core Optimization"] --> S8
+  DA["§7 Data Analysis"] -.->|"learn alongside"| S8
+```
 
 ### 8.01 What It Means to Learn
 The learning problem stated formally: an unknown distribution, a loss, a hypothesis class, a finite sample. **Empirical risk minimization** and why it is not obviously a good idea. The i.i.d. assumption and every place it breaks. **Inductive bias**, and the claim that learning without it is impossible. The **no free lunch theorem**, stated precisely enough to be useful rather than as a slogan. Bayes-optimal prediction and the Bayes error rate as the reference point (from §4.13). Generalization versus memorization. The taxonomy of paradigms: supervised, unsupervised, semi-supervised, self-supervised, reinforcement, online, active, transfer, multi-task. Approximation error versus estimation error versus optimization error, which is the decomposition that makes the rest of the section legible.
@@ -693,6 +748,15 @@ The organizing frame is Eiben and Smith's component decomposition, which every c
 **Prerequisites:** §3, §5.01, §5.13, §0.08.
 **Anchor references:** Eiben & Smith *Introduction to Evolutionary Computing*; Poli, Langdon & McPhee *A Field Guide to Genetic Programming*; Engelbrecht *Computational Intelligence*; Deb *Multi-Objective Optimization using Evolutionary Algorithms*; Koza *Genetic Programming*.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  C["§0.08 Combinatorics"] --> S9["Start §9<br/>Evolutionary Computation"]
+  P["§3 Probability"] --> S9
+  O["§5.01 and §5.13<br/>Optimization and Black-Box Search"] --> S9
+```
+
 ### 9.01 Optimization as Search
 The search-space framing: candidate solutions, neighborhoods, objective landscapes. Where gradients are unavailable: discrete spaces, combinatorial structure, non-differentiable and noisy objectives, simulation-based evaluation, program space. Exhaustive search, random search, and hill climbing as baselines. Local search and its local-optimum problem. **Simulated annealing** and tabu search as single-solution metaheuristics, taught here as the comparison baselines the population methods must beat. Why populations help. The exploration-exploitation dilemma stated as the central design tension.
 
@@ -766,6 +830,17 @@ Every serious deep learning course follows one of three orderings, and the choic
 **Prerequisites:** §0.13, §1.09, §2.01 through §2.13, §3.01 through §3.07, §5.06, §5.09, §5.10, §6.03, and the learning setup and linear-model material in §8.01 through §8.05. The rest of §8 is useful context, not a gate.
 **Anchor references:** Stanford CS231n and CS230, CMU 11-785, MIT 6.S191 and 6.7960, Berkeley CS182/282A, Michigan EECS 498, NYU DS-GA 1008; Goodfellow, Bengio & Courville *Deep Learning*; Zhang et al. *Dive into Deep Learning*; Prince *Understanding Deep Learning*; Karpathy *Neural Networks: Zero to Hero*.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart TD
+  C["§0.13 Scientific Computing"] --> S10["Start §10<br/>Neural Networks"]
+  M["§1.09 and §2.01-2.13<br/>Multivariable and Matrix Calculus"] --> S10
+  P["§3.01-3.07 and §6.03<br/>Probability and Cross-Entropy"] --> S10
+  O["§5.06, §5.09, §5.10<br/>Gradient-Based Optimization"] --> S10
+  ML["§8.01-8.05<br/>Learning and Linear Models"] --> S10
+```
+
 ### 10.01 The Perceptron and Its Limits
 McCulloch-Pitts neurons, the Rosenblatt perceptron, Hebbian learning, read in the original papers because the history clarifies the ideas. The perceptron learning algorithm and its convergence proof (from §8.05). **The Minsky-Papert XOR limitation**, and constructing by hand the two-hidden-unit network that resolves it. Threshold logic and neural networks as Boolean circuits. Size versus depth complexity of circuits, which is the first hint that depth buys something.
 
@@ -831,6 +906,13 @@ A real module, not an appendix. The systematic recipe: overfit a single batch fi
 **Prerequisites:** §10.
 **Anchor references:** Goodfellow et al.; Prince *Understanding Deep Learning*; d2l.ai; MIT 6.7960; Stanford CS231n; Berkeley CS182/282A; fast.ai Part 2.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  N["§10 Neural Networks"] --> S11["Start §11<br/>Deep Learning"]
+```
+
 ### 11.01 What Makes It Deep
 The empirical case for depth, and the theoretical results that partially explain it. Hierarchical feature composition, demonstrated by looking at what layers learn. Approximation theory: depth-separation results, the curse of dimensionality and how structure defeats it. The three-way split that organizes deep learning theory: **approximation** (can the architecture represent it), **optimization** (can SGD find it), **generalization** (does it transfer). Architectures grouped by the symmetry they encode: grids (convolution, translation), sequences (recurrence and attention), sets (permutation invariance, DeepSets), graphs (§11.12). Geometric deep learning as the unifying frame.
 
@@ -889,6 +971,15 @@ The goal of this section is that by the end, the transformer feels like the obvi
 **Prerequisites:** §10.16, §10.17, §11.
 **Anchor references:** Stanford CS224N and CS336 (Language Modeling from Scratch), CS25; Princeton COS 597R; CMU 11-667 and 11-711; Jurafsky & Martin *Speech and Language Processing* 3rd ed.; "The Illustrated Transformer"; "The Annotated Transformer"; Karpathy's nanoGPT.
 
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  A["§10.16 Seq2Seq and Attention"] --> S12["Start §12<br/>Transformers"]
+  E["§10.17 Embeddings"] --> S12
+  D["§11 Deep Learning"] --> S12
+```
+
 ### 12.01 The Road to Attention
 Recap of the RNN bottleneck from §10.16. Bahdanau and Luong attention as soft alignment. What removing recurrence buys: parallelism across sequence positions during training, and a path length of one between any two positions instead of O(n). What it costs: quadratic complexity and no built-in notion of order. The 2017 paper read as a response to a specific set of problems rather than as scripture.
 
@@ -937,6 +1028,13 @@ Stanford CS336 is explicitly modeled on "build an operating system from scratch,
 
 **Prerequisites:** §12.
 **Anchor references:** Stanford CS336, CS224N, CS324; Princeton COS 597R; CMU 11-667 and 11-664; Berkeley CS294 LLM Agents; Jurafsky & Martin 3rd ed.; Raschka *Build a Large Language Model (From Scratch)*; Karpathy's nanoGPT and minbpe.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart LR
+  T["§12 Transformers"] --> S13["Start §13<br/>Large Language Models"]
+```
 
 ### 13.01 Language Modeling Before Neural Networks
 Worth doing properly, because it establishes the objective and the evaluation discipline that everything after inherits. **N-gram language models**: the Markov assumption, MLE from counts, the chain rule factorization, the sparsity and zero-count problem, unknown-word handling, sentence boundary tokens. **Smoothing**: add-one and add-k, backoff (Katz), interpolation, absolute discounting, **Kneser-Ney** with its continuation counts and the "Francisco" intuition, Good-Turing. **Perplexity**: the definition, its relationship to cross-entropy and to branching factor, and the crucial caveat that **it is not comparable across tokenizers or corpora**, with bits-per-byte as the invariant alternative. Classical text representation: bag of words, TF-IDF, PPMI, latent semantic analysis. Classical structure: POS tagging, HMMs and Viterbi, NER with BIO tagging, CFGs and CKY, dependency parsing and transition-based parsing, UAS and LAS. What classical NLP got right (evaluation discipline, linguistic vocabulary, the LM objective itself) and what it got wrong (sparsity, brittle features).
@@ -1018,6 +1116,17 @@ Their placement here is organizational, not a prerequisite claim. Classical AI c
 
 **Prerequisites:** varies by module. RL needs §3, §5, and §10. Interpretability needs §12. Causality needs §4.
 **Anchor references:** Russell & Norvig *AIMA* 4th ed.; Berkeley CS188; Sutton & Barto *Reinforcement Learning*; Silver's UCL course; Stanford CS234; Berkeley CS285; Koller & Friedman; Pearl *Causality*; Neal *Introduction to Causal Inference*; Anthropic's Transformer Circuits thread; ARENA; AI Safety Fundamentals.
+
+**Prerequisite graph**
+
+```mermaid
+flowchart TD
+  C["§0 Discrete Math and Algorithms"] -->|"classical AI"| S14["Start §14<br/>Beyond"]
+  R["§3 Probability and §5 Optimization"] -->|"reinforcement learning"| S14
+  N["§10 Neural Networks"] -.->|"deep RL"| S14
+  E["§5 Optimization and §9 Evolutionary Computation"] -->|"computational intelligence"| S14
+  F["§4 Statistics, §8 Machine Learning, §12-13 Transformers and LLMs"] -.->|"advanced and frontier topics"| S14
+```
 
 ### 14.01 Classical AI, the Part Usually Skipped
 Agents and environments; rationality; PEAS task specification; environment properties; agent architectures from simple reflex through utility-based and learning agents. **Search**: problem formulation, BFS, uniform-cost, DFS, depth-limited and **iterative deepening**, bidirectional; greedy best-first, **A\***, admissibility and consistency, IDA\*, RBFS, SMA\*; heuristic quality and effective branching factor; relaxed problems, **pattern databases**, landmarks, learned heuristics. **Local search**: hill climbing and variants, simulated annealing, local beam search, continuous-space local search (and note that AIMA puts evolutionary algorithms right here, which is a defensible placement). **Adversarial search**: minimax, **alpha-beta pruning**, move ordering, evaluation functions, quiescence, the horizon effect, transposition tables, **Monte Carlo tree search and UCT**, expectiminimax. **Constraint satisfaction**: node, arc, and path consistency, AC-3, global constraints, backtracking with MRV and least-constraining-value heuristics, forward checking, MAC, conflict-directed backjumping, no-good learning, min-conflicts, tree-structured CSPs, cutset conditioning, symmetry breaking. **Logic and knowledge representation**: propositional logic, resolution, Horn clauses, forward and backward chaining, DPLL and WalkSAT; first-order logic, unification, Prolog; description logics; default reasoning. **Planning**: PDDL, forward and backward state-space search, planning as SAT, planning graphs and GraphPlan, delete-relaxation heuristics, landmarks, HTN planning, contingent and conformant planning, replanning, scheduling with resources. Why this matters now: agents plan, tool use is a search problem, constraint solving is coming back through LLM-plus-solver pipelines, and most "novel" agent architectures are rediscovering this material.
