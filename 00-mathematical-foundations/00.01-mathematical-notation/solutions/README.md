@@ -298,9 +298,9 @@ Keep declarations, attained outputs, set preimages, and composition compatibilit
 
 5. The identity laws are
    $$
-   f\circ\operatorname{id}_{\mathbb{R}}=f,
+   f\circ\mathrm{id}_{\mathbb{R}}=f,
    \qquad
-   \operatorname{id}_{\mathbb{R}}\circ f=f.
+   \mathrm{id}_{\mathbb{R}}\circ f=f.
    $$
 
 ### Verification

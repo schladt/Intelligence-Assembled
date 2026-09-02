@@ -190,7 +190,7 @@ noncoprime moduli, the views must agree where their cycles overlap.
 | $p,q$ | primes, hence at least $2$ | prime factors |
 | $a\mid b$ | proposition | $a$ divides $b$ |
 | $\gcd(a,b)$ | nonnegative integer | normalized greatest common divisor |
-| $\operatorname{lcm}(a,b)$ | nonnegative integer | normalized least common multiple |
+| $\mathrm{lcm}(a,b)$ | nonnegative integer | normalized least common multiple |
 | $a\equiv b\pmod n$ | proposition | $n\mid(a-b)$ |
 | $[a]_n$ | set | residue class of $a$ modulo $n$ |
 | $\mathbb{Z}/n\mathbb{Z}$ | set of $n$ classes | integers modulo $n$ |
@@ -280,11 +280,11 @@ $$
 \gcd(a,0)=|a|.
 $$
 
-The least common multiple $\operatorname{lcm}(a,b)$ is nonnegative, with
-$\operatorname{lcm}(a,0)=0$. For nonzero $a,b$,
+The least common multiple $\mathrm{lcm}(a,b)$ is nonnegative, with
+$\mathrm{lcm}(a,0)=0$. For nonzero $a,b$,
 
 $$
-\gcd(a,b)\operatorname{lcm}(a,b)=|ab|.
+\gcd(a,b)\mathrm{lcm}(a,b)=|ab|.
 $$
 
 If prime exponents in $|a|$ and $|b|$ are $\alpha_p$ and $\beta_p$, then gcd
@@ -446,7 +446,7 @@ $$
 a\equiv b\pmod g.
 $$
 
-When it exists, the solution is unique modulo $\operatorname{lcm}(m,n)=mn/g$.
+When it exists, the solution is unique modulo $\mathrm{lcm}(m,n)=mn/g$.
 This is the
 **general compatibility form**. Pairwise coprime moduli make $g=1$, so every
 residue pair is compatible and the solution is unique modulo $mn$.
@@ -581,7 +581,7 @@ For the two-prime teaching version:
 6. compute $c\equiv m^e\pmod n$ and recover $m'\equiv c^d\pmod n$.
 
 RFC 8017 uses the Carmichael exponent
-$\lambda(n)=\operatorname{lcm}(p-1,q-1)$ in its key
+$\lambda(n)=\mathrm{lcm}(p-1,q-1)$ in its key
 validity condition and allows more than two distinct odd primes [4]. Using
 $\varphi(n)$ here is a simpler sufficient teaching contract. It may produce a
 different valid private exponent.
@@ -847,7 +847,7 @@ $(3+1)(2+1)(1+1)=24$ positive divisors.
 
 $84=2^2\cdot3\cdot7$ and $126=2\cdot3^2\cdot7$. Thus
 $\gcd(84,126)=2\cdot3\cdot7=42$ and
-$\operatorname{lcm}(84,126)=2^2\cdot3^2\cdot7=252$.
+$\mathrm{lcm}(84,126)=2^2\cdot3^2\cdot7=252$.
 
 ### Worked example 5: Euclid and Bézout
 

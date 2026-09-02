@@ -170,9 +170,9 @@ $$
 Then:
 
 $$
-\operatorname{ndim}(\boldsymbol{a})=k,
+\mathrm{ndim}(\boldsymbol{a})=k,
 \qquad
-\operatorname{size}(\boldsymbol{a})=\prod_{j=0}^{k-1}d_j.
+\mathrm{size}(\boldsymbol{a})=\prod_{j=0}^{k-1}d_j.
 $$
 
 `shape` is the tuple of axis lengths, `ndim` is the number of axes, and `size`
@@ -223,7 +223,7 @@ For an index $(i_0,\ldots,i_{k-1})$ and strides
 $(s_0,\ldots,s_{k-1})$, NumPy computes a byte offset
 
 $$
-\operatorname{offset}=\sum_{j=0}^{k-1}i_js_j.
+\mathrm{offset}=\sum_{j=0}^{k-1}i_js_j.
 $$
 
 In ordinary C-contiguous, row-major storage, the last axis changes fastest. A

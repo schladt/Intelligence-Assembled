@@ -305,7 +305,7 @@ The horizontal rules feel reversed because the change occurs before $f$ receives
 
 ### Composition
 
-For $g:\mathcal{X}\to\mathcal{Y}$ and $f:\mathcal{Y}\to\mathcal{Z}$, $(f\circ g)(x)=f(g(x))$. The rightmost function acts first. Its natural domain is $\{x\in\operatorname{dom}(g):g(x)\in\operatorname{dom}(f)\}$.
+For $g:\mathcal{X}\to\mathcal{Y}$ and $f:\mathcal{Y}\to\mathcal{Z}$, $(f\circ g)(x)=f(g(x))$. The rightmost function acts first. Its natural domain is $\{x\in\mathrm{dom}(g):g(x)\in\mathrm{dom}(f)\}$.
 
 Composition is generally not commutative. This order becomes crucial in matrix products, computational graphs, and the chain rule.
 
@@ -379,14 +379,14 @@ This bounded range explains the phrase **saturating activation**. It does not by
 
 ### Sigmoid and logit preview
 
-The logistic sigmoid is $\operatorname{sigmoid}(x)=1/(1+e^{-x})$. It maps real inputs into $(0,1)$. Solving $p=1/(1+e^{-x})$ gives $\operatorname{logit}(p)=\log(p/(1-p))$ for $0<p<1$.
+The logistic sigmoid is $\mathrm{sigmoid}(x)=1/(1+e^{-x})$. It maps real inputs into $(0,1)$. Solving $p=1/(1+e^{-x})$ gives $\mathrm{logit}(p)=\log(p/(1-p))$ for $0<p<1$.
 
 The logarithm is developed in §0.03. Here the key point is domain and range: sigmoid maps $\mathbb{R}$ to $(0,1)$, and logit maps $(0,1)$ back to $\mathbb{R}$.
 
 The exact relation
 
 $$
-\operatorname{sigmoid}(x)=\frac{1+\tanh(x/2)}{2}
+\mathrm{sigmoid}(x)=\frac{1+\tanh(x/2)}{2}
 $$
 
 shows that these S-shaped functions are affinely related after an input rescaling. That identity does not make their output interpretations interchangeable.
@@ -632,7 +632,7 @@ A quarter-turn is $\pi/2$ radians. Since $5\pi/6$ lies outside arcsine's princip
 
 ### Example 10: Sigmoid range and logit preview
 
-We have $\operatorname{sigmoid}(0)=1/2$ and $\operatorname{logit}(0.8)=\log(0.8/0.2)=\log4$. Finite real inputs never attain sigmoid outputs $0$ or $1$, so logit requires $0<p<1$.
+We have $\mathrm{sigmoid}(0)=1/2$ and $\mathrm{logit}(0.8)=\log(0.8/0.2)=\log4$. Finite real inputs never attain sigmoid outputs $0$ or $1$, so logit requires $0<p<1$.
 
 ### Example 11: Tanh saturation
 

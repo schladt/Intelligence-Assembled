@@ -163,8 +163,8 @@ Write tests for `affine_batch` and `stable_logsumexp` that include:
 
 1. one hand-computed result each;
 2. shape, dtype, empty, nonfinite, and mismatch failures;
-3. the property $\operatorname{LSE}(\boldsymbol{x}+c)=
-   \operatorname{LSE}(\boldsymbol{x})+c$ over 100 generated finite cases;
+3. the property $\mathrm{LSE}(\boldsymbol{x}+c)=
+   \mathrm{LSE}(\boldsymbol{x})+c$ over 100 generated finite cases;
 4. a reference comparison for affine output using explicit scalar loops;
 5. a stated random-stream construction and tolerance policy;
 6. an explanation of what the finite test domain does not prove.

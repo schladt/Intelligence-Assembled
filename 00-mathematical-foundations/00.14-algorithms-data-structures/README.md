@@ -479,7 +479,7 @@ the root.
 The invariant is partition equivalence:
 
 $$
-\operatorname{find}(a)=\operatorname{find}(b)
+\mathrm{find}(a)=\mathrm{find}(b)
 \quad\Longleftrightarrow\quad
 \text{$a$ and $b$ belong to the same maintained block}.
 $$

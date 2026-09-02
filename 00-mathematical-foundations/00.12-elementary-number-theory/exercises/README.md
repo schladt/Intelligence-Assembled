@@ -56,7 +56,7 @@ project's 1 through 5 scale. All programming uses the Python standard library.
 
 Let $a=-2^4 3^2 7$ and $b=2^2 3^5 5$.
 
-1. Compute $\gcd(a,b)$ and $\operatorname{lcm}(a,b)$ from exponents.
+1. Compute $\gcd(a,b)$ and $\mathrm{lcm}(a,b)$ from exponents.
 2. Verify their product is $|ab|$.
 3. Count the positive divisors of $|a|$.
 4. State the fundamental theorem of arithmetic with its exact domain and

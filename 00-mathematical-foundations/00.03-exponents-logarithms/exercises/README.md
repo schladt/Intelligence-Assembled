@@ -280,11 +280,11 @@ After max shifting, one exponent is exactly zero before `exp`, so one exponentia
 
 1. Starting from the definition, prove
    $$
-   m\le\operatorname{LSE}(\boldsymbol{x})\le m+\log n.
+   m\le\mathrm{LSE}(\boldsymbol{x})\le m+\log n.
    $$
 2. Derive
    $$
-   \operatorname{LSE}(\boldsymbol{x})
+   \mathrm{LSE}(\boldsymbol{x})
    =m+\log\sum_i e^{x_i-m}.
    $$
 3. Explain separately why the shift prevents overflow and why it prevents all terms from underflowing.
@@ -322,8 +322,8 @@ For two terms, factor out the larger exponential. The smaller shifted exponent i
 1. Define softmax and prove its components are positive and sum to one.
 2. Derive
    $$
-   \log\operatorname{softmax}(\boldsymbol{z})_c
-   =z_c-\operatorname{LSE}(\boldsymbol{z}).
+   \log\mathrm{softmax}(\boldsymbol{z})_c
+   =z_c-\mathrm{LSE}(\boldsymbol{z}).
    $$
 3. Using a one-hot target, reduce
    $$
@@ -332,7 +332,7 @@ For two terms, factor out the larger exponential. The smaller shifted exponent i
    to a class-index NLL.
 4. Derive the stable class loss
    $$
-   -z_y+\operatorname{LSE}(\boldsymbol{z}).
+   -z_y+\mathrm{LSE}(\boldsymbol{z}).
    $$
 5. Prove that adding the same constant to every logit changes neither softmax nor the class loss.
 6. Compute log-softmax and the loss for $\boldsymbol{z}=(1000,999,998)$ with target class $1$.

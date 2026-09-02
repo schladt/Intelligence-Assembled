@@ -513,12 +513,12 @@ Write $aRb$ as shorthand for $(a,b)\in R$. A relation **on** $A$ is a subset of 
 Its domain and range are
 
 $$
-\operatorname{dom}(R)
+\mathrm{dom}(R)
 =\{a\in A:\exists b\in B,\ (a,b)\in R\},
 $$
 
 $$
-\operatorname{ran}(R)
+\mathrm{ran}(R)
 =\{b\in B:\exists a\in A,\ (a,b)\in R\}.
 $$
 
@@ -735,7 +735,7 @@ $$
 includes a domain $A$, codomain $B$, and assignment rule. Its graph is
 
 $$
-\operatorname{graph}(f)
+\mathrm{graph}(f)
 =\{(a,f(a)):a\in A\}
 \subseteq A\times B.
 $$
@@ -802,9 +802,9 @@ $$
 Then
 
 $$
-f^{-1}\circ f=\operatorname{id}_A,
+f^{-1}\circ f=\mathrm{id}_A,
 \qquad
-f\circ f^{-1}=\operatorname{id}_B.
+f\circ f^{-1}=\mathrm{id}_B.
 $$
 
 ### Exact image and preimage laws

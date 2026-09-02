@@ -29,7 +29,9 @@ Modules should follow it unless a different convention is part of the lesson. Wh
 | Scalar random variable | italic uppercase | $X$, $Y$ |
 | Random vector | bold uppercase | $\boldsymbol{X}$ |
 | Event | italic uppercase | $A$, $B$ |
-| Named function or operator | roman | $\operatorname{softmax}$ |
+| Named function or operator | roman | $\mathrm{softmax}$ |
+
+Use `\mathrm{...}` for named functions and operators. GitHub's math renderer rejects the alternative named-operator macro.
 
 Field-standard exceptions such as transformer $Q$, $K$, and $V$ are allowed. Define them locally.
 
@@ -186,7 +188,7 @@ For scalar functions of matrices, prefer differential and trace notation:
 $$
 df
 =
-\operatorname{tr}\left((\nabla_{\mathbf{X}}f)^{\top}d\mathbf{X}\right).
+\mathrm{tr}\left((\nabla_{\mathbf{X}}f)^{\top}d\mathbf{X}\right).
 $$
 
 When translating a source that uses denominator or mixed layout:
@@ -200,8 +202,8 @@ When translating a source that uses denominator or mixed layout:
 
 Use:
 
-- $\operatorname{JVP}(f,\boldsymbol{x},\boldsymbol{v})=\mathbf{J}_f(\boldsymbol{x})\boldsymbol{v}$;
-- $\operatorname{VJP}(f,\boldsymbol{x},\boldsymbol{u})=\boldsymbol{u}^{\top}\mathbf{J}_f(\boldsymbol{x})$;
+- $\mathrm{JVP}(f,\boldsymbol{x},\boldsymbol{v})=\mathbf{J}_f(\boldsymbol{x})\boldsymbol{v}$;
+- $\mathrm{VJP}(f,\boldsymbol{x},\boldsymbol{u})=\boldsymbol{u}^{\top}\mathbf{J}_f(\boldsymbol{x})$;
 - $\bar{\boldsymbol{x}}$ for a reverse-mode adjoint when bar notation is helpful.
 
 Explain how a framework represents the result because it may preserve the input shape rather than expose a row vector.
@@ -222,8 +224,8 @@ Use:
 - $p_X(x)$ for a probability mass or density function;
 - $F_X(x)=\Pr(X\le x)$ for a cumulative distribution function;
 - $\mathbb{E}[X]$ for expectation;
-- $\operatorname{Var}(X)$ for variance;
-- $\operatorname{Cov}(X,Y)$ for covariance;
+- $\mathrm{Var}(X)$ for variance;
+- $\mathrm{Cov}(X,Y)$ for covariance;
 - $X\perp\!\!\!\perp Y$ for independence;
 - $X\perp\!\!\!\perp Y\mid Z$ for conditional independence.
 
@@ -367,9 +369,9 @@ For transformer notation, use:
 Scaled dot-product attention is
 
 $$
-\operatorname{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V})
+\mathrm{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V})
 =
-\operatorname{softmax}\left(
+\mathrm{softmax}\left(
 \frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{d_k}}+\mathbf{M}
 \right)\mathbf{V}.
 $$
@@ -449,7 +451,7 @@ Use numerical tolerances rather than exact floating-point equality, and explain 
 | $P$ | probability, transition matrix, projection | $\Pr$, $\mathbf{P}$, named local symbol |
 | $Q$ | action value, query matrix | $Q^{\pi}$ or bold $\mathbf{Q}$ |
 | $\lambda$ | eigenvalue, regularization, rate, offspring count | Name the role on first use |
-| $\sigma$ | standard deviation, sigmoid, strategy | Use $\operatorname{sigmoid}$ when ambiguous |
+| $\sigma$ | standard deviation, sigmoid, strategy | Use $\mathrm{sigmoid}$ when ambiguous |
 | $\pi$ | constant, policy, stationary distribution | Use arguments or a descriptive subscript |
 | $t$ | time, token, iteration | Prefer $k$ for optimization iteration |
 | $V$ | value, vertices, vocabulary size | Use $\mathcal{V}$ for a set |

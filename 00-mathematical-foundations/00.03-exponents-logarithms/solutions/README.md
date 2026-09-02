@@ -416,7 +416,7 @@ $$
 \sum_i e^{x_i}\ge e^m.
 $$
 
-Taking logs gives $\operatorname{LSE}(\boldsymbol{x})\ge m$. Also, every $e^{x_i}\le e^m$, so
+Taking logs gives $\mathrm{LSE}(\boldsymbol{x})\ge m$. Also, every $e^{x_i}\le e^m$, so
 
 $$
 \sum_i e^{x_i}\le ne^m,
@@ -425,13 +425,13 @@ $$
 and therefore
 
 $$
-\operatorname{LSE}(\boldsymbol{x})\le\log(ne^m)=m+\log n.
+\mathrm{LSE}(\boldsymbol{x})\le\log(ne^m)=m+\log n.
 $$
 
 Factor the maximum:
 
 $$
-\operatorname{LSE}(\boldsymbol{x})
+\mathrm{LSE}(\boldsymbol{x})
 =\log\left(e^m\sum_i e^{x_i-m}\right)
 =m+\log\sum_i e^{x_i-m}.
 $$
@@ -448,7 +448,7 @@ $$
 A stable implementation uses
 
 $$
-m+\operatorname{log1p}(e^{-|a-b|}),
+m+\mathrm{log1p}(e^{-|a-b|}),
 $$
 
 especially when the second term is tiny.
@@ -459,7 +459,7 @@ $$
 1000+\log(1+e^{-1}+e^{-2})\approx1000.4076.
 $$
 
-It satisfies $1000\le\operatorname{LSE}\le1000+\log3$.
+It satisfies $1000\le\mathrm{LSE}\le1000+\log3$.
 
 For $(-1000,-1001)$,
 
@@ -472,7 +472,7 @@ The result exceeds $-1000$ because adding a second positive exponential makes th
 If all $x_i=x$, then
 
 $$
-\operatorname{LSE}(\boldsymbol{x})=\log(ne^x)=x+\log n,
+\mathrm{LSE}(\boldsymbol{x})=\log(ne^x)=x+\log n,
 $$
 
 so the upper bound is attained.
@@ -511,7 +511,7 @@ Taking logs,
 $$
 \log p_c
 =z_c-\log\sum_j e^{z_j}
-=z_c-\operatorname{LSE}(\boldsymbol{z}).
+=z_c-\mathrm{LSE}(\boldsymbol{z}).
 $$
 
 For a one-hot target,
@@ -523,7 +523,7 @@ $$
 Substituting log-softmax yields
 
 $$
--\log p_y=-z_y+\operatorname{LSE}(\boldsymbol{z}).
+-\log p_y=-z_y+\mathrm{LSE}(\boldsymbol{z}).
 $$
 
 For shift invariance, replace every logit by $z_c+k$:
@@ -535,12 +535,12 @@ $$
 =p_c.
 $$
 
-Also $\operatorname{LSE}(\boldsymbol{z}+k\boldsymbol{1})=k+\operatorname{LSE}(\boldsymbol{z})$, so the $k$ terms cancel in the class loss.
+Also $\mathrm{LSE}(\boldsymbol{z}+k\boldsymbol{1})=k+\mathrm{LSE}(\boldsymbol{z})$, so the $k$ terms cancel in the class loss.
 
 For $\boldsymbol{z}=(1000,999,998)$,
 
 $$
-\operatorname{LSE}(\boldsymbol{z})\approx1000.407606.
+\mathrm{LSE}(\boldsymbol{z})\approx1000.407606.
 $$
 
 Thus log-softmax is approximately

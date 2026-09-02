@@ -52,7 +52,7 @@ $$
 $$
 
 $$
-\operatorname{lcm}(a,b)=2^4 3^5 5\cdot7=136080.
+\mathrm{lcm}(a,b)=2^4 3^5 5\cdot7=136080.
 $$
 
 Their product is $36\cdot136080=4,898,880=|ab|$. The positive divisor count

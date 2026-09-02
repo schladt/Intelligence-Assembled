@@ -25,7 +25,7 @@ The computational point is especially important. A product of many ordinary prob
 This module builds the algebra first and then follows it into machine learning. We will derive log-likelihood, negative log-likelihood, log-sum-exp, stable log-softmax, and the single-example class loss
 
 $$
--z_y+\operatorname{LSE}(\boldsymbol{z}).
+-z_y+\mathrm{LSE}(\boldsymbol{z}).
 $$
 
 The probability and information-theory interpretations remain previews. Their full foundations belong to later sections.
@@ -526,7 +526,7 @@ Softmax converts them to positive normalized values:
 $$
 p_c
 \coloneqq
-\operatorname{softmax}(\boldsymbol{z})_c
+\mathrm{softmax}(\boldsymbol{z})_c
 =
 \frac{e^{z_c}}{\sum_{j=1}^{C}e^{z_j}}.
 $$
@@ -544,7 +544,7 @@ At this stage, treat "class-index cross-entropy" as this NLL identity. Later pro
 For $\boldsymbol{x}\in\mathbb{R}^{n}$, define
 
 $$
-\operatorname{LSE}(\boldsymbol{x})
+\mathrm{LSE}(\boldsymbol{x})
 \coloneqq
 \log\left(\sum_{i=1}^{n}e^{x_i}\right).
 $$
@@ -554,7 +554,7 @@ Let $m=\max_i x_i$. Since at least one term equals $e^m$,
 $$
 \sum_i e^{x_i}\ge e^m
 \quad\Longrightarrow\quad
-\operatorname{LSE}(\boldsymbol{x})\ge m.
+\mathrm{LSE}(\boldsymbol{x})\ge m.
 $$
 
 Since every term is at most $e^m$,
@@ -562,7 +562,7 @@ Since every term is at most $e^m$,
 $$
 \sum_i e^{x_i}\le ne^m
 \quad\Longrightarrow\quad
-\operatorname{LSE}(\boldsymbol{x})\le m+\log n.
+\mathrm{LSE}(\boldsymbol{x})\le m+\log n.
 $$
 
 Therefore
@@ -570,7 +570,7 @@ Therefore
 $$
 \max_i x_i
 \le
-\operatorname{LSE}(\boldsymbol{x})
+\mathrm{LSE}(\boldsymbol{x})
 \le
 \max_i x_i+\log n.
 $$
@@ -585,7 +585,7 @@ Direct evaluation can overflow if some $x_i$ is large. Factor out $e^m$:
 
 $$
 \begin{aligned}
-\operatorname{LSE}(\boldsymbol{x})
+\mathrm{LSE}(\boldsymbol{x})
 &=\log\left(\sum_i e^{x_i}\right)\\
 &=\log\left(e^m\sum_i e^{x_i-m}\right)\\
 &=m+\log\left(\sum_i e^{x_i-m}\right).
@@ -610,22 +610,22 @@ $$
 \log p_c
 &=\log\left(\frac{e^{z_c}}{\sum_j e^{z_j}}\right)\\
 &=z_c-\log\left(\sum_j e^{z_j}\right)\\
-&=z_c-\operatorname{LSE}(\boldsymbol{z}).
+&=z_c-\mathrm{LSE}(\boldsymbol{z}).
 \end{aligned}
 $$
 
 Thus
 
 $$
-\operatorname{logsoftmax}(\boldsymbol{z})_c
-=z_c-\operatorname{LSE}(\boldsymbol{z}).
+\mathrm{logsoftmax}(\boldsymbol{z})_c
+=z_c-\mathrm{LSE}(\boldsymbol{z}).
 $$
 
 For target class $y$,
 
 $$
 -\log p_y
-=-z_y+\operatorname{LSE}(\boldsymbol{z}).
+=-z_y+\mathrm{LSE}(\boldsymbol{z}).
 $$
 
 Use the shifted LSE and never form a huge exponential merely to take its log afterward.
@@ -749,7 +749,7 @@ The formulas are mathematically equal. Their floating-point evaluations differ b
 If $a=\log p$ and $b=\log q$, then
 
 $$
-\log(p+q)=\log(e^a+e^b)=\operatorname{LSE}(a,b).
+\log(p+q)=\log(e^a+e^b)=\mathrm{LSE}(a,b).
 $$
 
 NumPy provides this binary operation as `logaddexp`:
@@ -931,19 +931,19 @@ Suppose two parameter choices have likelihoods $10^{-200}$ and $10^{-220}$. The 
 For $\boldsymbol{x}=(1000,999,998)$, naive exponentiation overflows. With $m=1000$,
 
 $$
-\operatorname{LSE}(\boldsymbol{x})
+\mathrm{LSE}(\boldsymbol{x})
 =1000+\log(1+e^{-1}+e^{-2})
 \approx1000.4076.
 $$
 
-The bounds predict $1000\le\operatorname{LSE}\le1000+\ln3$, which the result satisfies.
+The bounds predict $1000\le\mathrm{LSE}\le1000+\ln3$, which the result satisfies.
 
 ### Example 12: Stable log-softmax and class NLL
 
 For logits $\boldsymbol{z}=(1000,999,998)$ and target $y=1$ under one-based class indexing,
 
 $$
--\log p_1=-z_1+\operatorname{LSE}(\boldsymbol{z})
+-\log p_1=-z_1+\mathrm{LSE}(\boldsymbol{z})
 \approx0.4076.
 $$
 

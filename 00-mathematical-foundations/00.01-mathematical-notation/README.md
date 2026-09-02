@@ -267,12 +267,12 @@ $$
 f\circ g:\mathcal{W}\to\mathcal{Y},\qquad(f\circ g)(w)=f(g(w)).
 $$
 
-The identity function is $\operatorname{id}_{\mathcal{X}}(x)=x$, and
+The identity function is $\mathrm{id}_{\mathcal{X}}(x)=x$, and
 
 $$
-f\circ\operatorname{id}_{\mathcal{X}}=f,
+f\circ\mathrm{id}_{\mathcal{X}}=f,
 \qquad
-\operatorname{id}_{\mathcal{Y}}\circ f=f.
+\mathrm{id}_{\mathcal{Y}}\circ f=f.
 $$
 
 MIT's Mathematics for Computer Science and Stanford CS103 both model the useful habit of declaring function sets explicitly [5,6].
@@ -361,7 +361,7 @@ The expressions are equal because they enumerate the same finite pair set exactl
 The bracket $[\widehat{y}_i=y_i]$ is one for a correct prediction and zero otherwise. Summing counts correct predictions; dividing gives
 
 $$
-\operatorname{accuracy}\coloneqq\frac{1}{n}\sum_{i=1}^{n}[\widehat{y}_i=y_i].
+\mathrm{accuracy}\coloneqq\frac{1}{n}\sum_{i=1}^{n}[\widehat{y}_i=y_i].
 $$
 
 Indicators turn selection and counting into algebra.
