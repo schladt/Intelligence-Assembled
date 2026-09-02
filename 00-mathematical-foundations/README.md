@@ -78,8 +78,8 @@ The arrows show the dominant flow, not a rigid semester sequence. In particular,
 | 0.11 | [Graph Theory](00.11-graph-theory/README.md) | Draft | 3/5 | 10-15 hours |
 | 0.12 | [Elementary Number Theory](00.12-elementary-number-theory/README.md) | Draft | 3/5 | 9-14 hours |
 | 0.13 | [Programming and Scientific Computing](00.13-programming-scientific-computing/README.md) | Draft | 2/5 | 10-18 hours |
-| 0.14 | Algorithms and Data Structures | Stub | 3/5 | 12-22 hours |
-| 0.15 | Computability and Complexity | Stub | 4/5 | 10-18 hours |
+| 0.14 | [Algorithms and Data Structures](00.14-algorithms-data-structures/README.md) | Draft | 3/5 | 12-22 hours |
+| 0.15 | [Computability and Complexity](00.15-computability-complexity/README.md) | Draft | 4/5 | 10-18 hours |
 
 The estimates include a careful read and a representative selection of exercises. They are planning ranges, not deadlines.
 
@@ -125,9 +125,8 @@ The file and content conventions live in the [style guide](../STYLE_GUIDE.md#mod
 
 ## Current Build Status
 
-The opening cluster, §0.01-§0.03, the reasoning cluster, §0.04-§0.06, and
-§0.07-§0.13 are published as complete draft learning packages. Entries from
-§0.14 onward remain roadmap stubs, not broken links. They will become links when
-real content exists.
+All fifteen modules, §0.01-§0.15, are published as complete draft learning
+packages. The section now spans mathematical reading, proof, discrete structure,
+scientific programming, algorithms, computability, and complexity.
 
 This section will keep evolving as new modules test the structure. The point is not to freeze a perfect format before learning begins. The point is to build something worth learning from.

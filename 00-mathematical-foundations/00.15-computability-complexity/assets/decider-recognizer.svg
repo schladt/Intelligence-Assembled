@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Decider, recognizer, and bounded simulation</title>
+  <desc id="desc">Three horizontal timelines show that a decider halts with accept or reject, a recognizer accepts members but may run forever on nonmembers, and a bounded simulator reports timeout without converting it to rejection.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 34px system-ui, sans-serif; fill: #0f172a; }
+      .sub { font: 18px system-ui, sans-serif; fill: #334155; }
+      .head { font: 700 23px system-ui, sans-serif; fill: #0f172a; }
+      .body { font: 18px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 16px system-ui, sans-serif; fill: #475569; }
+      .timeline { stroke: #475569; stroke-width: 4; marker-end: url(#arrow); }
+      .accept { fill: #dcfce7; stroke: #15803d; stroke-width: 3; }
+      .reject { fill: #fee2e2; stroke: #b91c1c; stroke-width: 3; }
+      .timeout { fill: #fef3c7; stroke: #b45309; stroke-width: 3; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="700" rx="24"/>
+  <text class="title" x="60" y="62">Termination status is part of correctness</text>
+  <text class="sub" x="60" y="94">A finite observation cannot settle an unbounded computation.</text>
+
+  <rect x="55" y="128" width="1090" height="150" rx="20" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text class="head" x="82" y="167">Decider</text>
+  <text class="body" x="82" y="198">Every input reaches one halting answer.</text>
+  <line class="timeline" x1="380" y1="204" x2="760" y2="204"/>
+  <rect class="accept" x="800" y="162" width="135" height="54" rx="14"/>
+  <text class="head" x="823" y="197">ACCEPT</text>
+  <rect class="reject" x="965" y="162" width="135" height="54" rx="14"/>
+  <text class="head" x="991" y="197">REJECT</text>
+  <text class="small" x="380" y="246">The proof supplies a finite halt for YES and NO.</text>
+
+  <rect x="55" y="303" width="1090" height="150" rx="20" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text class="head" x="82" y="342">Recognizer</text>
+  <text class="body" x="82" y="373">Members halt and accept.</text>
+  <text class="body" x="82" y="404">Nonmembers may reject or run forever.</text>
+  <line class="timeline" x1="380" y1="378" x2="760" y2="378"/>
+  <rect class="accept" x="800" y="336" width="135" height="54" rx="14"/>
+  <text class="head" x="823" y="371">ACCEPT</text>
+  <path d="M 955 405 C 990 360, 1080 360, 1098 405 C 1080 450, 990 450, 955 405" fill="none" stroke="#475569" stroke-width="3" stroke-dasharray="10 8"/>
+  <text class="head" x="998" y="412">LOOP</text>
+
+  <rect x="55" y="478" width="1090" height="150" rx="20" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text class="head" x="82" y="517">Bounded simulator</text>
+  <text class="body" x="82" y="548">Runs at most B transitions.</text>
+  <text class="body" x="82" y="579">No halt by B means unknown.</text>
+  <line class="timeline" x1="380" y1="553" x2="760" y2="553"/>
+  <line x1="760" y1="516" x2="760" y2="596" stroke="#b45309" stroke-width="4"/>
+  <text class="small" x="726" y="615">budget B</text>
+  <rect class="timeout" x="800" y="511" width="180" height="54" rx="14"/>
+  <text class="head" x="831" y="546">TIMEOUT</text>
+  <text class="head" x="1004" y="546" fill="#b91c1c">≠ REJECT</text>
+  <text class="small" x="60" y="674">Preserve UNKNOWN until a proof or complete search establishes NO.</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Language model ladder</title>
+  <desc id="desc">Nested regions show regular languages inside context-free languages, inside decidable languages, inside recognizable languages, with some languages outside recognition. Labels connect finite automata, pushdown automata, and Turing machines to their memory contracts.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 34px system-ui, sans-serif; fill: #0f172a; }
+      .sub { font: 18px system-ui, sans-serif; fill: #334155; }
+      .label { font: 700 22px system-ui, sans-serif; fill: #0f172a; }
+      .body { font: 18px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 16px system-ui, sans-serif; fill: #334155; }
+      .line { stroke: #475569; stroke-width: 2.5; fill: none; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="700" rx="24"/>
+  <text class="title" x="60" y="62">More memory recognizes more languages</text>
+  <text class="sub" x="60" y="94">Each strict inclusion adds expressive power, not merely speed.</text>
+
+  <rect x="55" y="125" width="1090" height="510" rx="30" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+  <text class="label" x="82" y="165">All languages over a fixed alphabet</text>
+  <text class="small" x="82" y="192">Most have no Turing-machine recognizer.</text>
+
+  <rect x="185" y="215" width="875" height="370" rx="28" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text class="label" x="212" y="255">Recognizable</text>
+  <text class="small" x="212" y="282">A Turing machine accepts members; it may loop on nonmembers.</text>
+
+  <rect x="310" y="305" width="660" height="250" rx="26" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text class="label" x="337" y="345">Decidable</text>
+  <text class="small" x="337" y="372">A Turing machine halts with YES or NO on every input.</text>
+
+  <rect x="435" y="390" width="360" height="130" rx="22" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text class="label" x="462" y="427">Context-free</text>
+
+  <rect x="535" y="448" width="225" height="52" rx="18" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+  <text class="label" x="580" y="482">Regular</text>
+
+  <path class="line" d="M 800 416 L 1090 416"/>
+  <text class="body" x="830" y="400">unbounded nesting</text>
+  <text class="small" x="830" y="438">one stack</text>
+
+  <path class="line" d="M 765 474 L 1090 474"/>
+  <text class="body" x="800" y="493">parity, fixed patterns</text>
+  <text class="small" x="995" y="520">finite states</text>
+
+  <text class="small" x="60" y="674">Examples mark capabilities, not complete characterizations.</text>
+</svg>

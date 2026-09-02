@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc" style="max-width:100%;height:auto">
+  <title id="title">Representation contracts map operations to data structures</title>
+  <desc id="desc">A flow from dominant operation through candidate structures to the invariant and cost that must be justified.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 28px system-ui, sans-serif; fill: #0f172a; }
+      .subtitle { font: 16px system-ui, sans-serif; fill: #334155; }
+      .head { font: 700 18px system-ui, sans-serif; fill: #0f172a; }
+      .body { font: 15px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 14px system-ui, sans-serif; fill: #334155; }
+      .card { stroke: #334155; stroke-width: 2; rx: 14; }
+      .line { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1000" height="620" fill="#f8fafc"/>
+  <text x="500" y="42" text-anchor="middle" class="title">Choose by operation, then justify the contract</text>
+  <text x="500" y="70" text-anchor="middle" class="subtitle">The structure name is the middle of the argument, not the beginning.</text>
+
+  <rect x="35" y="120" width="220" height="385" class="card" fill="#dbeafe"/>
+  <text x="145" y="154" text-anchor="middle" class="head">Dominant operation</text>
+  <text x="58" y="195" class="body">Index by position</text>
+  <text x="58" y="239" class="body">Update by key</text>
+  <text x="58" y="283" class="body">Remove minimum</text>
+  <text x="58" y="327" class="body">Visit neighbors</text>
+  <text x="58" y="371" class="body">Insert at both ends</text>
+  <text x="58" y="415" class="body">Skip stored zeros</text>
+  <text x="58" y="459" class="body">Ordered predecessor</text>
+
+  <rect x="390" y="120" width="220" height="385" class="card" fill="#dcfce7"/>
+  <text x="500" y="154" text-anchor="middle" class="head">Candidate structure</text>
+  <text x="414" y="195" class="body">Dynamic array</text>
+  <text x="414" y="239" class="body">Hash table</text>
+  <text x="414" y="283" class="body">Min-heap</text>
+  <text x="414" y="327" class="body">Adjacency list</text>
+  <text x="414" y="371" class="body">Deque</text>
+  <text x="414" y="415" class="body">Sparse row map</text>
+  <text x="414" y="459" class="body">Balanced search tree</text>
+
+  <rect x="745" y="120" width="220" height="385" class="card" fill="#fef3c7"/>
+  <text x="855" y="154" text-anchor="middle" class="head">Proof obligation</text>
+  <text x="768" y="195" class="small">Index and resize costs</text>
+  <text x="768" y="239" class="small">Collision assumptions</text>
+  <text x="768" y="283" class="small">Parent-child order</text>
+  <text x="768" y="327" class="small">Vertex and edge scans</text>
+  <text x="768" y="371" class="small">End-operation bound</text>
+  <text x="768" y="415" class="small">Missing means zero</text>
+  <text x="768" y="459" class="small">Ordering and height</text>
+
+  <path d="M255 312 H385" class="line"/>
+  <path d="M610 312 H740" class="line"/>
+
+  <rect x="130" y="545" width="740" height="48" rx="24" fill="#fee2e2" stroke="#991b1b" stroke-width="2"/>
+  <text x="500" y="575" text-anchor="middle" class="head">Reject the choice when its invariant or cost does not match the trace.</text>
+</svg>

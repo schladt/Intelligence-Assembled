@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Halting problem diagonal contradiction</title>
+  <desc id="desc">Assuming a halting decider H, constructed program D loops when H predicts halt and halts when H predicts loop. Running D on itself contradicts either prediction.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 34px system-ui, sans-serif; fill: #0f172a; }
+      .sub { font: 18px system-ui, sans-serif; fill: #334155; }
+      .head { font: 700 23px system-ui, sans-serif; fill: #0f172a; }
+      .body { font: 18px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 16px system-ui, sans-serif; fill: #475569; }
+      .box { fill: #ffffff; stroke: #64748b; stroke-width: 3; }
+      .yes { fill: #fee2e2; stroke: #dc2626; stroke-width: 3; }
+      .no { fill: #dcfce7; stroke: #16a34a; stroke-width: 3; }
+      .line { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="700" rx="24"/>
+  <text class="title" x="60" y="62">The self-input forces both predictions to fail</text>
+  <text class="sub" x="60" y="94">Assume H is total and correct, then define D to oppose H on the diagonal.</text>
+
+  <rect class="box" x="380" y="135" width="440" height="105" rx="20"/>
+  <text class="head" x="415" y="177">Ask H(D, D)</text>
+  <text class="body" x="415" y="211">Will program D halt on its own encoding?</text>
+
+  <path class="line" d="M 500 240 C 430 285, 330 290, 280 340"/>
+  <path class="line" d="M 700 240 C 770 285, 870 290, 920 340"/>
+  <text class="head" x="320" y="288">H says YES</text>
+  <text class="head" x="795" y="288">H says NO</text>
+
+  <rect class="yes" x="90" y="350" width="420" height="125" rx="20"/>
+  <text class="head" x="125" y="393">Definition of D: loop forever</text>
+  <text class="body" x="125" y="428">Prediction: D(D) halts</text>
+  <text class="body" x="125" y="455">Behavior: D(D) does not halt</text>
+
+  <rect class="no" x="690" y="350" width="420" height="125" rx="20"/>
+  <text class="head" x="725" y="393">Definition of D: halt</text>
+  <text class="body" x="725" y="428">Prediction: D(D) does not halt</text>
+  <text class="body" x="725" y="455">Behavior: D(D) halts</text>
+
+  <path class="line" d="M 300 475 C 330 540, 465 555, 535 565"/>
+  <path class="line" d="M 900 475 C 870 540, 735 555, 665 565"/>
+  <rect x="430" y="545" width="340" height="82" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <text class="head" x="486" y="582">Contradiction either way</text>
+  <text class="body" x="475" y="610">No total correct H can exist.</text>
+
+  <text class="small" x="60" y="674">The result rules out every decider for HALT, not only this attempted implementation.</text>
+</svg>

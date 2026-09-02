@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc" style="max-width:100%;height:auto">
+  <title id="title">FIFO and minimum-priority frontier contracts</title>
+  <desc id="desc">The same weighted directed graph is shown beside a BFS queue and a Dijkstra priority queue, producing different valid path objectives.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .title { font: 700 27px system-ui, sans-serif; fill: #0f172a; }
+      .subtitle { font: 16px system-ui, sans-serif; fill: #334155; }
+      .head { font: 700 19px system-ui, sans-serif; fill: #0f172a; }
+      .body { font: 15px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 14px system-ui, sans-serif; fill: #334155; }
+      .edge { stroke: #475569; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .node { stroke: #1e3a8a; stroke-width: 2; fill: #dbeafe; }
+    </style>
+  </defs>
+  <rect width="1000" height="620" fill="#f8fafc"/>
+  <text x="500" y="40" text-anchor="middle" class="title">The frontier order must match the path objective</text>
+  <text x="500" y="68" text-anchor="middle" class="subtitle">Same graph, different cost contract, different valid answer</text>
+
+  <rect x="35" y="100" width="420" height="465" rx="18" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="245" y="135" text-anchor="middle" class="head">BFS: FIFO frontier</text>
+  <text x="245" y="160" text-anchor="middle" class="small">Objective: fewest edges</text>
+
+  <circle cx="100" cy="260" r="28" class="node"/><text x="100" y="266" text-anchor="middle" class="head">s</text>
+  <circle cx="245" cy="205" r="28" class="node"/><text x="245" y="211" text-anchor="middle" class="head">a</text>
+  <circle cx="245" cy="335" r="28" class="node"/><text x="245" y="341" text-anchor="middle" class="head">b</text>
+  <circle cx="390" cy="260" r="28" class="node"/><text x="390" y="266" text-anchor="middle" class="head">g</text>
+  <path d="M128 250 L216 216" class="edge"/><text x="172" y="220" class="small">4</text>
+  <path d="M128 270 L216 324" class="edge"/><text x="169" y="310" class="small">1</text>
+  <path d="M272 219 L363 250" class="edge"/><text x="320" y="220" class="small">1</text>
+  <path d="M272 324 L363 270" class="edge"/><text x="320" y="316" class="small">8</text>
+  <path d="M245 307 L245 234" class="edge"/><text x="257" y="274" class="small">2</text>
+
+  <rect x="86" y="400" width="318" height="48" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+  <line x1="170" y1="400" x2="170" y2="448" stroke="#1d4ed8" stroke-width="1.5"/>
+  <line x1="254" y1="400" x2="254" y2="448" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="128" y="430" text-anchor="middle" class="body">a</text>
+  <text x="212" y="430" text-anchor="middle" class="body">b</text>
+  <text x="329" y="430" text-anchor="middle" class="small">first in, first out</text>
+  <text x="245" y="486" text-anchor="middle" class="head">s → a → g</text>
+  <text x="245" y="512" text-anchor="middle" class="body">2 edges, total weight 5</text>
+
+  <rect x="545" y="100" width="420" height="465" rx="18" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+  <text x="755" y="135" text-anchor="middle" class="head">Dijkstra: minimum-priority frontier</text>
+  <text x="755" y="160" text-anchor="middle" class="small">Objective: minimum nonnegative total weight</text>
+
+  <circle cx="610" cy="260" r="28" class="node"/><text x="610" y="266" text-anchor="middle" class="head">s</text>
+  <circle cx="755" cy="205" r="28" class="node"/><text x="755" y="211" text-anchor="middle" class="head">a</text>
+  <circle cx="755" cy="335" r="28" class="node"/><text x="755" y="341" text-anchor="middle" class="head">b</text>
+  <circle cx="900" cy="260" r="28" class="node"/><text x="900" y="266" text-anchor="middle" class="head">g</text>
+  <path d="M638 250 L726 216" class="edge"/><text x="682" y="220" class="small">4</text>
+  <path d="M638 270 L726 324" class="edge"/><text x="679" y="310" class="small">1</text>
+  <path d="M782 219 L873 250" class="edge"/><text x="830" y="220" class="small">1</text>
+  <path d="M782 324 L873 270" class="edge"/><text x="830" y="316" class="small">8</text>
+  <path d="M755 307 L755 234" class="edge"/><text x="767" y="274" class="small">2</text>
+
+  <rect x="596" y="400" width="318" height="48" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2"/>
+  <line x1="700" y1="400" x2="700" y2="448" stroke="#15803d" stroke-width="1.5"/>
+  <line x1="802" y1="400" x2="802" y2="448" stroke="#15803d" stroke-width="1.5"/>
+  <text x="648" y="430" text-anchor="middle" class="body">b: 1</text>
+  <text x="751" y="430" text-anchor="middle" class="body">a: 3</text>
+  <text x="858" y="430" text-anchor="middle" class="body">g: 4</text>
+  <text x="755" y="486" text-anchor="middle" class="head">s → b → a → g</text>
+  <text x="755" y="512" text-anchor="middle" class="body">3 edges, total weight 4</text>
+
+  <text x="500" y="598" text-anchor="middle" class="head">A negative edge invalidates Dijkstra's final-distance proof.</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Reduction direction and complexity class map</title>
+  <desc id="desc">The left side shows A reducing to B, with solvers moving from B back to A and hardness moving from A forward to B. The right side shows P inside NP, NP-complete problems inside NP, and NP-hard problems extending beyond NP.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker>
+    <marker id="bluearrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 34px system-ui, sans-serif; fill: #0f172a; }
+      .sub { font: 18px system-ui, sans-serif; fill: #334155; }
+      .head { font: 700 23px system-ui, sans-serif; fill: #0f172a; }
+      .body { font: 18px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 16px system-ui, sans-serif; fill: #475569; }
+      .box { fill: #ffffff; stroke: #64748b; stroke-width: 3; }
+      .line { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrow); }
+      .blue { fill: none; stroke: #2563eb; stroke-width: 3; marker-end: url(#bluearrow); }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="700" rx="24"/>
+  <text class="title" x="60" y="62">One reduction arrow, two transfer rules</text>
+  <text class="sub" x="60" y="94">To prove B hard, transform known-hard A instances into B instances.</text>
+
+  <text class="head" x="75" y="145">Reduction contract</text>
+  <rect class="box" x="70" y="180" width="185" height="95" rx="18"/>
+  <text class="head" x="148" y="221">A</text>
+  <text class="small" x="104" y="251">source instance x</text>
+  <rect class="box" x="390" y="180" width="185" height="95" rx="18"/>
+  <text class="head" x="468" y="221">B</text>
+  <text class="small" x="423" y="251">target f(x)</text>
+  <path class="blue" d="M 255 215 L 390 215"/>
+  <text class="body" x="300" y="197">f</text>
+  <text class="small" x="224" y="310">x ∈ A exactly when f(x) ∈ B</text>
+
+  <path class="line" d="M 480 330 C 390 385, 270 385, 165 330"/>
+  <text class="body" x="241" y="413">solver for B gives solver for A</text>
+  <path class="blue" d="M 165 440 C 270 490, 390 490, 480 440"/>
+  <text class="body" x="221" y="525">hardness of A transfers to B</text>
+
+  <line x1="625" y1="135" x2="625" y2="625" stroke="#cbd5e1" stroke-width="3"/>
+  <text class="head" x="670" y="145">Decision-language classes</text>
+
+  <ellipse cx="985" cy="382" rx="160" ry="220" fill="#fee2e2" fill-opacity="0.72" stroke="#dc2626" stroke-width="3"/>
+  <text class="head" x="1010" y="205">NP-hard</text>
+  <text class="small" x="1000" y="232">extends outside NP</text>
+
+  <ellipse cx="805" cy="382" rx="180" ry="190" fill="#dbeafe" fill-opacity="0.76" stroke="#2563eb" stroke-width="3"/>
+  <text class="head" x="665" y="260">NP</text>
+  <text class="small" x="665" y="287">short certificates</text>
+
+  <ellipse cx="755" cy="390" rx="78" ry="94" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text class="head" x="740" y="380">P</text>
+  <text class="small" x="704" y="411">fast decision</text>
+
+  <text class="head" x="865" y="378">NP-</text>
+  <text class="head" x="850" y="408">complete</text>
+  <text class="small" x="845" y="438">the overlap</text>
+
+  <text class="small" x="680" y="635">P versus NP is unresolved; the drawing does not assert a strict P subset.</text>
+  <text class="small" x="60" y="674">NP-complete = NP-hard and in NP. Optimization problems need separate interfaces.</text>
+</svg>

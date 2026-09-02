@@ -724,8 +724,9 @@ representation and complexity contracts. Data analysis needs provenance and
 plots that preserve units. Machine learning needs shape-safe batch operations,
 stable arithmetic, testable randomness, and reproducible evaluation.
 
-The next roadmap module is not published locally. This module does not create
-or link a §0.14 path.
+Continue with [§0.14 Algorithms and Data Structures](../00.14-algorithms-data-structures/README.md)
+to turn computational contracts into representation, correctness, and cost
+decisions.
 
 ## References
 
@@ -776,4 +777,4 @@ number generation," NumPy 2.5 manual.
 https://numpy.org/doc/stable/reference/random/generator.html and
 https://numpy.org/doc/stable/reference/random/parallel.html Accessed 2026-09-01.
 
-[Section home](../README.md) | Previous: [§0.12 Elementary Number Theory](../00.12-elementary-number-theory/README.md) | [Exercises](exercises/README.md) | [Worked solutions](solutions/README.md) | [Resources](resources/README.md) | [Code](code/README.md)
+[Section home](../README.md) | Previous: [§0.12 Elementary Number Theory](../00.12-elementary-number-theory/README.md) | Next: [§0.14 Algorithms and Data Structures](../00.14-algorithms-data-structures/README.md) | [Exercises](exercises/README.md) | [Worked solutions](solutions/README.md) | [Resources](resources/README.md) | [Code](code/README.md)
