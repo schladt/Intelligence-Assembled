@@ -515,7 +515,7 @@ matrix has
 
 $$
 A_{ij}=\begin{cases}
-1,&\{v_i,v_j\}\in E,\\
+1,&\{v_i,v_j\}\in E,\\\\
 0,&\text{otherwise}.
 \end{cases}
 $$
@@ -531,8 +531,8 @@ $\mathbf{B}\in\mathbb{R}^{m\times n}$ have one row per edge instance:
 
 $$
 B_{e,i}=\begin{cases}
--1,&v_i\text{ is the chosen tail of }e,\\
-+1,&v_i\text{ is the chosen head of }e,\\
+-1,&v_i\text{ is the chosen tail of }e,\\\\
++1,&v_i\text{ is the chosen head of }e,\\\\
 0,&\text{otherwise}.
 \end{cases}
 $$

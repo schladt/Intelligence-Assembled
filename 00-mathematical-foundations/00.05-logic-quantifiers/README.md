@@ -796,8 +796,8 @@ Eliminate implication and apply commutativity:
 $$
 \begin{aligned}
 P\implies Q
-&\equiv \neg P\lor Q\\
-&\equiv Q\lor\neg P\\
+&\equiv \neg P\lor Q\\\\
+&\equiv Q\lor\neg P\\\\
 &\equiv \neg Q\implies\neg P.
 \end{aligned}
 $$
@@ -882,13 +882,13 @@ says every request has a handler that can serve it. Negate mechanically:
 
 $$
 \begin{aligned}
-&\neg\forall r\,(Request(r)\implies\exists h\,(Handler(h)\land CanServe(h,r)))\\
+&\neg\forall r\,(Request(r)\implies\exists h\,(Handler(h)\land CanServe(h,r)))\\\\
 &\equiv
-\exists r\,\neg(Request(r)\implies\exists h\,(Handler(h)\land CanServe(h,r)))\\
+\exists r\,\neg(Request(r)\implies\exists h\,(Handler(h)\land CanServe(h,r)))\\\\
 &\equiv
-\exists r\,(Request(r)\land\neg\exists h\,(Handler(h)\land CanServe(h,r)))\\
+\exists r\,(Request(r)\land\neg\exists h\,(Handler(h)\land CanServe(h,r)))\\\\
 &\equiv
-\exists r\,(Request(r)\land\forall h\,\neg(Handler(h)\land CanServe(h,r)))\\
+\exists r\,(Request(r)\land\forall h\,\neg(Handler(h)\land CanServe(h,r)))\\\\
 &\equiv
 \exists r\,(Request(r)\land\forall h\,(\neg Handler(h)\lor\neg CanServe(h,r))).
 \end{aligned}

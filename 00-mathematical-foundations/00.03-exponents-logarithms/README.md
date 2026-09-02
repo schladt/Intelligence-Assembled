@@ -156,8 +156,7 @@ flowchart LR
 For positive $p_i$,
 
 $$
-\log\left(\prod_{i=1}^{n}p_i\right)
-=
+\log\left(\prod_{i=1}^{n}p_i\right) =
 \sum_{i=1}^{n}\log p_i.
 $$
 
@@ -502,8 +501,7 @@ $$
 Because $\log$ is strictly increasing,
 
 $$
-\arg\max_{\boldsymbol{\theta}}\mathcal{L}(\boldsymbol{\theta};\mathcal{D})
-=
+\arg\max_{\boldsymbol{\theta}}\mathcal{L}(\boldsymbol{\theta};\mathcal{D}) =
 \arg\max_{\boldsymbol{\theta}}\ell(\boldsymbol{\theta};\mathcal{D}),
 $$
 
@@ -526,8 +524,7 @@ Softmax converts them to positive normalized values:
 $$
 p_c
 \coloneqq
-\mathrm{softmax}(\boldsymbol{z})_c
-=
+\mathrm{softmax}(\boldsymbol{z})_c =
 \frac{e^{z_c}}{\sum_{j=1}^{C}e^{z_j}}.
 $$
 
@@ -586,8 +583,8 @@ Direct evaluation can overflow if some $x_i$ is large. Factor out $e^m$:
 $$
 \begin{aligned}
 \mathrm{LSE}(\boldsymbol{x})
-&=\log\left(\sum_i e^{x_i}\right)\\
-&=\log\left(e^m\sum_i e^{x_i-m}\right)\\
+&=\log\left(\sum_i e^{x_i}\right)\\\\
+&=\log\left(e^m\sum_i e^{x_i-m}\right)\\\\
 &=m+\log\left(\sum_i e^{x_i-m}\right).
 \end{aligned}
 $$
@@ -608,8 +605,8 @@ Take the log of softmax:
 $$
 \begin{aligned}
 \log p_c
-&=\log\left(\frac{e^{z_c}}{\sum_j e^{z_j}}\right)\\
-&=z_c-\log\left(\sum_j e^{z_j}\right)\\
+&=\log\left(\frac{e^{z_c}}{\sum_j e^{z_j}}\right)\\\\
+&=z_c-\log\left(\sum_j e^{z_j}\right)\\\\
 &=z_c-\mathrm{LSE}(\boldsymbol{z}).
 \end{aligned}
 $$

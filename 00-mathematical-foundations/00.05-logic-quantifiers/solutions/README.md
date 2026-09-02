@@ -169,7 +169,7 @@ we obtain
 $$
 \begin{aligned}
 \varphi_1
-&\equiv\neg(\neg P\lor Q\lor R)\\
+&\equiv\neg(\neg P\lor Q\lor R)\\\\
 &\equiv P\land\neg Q\land\neg R.
 \end{aligned}
 $$
@@ -403,7 +403,7 @@ First:
 $$
 \begin{aligned}
 \neg\forall x(A(x)\implies B(x))
-&\equiv\exists x\neg(A(x)\implies B(x))\\
+&\equiv\exists x\neg(A(x)\implies B(x))\\\\
 &\equiv\exists x(A(x)\land\neg B(x)).
 \end{aligned}
 $$
@@ -415,8 +415,8 @@ Second:
 $$
 \begin{aligned}
 \neg\exists x(A(x)\land\forall yR(x,y))
-&\equiv\forall x\neg(A(x)\land\forall yR(x,y))\\
-&\equiv\forall x(\neg A(x)\lor\neg\forall yR(x,y))\\
+&\equiv\forall x\neg(A(x)\land\forall yR(x,y))\\\\
+&\equiv\forall x(\neg A(x)\lor\neg\forall yR(x,y))\\\\
 &\equiv\forall x(\neg A(x)\lor\exists y\neg R(x,y)).
 \end{aligned}
 $$
@@ -428,7 +428,7 @@ Third:
 $$
 \begin{aligned}
 \neg\forall x\exists y(P(x,y)\implies Q(y))
-&\equiv\exists x\forall y\neg(P(x,y)\implies Q(y))\\
+&\equiv\exists x\forall y\neg(P(x,y)\implies Q(y))\\\\
 &\equiv\exists x\forall y(P(x,y)\land\neg Q(y)).
 \end{aligned}
 $$
@@ -438,7 +438,7 @@ Fourth already begins with negation:
 $$
 \begin{aligned}
 \neg\exists x\forall y(P(x)\lor\neg R(x,y))
-&\equiv\forall x\exists y\neg(P(x)\lor\neg R(x,y))\\
+&\equiv\forall x\exists y\neg(P(x)\lor\neg R(x,y))\\\\
 &\equiv\forall x\exists y(\neg P(x)\land R(x,y)).
 \end{aligned}
 $$
@@ -448,7 +448,7 @@ Fifth:
 $$
 \begin{aligned}
 \neg((\exists xP(x))\implies(\forall yQ(y)))
-&\equiv(\exists xP(x))\land\neg\forall yQ(y)\\
+&\equiv(\exists xP(x))\land\neg\forall yQ(y)\\\\
 &\equiv(\exists xP(x))\land(\exists y\neg Q(y)).
 \end{aligned}
 $$

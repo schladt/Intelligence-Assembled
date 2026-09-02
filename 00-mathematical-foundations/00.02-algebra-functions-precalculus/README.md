@@ -208,10 +208,8 @@ Expansion removes products of sums, as in $(2x-3)(x+4)=2x^2+5x-12$. Factoring re
 Simplification should reduce structural complexity without discarding domain information. For example,
 
 $$
-\frac{2x^2-8}{x^2+x-6}
-=
-\frac{2(x-2)(x+2)}{(x+3)(x-2)}
-=
+\frac{2x^2-8}{x^2+x-6} =
+\frac{2(x-2)(x+2)}{(x+3)(x-2)} =
 \frac{2(x+2)}{x+3},
 $$
 
@@ -406,8 +404,7 @@ The conjugate is $\overline{z}=a-bi$, the modulus is $|z|=\sqrt{a^2+b^2}$, and $
 For $z\ne0$, division uses the conjugate:
 
 $$
-\frac{a+bi}{c+di}
-=
+\frac{a+bi}{c+di} =
 \frac{(a+bi)(c-di)}{c^2+d^2}.
 $$
 
@@ -428,10 +425,9 @@ Magnitudes multiply and angles add.
 A real planar rotation by $\theta$ is represented by
 
 $$
-\mathbf{R}_{\theta}
-=
+\mathbf{R}_{\theta} =
 \begin{bmatrix}
-\cos\theta&-\sin\theta\\
+\cos\theta&-\sin\theta\\\\
 \sin\theta&\cos\theta
 \end{bmatrix}.
 $$
@@ -457,8 +453,7 @@ Roots of unity later organize the discrete Fourier transform. That is a precise 
 Start with $ax^2+bx+c=0$, where $a\ne0$. Divide by $a$, move the constant, and add the square of half the linear coefficient:
 
 $$
-x^2+\frac{b}{a}x+\frac{b^2}{4a^2}
-=
+x^2+\frac{b}{a}x+\frac{b^2}{4a^2} =
 \frac{b^2-4ac}{4a^2}.
 $$
 
@@ -644,7 +639,7 @@ For $z_1=2e^{i\pi/6}$ and $z_2=3e^{i\pi/3}$, $z_1z_2=6e^{i\pi/2}=6i$. The modulu
 
 ### Example 13: Rotation-matrix eigenvalues
 
-For a quarter-turn, $\mathbf{R}_{\pi/2}=\begin{bmatrix}0&-1\\1&0\end{bmatrix}$. Its characteristic equation is $\lambda^2+1=0$, so $\lambda=\pm i$. No nonzero real vector stays on its own line, but complex eigenvectors make the rotation diagonalizable over $\mathbb{C}$.
+For a quarter-turn, $\mathbf{R}_{\pi/2}=\begin{bmatrix}0&-1\\\\1&0\end{bmatrix}$. Its characteristic equation is $\lambda^2+1=0$, so $\lambda=\pm i$. No nonzero real vector stays on its own line, but complex eigenvectors make the rotation diagonalizable over $\mathbb{C}$.
 
 ### Example 14: Roots of unity
 

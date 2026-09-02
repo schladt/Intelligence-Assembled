@@ -193,8 +193,7 @@ when $k<0$ or $k>n$ for nonnegative $n$. This convention makes identities valid 
 If finite sets $A_1,\ldots,A_m$ are pairwise disjoint, then
 
 $$
-\left|\bigcup_{i=1}^{m}A_i\right|
-=
+\left|\bigcup_{i=1}^{m}A_i\right| =
 \sum_{i=1}^{m}|A_i|.
 $$
 
@@ -205,8 +204,7 @@ Pairwise disjointness is load-bearing. If pieces overlap, addition counts shared
 For finite sets $A_1,\ldots,A_m$,
 
 $$
-|A_1\times\cdots\times A_m|
-=
+|A_1\times\cdots\times A_m| =
 \prod_{i=1}^{m}|A_i|.
 $$
 
@@ -299,8 +297,7 @@ Equivalently, choose positions successively:
 $$
 \binom{n}{k_1}
 \binom{n-k_1}{k_2}
-\cdots
-=
+\cdots =
 \binom{n}{k_1,\ldots,k_m}.
 $$
 
@@ -316,8 +313,7 @@ $$
 is
 
 $$
-\binom{r+m-1}{m-1}
-=
+\binom{r+m-1}{m-1} =
 \binom{r+m-1}{r}.
 $$
 
@@ -346,8 +342,7 @@ when $r\ge m$, and zero otherwise.
 For nonnegative integer $n$,
 
 $$
-(a+b)^n
-=
+(a+b)^n =
 \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.
 $$
 
@@ -372,8 +367,7 @@ by setting $a=1,b=-1$.
 Fix one distinguished element of an $n$-set. Every $k$-subset either contains it or does not, so
 
 $$
-\binom{n}{k}
-=
+\binom{n}{k} =
 \binom{n-1}{k-1}
 +
 \binom{n-1}{k}.
@@ -401,8 +395,7 @@ Let disjoint sets $A$ and $B$ have sizes $m$ and $n$. Count the $r$-subsets of $
 
 $$
 \sum_{k=0}^{r}
-\binom{m}{k}\binom{n}{r-k}
-=
+\binom{m}{k}\binom{n}{r-k} =
 \binom{m+n}{r}.
 $$
 
@@ -419,8 +412,7 @@ One identity, two proofs: partitioning subsets and extracting coefficients.
 For nonnegative integer $n$,
 
 $$
-(x_1+\cdots+x_m)^n
-=
+(x_1+\cdots+x_m)^n =
 \sum_{k_1+\cdots+k_m=n}
 \binom{n}{k_1,\ldots,k_m}
 \prod_{i=1}^{m}x_i^{k_i},
@@ -443,8 +435,7 @@ Both sides count length-$n$ words over an $m$-symbol alphabet.
 For finite sets $A_1,\ldots,A_m$,
 
 $$
-\left|\bigcup_{i=1}^{m}A_i\right|
-=
+\left|\bigcup_{i=1}^{m}A_i\right| =
 \sum_{\varnothing\ne J\subseteq[m]}
 (-1)^{|J|+1}
 \left|\bigcap_{j\in J}A_j\right|.
@@ -455,8 +446,8 @@ For three sets this is
 $$
 \begin{aligned}
 |A\cup B\cup C|
-={}&|A|+|B|+|C|\\
-&-|A\cap B|-|A\cap C|-|B\cap C|\\
+={}&|A|+|B|+|C|\\\\
+&-|A\cap B|-|A\cap C|-|B\cap C|\\\\
 &+|A\cap B\cap C|.
 \end{aligned}
 $$
@@ -515,8 +506,7 @@ asks for the coefficient of $x^r$.
 Suppose one choice contributes sizes encoded by $A(x)$ and an independent choice contributes sizes encoded by $B(x)$. Then
 
 $$
-[x^r]A(x)B(x)
-=
+[x^r]A(x)B(x) =
 \sum_{i=0}^{r}a_i b_{r-i}.
 $$
 
@@ -611,10 +601,8 @@ $$
 The closed form is
 
 $$
-C_n
-=
-\frac{1}{n+1}\binom{2n}{n}
-=
+C_n =
+\frac{1}{n+1}\binom{2n}{n} =
 \binom{2n}{n}-\binom{2n}{n+1}.
 $$
 
@@ -633,10 +621,8 @@ Catalan numbers count many families because those families share the same unique
 Let $f:A\to B$ be onto with every fiber of size $d$. Distinct fibers are disjoint, and their union is $A$. By the sum rule,
 
 $$
-|A|
-=
-\sum_{b\in B}|f^{-1}(\{b\})|
-=
+|A| =
+\sum_{b\in B}|f^{-1}(\{b\})| =
 \sum_{b\in B}d
 =d|B|.
 $$
@@ -695,16 +681,14 @@ Multiply finite polynomials:
 
 $$
 \left(\sum_i a_ix^i\right)
-\left(\sum_j b_jx^j\right)
-=
+\left(\sum_j b_jx^j\right) =
 \sum_i\sum_j a_ib_jx^{i+j}.
 $$
 
 Collect terms with $i+j=r$:
 
 $$
-[x^r]A(x)B(x)
-=
+[x^r]A(x)B(x) =
 \sum_{i=0}^{r}a_i b_{r-i}.
 $$
 
@@ -904,8 +888,7 @@ $$
 For $k=0$,
 
 $$
-\binom{n}{0}
-=
+\binom{n}{0} =
 \binom{n-1}{-1}+\binom{n-1}{0}
 =0+1=1.
 $$

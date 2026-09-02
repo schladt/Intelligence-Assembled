@@ -9,8 +9,7 @@
 AI is usually taught as though its notation, algebra, proofs, and computational habits arrived fully formed. They did not. A line such as
 
 $$
-\widehat{\boldsymbol{\theta}}
-=
+\widehat{\boldsymbol{\theta}} =
 \arg\min_{\boldsymbol{\theta}\in\mathbb{R}^{d}}
 \frac{1}{n}\sum_{i=1}^{n}
 L\left(f_{\boldsymbol{\theta}}(\boldsymbol{x}_i),y_i\right)

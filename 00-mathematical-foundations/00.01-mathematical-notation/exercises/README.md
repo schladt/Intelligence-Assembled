@@ -245,8 +245,8 @@ Let $A_{ij}$ have shape $2\times3$, $B_{jk}$ have shape $3\times2$, and $x_j$ ha
 1. Expand $y_i=A_{ij}x_j$ with explicit sigma notation and state the shape of $\boldsymbol{y}$.
 2. Expand $C_{ik}=A_{ij}B_{jk}$ and state the shape of $\mathbf{C}$.
 3. Let
-   $\mathbf{A}=\begin{bmatrix}1&0&2\\-1&3&1\end{bmatrix}$ and
-   $\boldsymbol{x}=\begin{bmatrix}2\\1\\-1\end{bmatrix}$.
+   $\mathbf{A}=\begin{bmatrix}1&0&2\\\\-1&3&1\end{bmatrix}$ and
+   $\boldsymbol{x}=\begin{bmatrix}2\\\\1\\\\-1\end{bmatrix}$.
    Compute $\boldsymbol{y}$.
 4. Diagnose each expression: $z=A_{ij}x_j$, $D_{ij}=A_{ik}B_{kj}+x_i$, and $q_i=A_{ij}x_jx_j$.
 

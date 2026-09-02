@@ -143,7 +143,7 @@ Brackets include an endpoint; parentheses exclude it. Infinity is never included
 Absolute value is distance from zero:
 
 $$
-|x|=\begin{cases}x,&x\ge0,\\-x,&x<0.\end{cases}
+|x|=\begin{cases}x,&x\ge0,\\\\-x,&x<0.\end{cases}
 $$
 
 Thus $|x-y|$ is the distance between $x$ and $y$. For a finite set, $|A|$ usually means cardinality instead.
@@ -483,7 +483,7 @@ The set preimage is $f^{-1}([1,4])=[-2,-1]\cup[1,2]$. It exists although $x^2$ h
 Predictions $(2,0,1,1)$ and labels $(2,1,1,1)$ give brackets $(1,0,1,1)$, so $\frac{1}{4}\sum_{i=1}^{4}[\widehat{y}_i=y_i]=\frac{3}{4}$.
 
 ### Example 10: Matrix multiplication via Einstein notation
-For $\mathbf{A}=\begin{bmatrix}1&2\\3&4\end{bmatrix}$ and $\mathbf{B}=\begin{bmatrix}5&6\\7&8\end{bmatrix}$, $C_{ik}=A_{ij}B_{jk}$ gives $C_{11}=1\cdot5+2\cdot7=19$ and $\mathbf{C}=\begin{bmatrix}19&22\\43&50\end{bmatrix}$. The invalid $C_{ik}=A_{ij}B_{ij}$ has inconsistent free indices.
+For $\mathbf{A}=\begin{bmatrix}1&2\\\\3&4\end{bmatrix}$ and $\mathbf{B}=\begin{bmatrix}5&6\\\\7&8\end{bmatrix}$, $C_{ik}=A_{ij}B_{jk}$ gives $C_{11}=1\cdot5+2\cdot7=19$ and $\mathbf{C}=\begin{bmatrix}19&22\\\\43&50\end{bmatrix}$. The invalid $C_{ik}=A_{ij}B_{ij}$ has inconsistent free indices.
 
 ### Example 11: Kronecker delta selection
 The identity $\sum_{i=1}^{3}\delta_{ik}x_i=x_k$ holds because only $i=k$ survives, as with a one-hot mask.

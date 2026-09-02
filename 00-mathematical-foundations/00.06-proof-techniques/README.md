@@ -547,10 +547,8 @@ $$
 can be counted by records or by shards:
 
 $$
-|I|
-=
-\sum_{r\in R}|\{s\in S:(r,s)\in H\}|
-=
+|I| =
+\sum_{r\in R}|\{s\in S:(r,s)\in H\}| =
 \sum_{s\in S}|\{r\in R:(r,s)\in H\}|.
 $$
 
@@ -1188,8 +1186,7 @@ $$
 Then $a,b\in\mathbb{Z}$, $a\ne b$, and
 
 $$
-\frac{a+b}{2}
-=
+\frac{a+b}{2} =
 \frac{(n-1)+(n+1)}{2}
 =n.
 $$
@@ -1242,8 +1239,7 @@ Checking $4,6,8$ would not help because they are outside the restricted class of
 **Claim.** For sets $A,B,C$,
 
 $$
-A\setminus(B\cup C)
-=
+A\setminus(B\cup C) =
 (A\setminus B)\cap(A\setminus C).
 $$
 
@@ -1252,8 +1248,8 @@ Let $x$ be arbitrary. Then
 $$
 \begin{aligned}
 x\in A\setminus(B\cup C)
-&\iff x\in A\text{ and }x\notin B\cup C\\
-&\iff x\in A\text{ and }x\notin B\text{ and }x\notin C\\
+&\iff x\in A\text{ and }x\notin B\cup C\\\\
+&\iff x\in A\text{ and }x\notin B\text{ and }x\notin C\\\\
 &\iff x\in(A\setminus B)\cap(A\setminus C).
 \end{aligned}
 $$

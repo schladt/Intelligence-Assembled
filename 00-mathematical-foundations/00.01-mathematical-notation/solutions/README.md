@@ -117,8 +117,7 @@ A split partitions one index range into two disjoint adjacent ranges.
 The requested split is
 
 $$
-\sum_{k=0}^{T-1}(a_{k+1}-a_k)
-=
+\sum_{k=0}^{T-1}(a_{k+1}-a_k) =
 \sum_{k=0}^{r-1}(a_{k+1}-a_k)
 +
 \sum_{k=r}^{T-1}(a_{k+1}-a_k).
@@ -182,8 +181,7 @@ For fixed $j$, the inequality $j<i$ makes the smallest $i$ equal to $j+1$, while
 Thus
 
 $$
-S_n
-=
+S_n =
 \sum_{j=0}^{n-1}\sum_{i=j+1}^{n}a_{ij}.
 $$
 
@@ -398,7 +396,7 @@ Repeated indices are contracted; free indices remain as output coordinates.
    $$
    Hence
    $$
-   \boldsymbol{y}=\begin{bmatrix}0\\0\end{bmatrix}.
+   \boldsymbol{y}=\begin{bmatrix}0\\\\0\end{bmatrix}.
    $$
 
 4. Diagnoses:

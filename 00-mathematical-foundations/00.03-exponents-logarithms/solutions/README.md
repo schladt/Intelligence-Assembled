@@ -25,26 +25,19 @@ For the first claim, $(-16)^3$ is real and negative, but its fourth root is not 
 For the exact evaluations,
 
 $$
-27^{-2/3}
-=
-\frac{1}{27^{2/3}}
-=
-\frac{1}{(\sqrt[3]{27})^2}
-=
+27^{-2/3} =
+\frac{1}{27^{2/3}} =
+\frac{1}{(\sqrt[3]{27})^2} =
 \frac{1}{9}.
 $$
 
 The odd root permits the negative-base case:
 
 $$
-(-27)^{-2/3}
-=
-\frac{1}{(-27)^{2/3}}
-=
-\frac{1}{(\sqrt[3]{-27})^2}
-=
-\frac{1}{(-3)^2}
-=
+(-27)^{-2/3} =
+\frac{1}{(-27)^{2/3}} =
+\frac{1}{(\sqrt[3]{-27})^2} =
+\frac{1}{(-3)^2} =
 \frac{1}{9}.
 $$
 
@@ -176,8 +169,7 @@ For $P=2500$, $r=0.048$, and $t=12$:
 To expose the defining limit, set $m=n/r$ when considering positive $r$ along a compatible sequence. Then $r/n=1/m$ and $nt=mrt$, so
 
 $$
-\left(1+\frac{r}{n}\right)^{nt}
-=
+\left(1+\frac{r}{n}\right)^{nt} =
 \left[\left(1+\frac{1}{m}\right)^m\right]^{rt}
 \longrightarrow e^{rt}.
 $$
@@ -529,8 +521,7 @@ $$
 For shift invariance, replace every logit by $z_c+k$:
 
 $$
-\frac{e^{z_c+k}}{\sum_j e^{z_j+k}}
-=
+\frac{e^{z_c+k}}{\sum_j e^{z_j+k}} =
 \frac{e^ke^{z_c}}{e^k\sum_j e^{z_j}}
 =p_c.
 $$

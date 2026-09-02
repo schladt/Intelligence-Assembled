@@ -346,7 +346,7 @@ For a convergent series with no root limit, define
 $$
 a_n=
 \begin{cases}
-2^{-n},&n\text{ even},\\
+2^{-n},&n\text{ even},\\\\
 3^{-n},&n\text{ odd}.
 \end{cases}
 $$

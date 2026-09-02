@@ -946,7 +946,7 @@ One bijection $z:\mathbb{N}\to\mathbb{Z}$ is
 $$
 z(n)=
 \begin{cases}
- n/2,&n\text{ even},\\
+ n/2,&n\text{ even},\\\\
  -(n+1)/2,&n\text{ odd}.
 \end{cases}
 $$
@@ -1020,7 +1020,7 @@ Every subset $S\subseteq\mathbb{N}$ has an indicator sequence
 $$
 \chi_S(n)=
 \begin{cases}
-1,&n\in S,\\
+1,&n\in S,\\\\
 0,&n\notin S.
 \end{cases}
 $$
@@ -1129,10 +1129,10 @@ Take an arbitrary $x$ in the ambient universe. Then
 $$
 \begin{aligned}
 x\in A\setminus(B\cup C)
-&\iff x\in A\text{ and }x\notin B\cup C\\
-&\iff x\in A\text{ and }x\notin B\text{ and }x\notin C\\
+&\iff x\in A\text{ and }x\notin B\cup C\\\\
+&\iff x\in A\text{ and }x\notin B\text{ and }x\notin C\\\\
 &\iff (x\in A\text{ and }x\notin B)
-      \text{ and }(x\in A\text{ and }x\notin C)\\
+      \text{ and }(x\in A\text{ and }x\notin C)\\\\
 &\iff x\in(A\setminus B)\cap(A\setminus C).
 \end{aligned}
 $$
@@ -1182,8 +1182,8 @@ Preimages are exact because one input $x$ is tested against a codomain condition
 $$
 \begin{aligned}
 x\in f^{-1}(T_1\cap T_2)
-&\iff f(x)\in T_1\cap T_2\\
-&\iff f(x)\in T_1\text{ and }f(x)\in T_2\\
+&\iff f(x)\in T_1\cap T_2\\\\
+&\iff f(x)\in T_1\text{ and }f(x)\in T_2\\\\
 &\iff x\in f^{-1}(T_1)\cap f^{-1}(T_2).
 \end{aligned}
 $$

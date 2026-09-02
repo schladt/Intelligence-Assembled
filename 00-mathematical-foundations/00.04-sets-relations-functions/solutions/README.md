@@ -68,8 +68,8 @@ For De Morgan's law,
 $$
 \begin{aligned}
 x\in(A\cap B)^c
-&\iff x\notin A\cap B\\
-&\iff x\notin A\text{ or }x\notin B\\
+&\iff x\notin A\cap B\\\\
+&\iff x\notin A\text{ or }x\notin B\\\\
 &\iff x\in A^c\cup B^c.
 \end{aligned}
 $$
@@ -79,10 +79,10 @@ For difference over intersection,
 $$
 \begin{aligned}
 x\in A\setminus(B\cap C)
-&\iff x\in A\text{ and not }(x\in B\text{ and }x\in C)\\
-&\iff x\in A\text{ and }(x\notin B\text{ or }x\notin C)\\
+&\iff x\in A\text{ and not }(x\in B\text{ and }x\in C)\\\\
+&\iff x\in A\text{ and }(x\notin B\text{ or }x\notin C)\\\\
 &\iff (x\in A\text{ and }x\notin B)
-       \text{ or }(x\in A\text{ and }x\notin C)\\
+       \text{ or }(x\in A\text{ and }x\notin C)\\\\
 &\iff x\in(A\setminus B)\cup(A\setminus C).
 \end{aligned}
 $$
@@ -93,9 +93,9 @@ $$
 \begin{aligned}
 x\in A\mathbin{\triangle}B
 &\iff (x\in A\text{ and }x\notin B)
-       \text{ or }(x\in B\text{ and }x\notin A)\\
+       \text{ or }(x\in B\text{ and }x\notin A)\\\\
 &\iff (x\in A\text{ or }x\in B)
-       \text{ and not }(x\in A\text{ and }x\in B)\\
+       \text{ and not }(x\in A\text{ and }x\in B)\\\\
 &\iff x\in(A\cup B)\setminus(A\cap B).
 \end{aligned}
 $$
@@ -105,9 +105,9 @@ For the indexed law,
 $$
 \begin{aligned}
 x\in\left(\bigcup_{i\in I}A_i\right)^c
-&\iff x\notin\bigcup_{i\in I}A_i\\
-&\iff \text{there is no }i\in I\text{ with }x\in A_i\\
-&\iff \text{for every }i\in I,\ x\notin A_i\\
+&\iff x\notin\bigcup_{i\in I}A_i\\\\
+&\iff \text{there is no }i\in I\text{ with }x\in A_i\\\\
+&\iff \text{for every }i\in I,\ x\notin A_i\\\\
 &\iff x\in\bigcap_{i\in I}A_i^c.
 \end{aligned}
 $$
@@ -164,8 +164,7 @@ $$
 Since $A\times\{0\}=\{(a,0),(b,0)\}$,
 
 $$
-\mathcal{P}(A\times\{0\})
-=
+\mathcal{P}(A\times\{0\}) =
 \{\varnothing,\{(a,0)\},\{(b,0)\},\{(a,0),(b,0)\}\}.
 $$
 
@@ -373,8 +372,8 @@ For union,
 $$
 \begin{aligned}
 x\in f^{-1}(T_1\cup T_2)
-&\iff f(x)\in T_1\cup T_2\\
-&\iff f(x)\in T_1\text{ or }f(x)\in T_2\\
+&\iff f(x)\in T_1\cup T_2\\\\
+&\iff f(x)\in T_1\text{ or }f(x)\in T_2\\\\
 &\iff x\in f^{-1}(T_1)\cup f^{-1}(T_2).
 \end{aligned}
 $$
@@ -386,8 +385,8 @@ For relative complement,
 $$
 \begin{aligned}
 x\in f^{-1}(B\setminus T_1)
-&\iff f(x)\in B\text{ and }f(x)\notin T_1\\
-&\iff x\in A\text{ and }x\notin f^{-1}(T_1)\\
+&\iff f(x)\in B\text{ and }f(x)\notin T_1\\\\
+&\iff x\in A\text{ and }x\notin f^{-1}(T_1)\\\\
 &\iff x\in A\setminus f^{-1}(T_1).
 \end{aligned}
 $$

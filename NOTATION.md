@@ -15,6 +15,8 @@ Modules should follow it unless a different convention is part of the lesson. Wh
 - Pair dense notation with a plain-English interpretation.
 - State local exceptions rather than silently changing conventions.
 - Use $\coloneqq$ or `:=` for definitions, $=$ for equality, $\approx$ for approximation, and $\gets$ for assignment.
+- In Markdown source, write TeX row separators as `\\\\` so GitHub passes the line-break command to MathJax.
+- Never put `=` alone on a line inside display math; keep it with the left- or right-hand expression so GFM does not parse it as a setext heading underline.
 
 ## Object Typography
 
@@ -123,8 +125,7 @@ $$
 Use the differential to emphasize linear approximation:
 
 $$
-f(\boldsymbol{x}+d\boldsymbol{x})
-=
+f(\boldsymbol{x}+d\boldsymbol{x}) =
 f(\boldsymbol{x})+Df(\boldsymbol{x})[d\boldsymbol{x}]
 +o(\lVert d\boldsymbol{x}\rVert).
 $$
@@ -176,8 +177,7 @@ $$
 For composition $g\circ f$:
 
 $$
-\mathbf{J}_{g\circ f}(\boldsymbol{x})
-=
+\mathbf{J}_{g\circ f}(\boldsymbol{x}) =
 \mathbf{J}_g(f(\boldsymbol{x}))\mathbf{J}_f(\boldsymbol{x}).
 $$
 
@@ -186,8 +186,7 @@ Check shapes for every nontrivial chain-rule product.
 For scalar functions of matrices, prefer differential and trace notation:
 
 $$
-df
-=
+df =
 \mathrm{tr}\left((\nabla_{\mathbf{X}}f)^{\top}d\mathbf{X}\right).
 $$
 
@@ -266,8 +265,7 @@ Use $\boldsymbol{x}^{*}$ for an optimizer and $f^{*}$ for the optimal value.
 An iterative update uses superscript parentheses:
 
 $$
-\boldsymbol{x}^{(k+1)}
-=
+\boldsymbol{x}^{(k+1)} =
 \boldsymbol{x}^{(k)}-\eta_k\nabla f(\boldsymbol{x}^{(k)}).
 $$
 
@@ -319,8 +317,7 @@ H(p,q)=-\sum_xp(x)\log q(x),
 $$
 
 $$
-D_{\mathrm{KL}}(p\Vert q)
-=
+D_{\mathrm{KL}}(p\Vert q) =
 \sum_xp(x)\log\frac{p(x)}{q(x)}.
 $$
 
@@ -331,16 +328,14 @@ KL divergence is ordered, asymmetric, and not a metric. Use $0\log0=0$ by the li
 For layer $\ell$:
 
 $$
-\boldsymbol{z}^{(\ell)}
-=
+\boldsymbol{z}^{(\ell)} =
 \mathbf{W}^{(\ell)}\boldsymbol{a}^{(\ell-1)}
 +
 \boldsymbol{b}^{(\ell)},
 $$
 
 $$
-\boldsymbol{a}^{(\ell)}
-=
+\boldsymbol{a}^{(\ell)} =
 \phi^{(\ell)}(\boldsymbol{z}^{(\ell)}).
 $$
 
@@ -369,8 +364,7 @@ For transformer notation, use:
 Scaled dot-product attention is
 
 $$
-\mathrm{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V})
-=
+\mathrm{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}) =
 \mathrm{softmax}\left(
 \frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{d_k}}+\mathbf{M}
 \right)\mathbf{V}.
@@ -381,8 +375,7 @@ Use $\mathbf{M}$ for an additive mask with $0$ at allowed positions and $-\infty
 The autoregressive factorization is
 
 $$
-p(t_{1:T})
-=
+p(t_{1:T}) =
 \prod_{i=1}^{T}p(t_i\mid t_{<i}).
 $$
 

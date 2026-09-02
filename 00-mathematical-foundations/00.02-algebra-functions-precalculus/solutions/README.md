@@ -109,8 +109,8 @@ Factor the leading coefficient from the first two terms:
 $$
 \begin{aligned}
 f(x)
-&=-3(x^2-4x)-7\\
-&=-3[(x-2)^2-4]-7\\
+&=-3(x^2-4x)-7\\\\
+&=-3[(x-2)^2-4]-7\\\\
 &=-3(x-2)^2+5.
 \end{aligned}
 $$
@@ -278,8 +278,7 @@ A repeated denominator factor requires one term for each power through its multi
 Write
 
 $$
-\frac{2x^2+3x+5}{(x-1)^2(x+2)}
-=
+\frac{2x^2+3x+5}{(x-1)^2(x+2)} =
 \frac{A}{x-1}+\frac{B}{(x-1)^2}+\frac{C}{x+2}.
 $$
 
@@ -304,8 +303,7 @@ $$
 The $x^2$ coefficient is $A+C=2$, so $A=11/9$. Therefore
 
 $$
-\frac{2x^2+3x+5}{(x-1)^2(x+2)}
-=
+\frac{2x^2+3x+5}{(x-1)^2(x+2)} =
 \frac{11}{9(x-1)}
 +\frac{10}{3(x-1)^2}
 +\frac{7}{9(x+2)}.
@@ -529,8 +527,8 @@ Now
 $$
 \begin{aligned}
 \frac{1+h(x/2)}{2}
-&=\frac12\left(1+\frac{e^{x/2}-e^{-x/2}}{e^{x/2}+e^{-x/2}}\right)\\
-&=\frac{e^{x/2}}{e^{x/2}+e^{-x/2}}\\
+&=\frac12\left(1+\frac{e^{x/2}-e^{-x/2}}{e^{x/2}+e^{-x/2}}\right)\\\\
+&=\frac{e^{x/2}}{e^{x/2}+e^{-x/2}}\\\\
 &=\frac{1}{1+e^{-x}}=s(x).
 \end{aligned}
 $$

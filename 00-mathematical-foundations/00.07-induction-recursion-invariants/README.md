@@ -300,8 +300,8 @@ Then
 $$
 \begin{aligned}
 \sum_{i=0}^{k+1}i
-&=\left(\sum_{i=0}^{k}i\right)+(k+1)\\
-&=\frac{k(k+1)}{2}+(k+1)\\
+&=\left(\sum_{i=0}^{k}i\right)+(k+1)\\\\
+&=\frac{k(k+1)}{2}+(k+1)\\\\
 &=\frac{(k+1)(k+2)}{2}.
 \end{aligned}
 $$
@@ -568,9 +568,9 @@ Then
 $$
 \begin{aligned}
 length(cons(x,xs)\mathbin{+\!+}ys)
-&=length(cons(x,xs\mathbin{+\!+}ys))\\
-&=1+length(xs\mathbin{+\!+}ys)\\
-&=1+length(xs)+length(ys)\\
+&=length(cons(x,xs\mathbin{+\!+}ys))\\\\
+&=1+length(xs\mathbin{+\!+}ys)\\\\
+&=1+length(xs)+length(ys)\\\\
 &=length(cons(x,xs))+length(ys).
 \end{aligned}
 $$
@@ -601,9 +601,9 @@ Then
 $$
 \begin{aligned}
 L(t)
-&=L(left)+L(right)\\
-&=N(left)+N(right)+2\\
-&=(1+N(left)+N(right))+1\\
+&=L(left)+L(right)\\\\
+&=N(left)+N(right)+2\\\\
+&=(1+N(left)+N(right))+1\\\\
 &=N(t)+1.
 \end{aligned}
 $$
@@ -796,10 +796,10 @@ unroll:
 $$
 \begin{aligned}
 a_n
-&=a_{n-1}+2n\\
-&=a_{n-2}+2(n-1)+2n\\
-&=\cdots\\
-&=2\sum_{j=1}^{n}j\\
+&=a_{n-1}+2n\\\\
+&=a_{n-2}+2(n-1)+2n\\\\
+&=\cdots\\\\
+&=2\sum_{j=1}^{n}j\\\\
 &=n(n+1).
 \end{aligned}
 $$
@@ -1366,7 +1366,7 @@ On powers of two, define
 $$
 f(n)=
 \begin{cases}
-n^2,&\log_2n\text{ even},\\
+n^2,&\log_2n\text{ even},\\\\
 n^3,&\log_2n\text{ odd}.
 \end{cases}
 $$

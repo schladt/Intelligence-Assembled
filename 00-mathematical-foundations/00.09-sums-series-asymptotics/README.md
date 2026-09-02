@@ -286,8 +286,8 @@ If $a_n=b_n-b_{n+1}$, then
 $$
 \begin{aligned}
 S_N
-&=\sum_{n=1}^{N}(b_n-b_{n+1})\\
-&=(b_1-b_2)+(b_2-b_3)+\cdots+(b_N-b_{N+1})\\
+&=\sum_{n=1}^{N}(b_n-b_{n+1})\\\\
+&=(b_1-b_2)+(b_2-b_3)+\cdots+(b_N-b_{N+1})\\\\
 &=b_1-b_{N+1}.
 \end{aligned}
 $$
@@ -445,7 +445,7 @@ The $p$-series classification follows:
 $$
 \sum_{n=1}^{\infty}\frac1{n^p}
 \begin{cases}
-\text{converges},&p>1,\\
+\text{converges},&p>1,\\\\
 \text{diverges},&p\le1.
 \end{cases}
 $$

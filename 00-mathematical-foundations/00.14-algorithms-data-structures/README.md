@@ -508,7 +508,7 @@ within capacity $w$. For weight $s_i$ and value $v_i$:
 $$
 D[i,w]=
 \begin{cases}
-D[i-1,w], & s_i>w,\\
+D[i-1,w], & s_i>w,\\\\
 \max\{D[i-1,w],\ D[i-1,w-s_i]+v_i\}, & s_i\le w.
 \end{cases}
 $$

@@ -62,8 +62,8 @@ At $n=0$, both sides equal $1$. Let $k\ge0$ and assume $P(k)$. Then
 $$
 \begin{aligned}
 \sum_{i=0}^{k+1}(2i+1)
-&=\sum_{i=0}^{k}(2i+1)+(2(k+1)+1)\\
-&=(k+1)^2+2k+3\\
+&=\sum_{i=0}^{k}(2i+1)+(2(k+1)+1)\\\\
+&=(k+1)^2+2k+3\\\\
 &=(k+2)^2.
 \end{aligned}
 $$
@@ -81,8 +81,8 @@ for $n\ge1$. At $n=1$, $1+3=4=(3^2-1)/2$. Assume $P(k)$ for $k\ge1$. Then
 $$
 \begin{aligned}
 \sum_{i=0}^{k+1}3^i
-&=\frac{3^{k+1}-1}{2}+3^{k+1}\\
-&=\frac{3^{k+1}-1+2\cdot3^{k+1}}{2}\\
+&=\frac{3^{k+1}-1}{2}+3^{k+1}\\\\
+&=\frac{3^{k+1}-1+2\cdot3^{k+1}}{2}\\\\
 &=\frac{3^{k+2}-1}{2}.
 \end{aligned}
 $$
@@ -162,9 +162,9 @@ Then
 $$
 \begin{aligned}
 a_{k+2}
-&=2a_{k+1}+a_k\\
-&<2\cdot3^{k+2}+3^{k+1}\\
-&=7\cdot3^{k+1}\\
+&=2a_{k+1}+a_k\\\\
+&<2\cdot3^{k+2}+3^{k+1}\\\\
+&=7\cdot3^{k+1}\\\\
 &<9\cdot3^{k+1}=3^{k+3}.
 \end{aligned}
 $$
@@ -349,9 +349,9 @@ Then
 $$
 \begin{aligned}
 reverse(cons(x,xs)\mathbin{+\!+}ys)
-&=reverse(cons(x,xs\mathbin{+\!+}ys))\\
-&=reverse(xs\mathbin{+\!+}ys)\mathbin{+\!+}[x]\\
-&=(reverse(ys)\mathbin{+\!+}reverse(xs))\mathbin{+\!+}[x]\\
+&=reverse(cons(x,xs\mathbin{+\!+}ys))\\\\
+&=reverse(xs\mathbin{+\!+}ys)\mathbin{+\!+}[x]\\\\
+&=(reverse(ys)\mathbin{+\!+}reverse(xs))\mathbin{+\!+}[x]\\\\
 &=reverse(ys)\mathbin{+\!+}reverse(cons(x,xs)).
 \end{aligned}
 $$

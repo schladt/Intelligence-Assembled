@@ -456,10 +456,10 @@ For the first identity, let $x$ be arbitrary. Then
 $$
 \begin{aligned}
 x\in A\setminus(B\cap C)
-&\iff x\in A\text{ and }x\notin B\cap C\\
-&\iff x\in A\text{ and }(x\notin B\text{ or }x\notin C)\\
+&\iff x\in A\text{ and }x\notin B\cap C\\\\
+&\iff x\in A\text{ and }(x\notin B\text{ or }x\notin C)\\\\
 &\iff (x\in A\text{ and }x\notin B)
-   \text{ or }(x\in A\text{ and }x\notin C)\\
+   \text{ or }(x\in A\text{ and }x\notin C)\\\\
 &\iff x\in(A\setminus B)\cup(A\setminus C).
 \end{aligned}
 $$

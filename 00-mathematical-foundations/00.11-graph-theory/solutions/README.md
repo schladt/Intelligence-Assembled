@@ -492,20 +492,20 @@ energy independent of arbitrary orientation.
 The matrices are
 
 $$
-\mathbf{A}=\begin{bmatrix}0&1&0\\1&0&1\\0&1&0\end{bmatrix},
+\mathbf{A}=\begin{bmatrix}0&1&0\\\\1&0&1\\\\0&1&0\end{bmatrix},
 \quad
-\mathbf{D}=\begin{bmatrix}1&0&0\\0&2&0\\0&0&1\end{bmatrix},
+\mathbf{D}=\begin{bmatrix}1&0&0\\\\0&2&0\\\\0&0&1\end{bmatrix},
 $$
 
 $$
-\mathbf{B}=\begin{bmatrix}-1&1&0\\0&-1&1\end{bmatrix}.
+\mathbf{B}=\begin{bmatrix}-1&1&0\\\\0&-1&1\end{bmatrix}.
 $$
 
 Multiplication gives
 
 $$
 \mathbf{B}^{\top}\mathbf{B}
-=\begin{bmatrix}1&-1&0\\-1&2&-1\\0&-1&1\end{bmatrix}
+=\begin{bmatrix}1&-1&0\\\\-1&2&-1\\\\0&-1&1\end{bmatrix}
 =\mathbf{D}-\mathbf{A}=\mathbf{L}.
 $$
 
