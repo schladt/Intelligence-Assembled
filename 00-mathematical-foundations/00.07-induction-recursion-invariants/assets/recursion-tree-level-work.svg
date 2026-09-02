@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Three recursion-tree level-work patterns</title>
+  <desc id="desc">Three side-by-side panels show bars across tree depth. In case one bars grow toward leaves, in case two bars remain equal, and in case three bars shrink from a dominant root. Arrows and text labels identify each trend.</desc>
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#edf3f4"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#28627a" stroke-width="2"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#263238"/>
+    </marker>
+  </defs>
+  <rect width="960" height="620" fill="#fffdf8"/>
+  <text x="48" y="48" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#172126">Level work explains the three Master patterns</text>
+  <text x="48" y="78" font-family="Verdana, sans-serif" font-size="15" fill="#40515a">Each bar is Wᵢ = aⁱ f(n/bⁱ). The theorem still requires its formal hypotheses.</text>
+
+  <g font-family="Verdana, sans-serif">
+    <rect x="42" y="110" width="276" height="430" rx="6" fill="#ffffff" stroke="#263238" stroke-width="2"/>
+    <text x="180" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#172126">Case 1: leaf-heavy</text>
+    <text x="180" y="171" text-anchor="middle" font-size="13" fill="#40515a">f(n) polynomially smaller</text>
+    <line x1="90" y1="205" x2="90" y2="468" stroke="#263238" stroke-width="2"/>
+    <text x="76" y="212" text-anchor="end" font-size="12">root</text>
+    <text x="76" y="457" text-anchor="end" font-size="12">leaves</text>
+    <rect x="90" y="196" width="48" height="28" fill="url(#hatch)" stroke="#28627a" stroke-width="2"/>
+    <rect x="90" y="252" width="82" height="28" fill="url(#hatch)" stroke="#28627a" stroke-width="2"/>
+    <rect x="90" y="308" width="126" height="28" fill="url(#hatch)" stroke="#28627a" stroke-width="2"/>
+    <rect x="90" y="364" width="174" height="28" fill="url(#hatch)" stroke="#28627a" stroke-width="2"/>
+    <rect x="90" y="420" width="210" height="28" fill="url(#hatch)" stroke="#28627a" stroke-width="2"/>
+    <line x1="145" y1="485" x2="275" y2="485" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="210" y="516" text-anchor="middle" font-size="14" font-weight="700">work grows with depth</text>
+
+    <rect x="342" y="110" width="276" height="430" rx="6" fill="#ffffff" stroke="#263238" stroke-width="2"/>
+    <text x="480" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#172126">Case 2: balanced</text>
+    <text x="480" y="171" text-anchor="middle" font-size="13" fill="#40515a">f(n) matches leaf exponent</text>
+    <line x1="390" y1="205" x2="390" y2="468" stroke="#263238" stroke-width="2"/>
+    <text x="376" y="212" text-anchor="end" font-size="12">root</text>
+    <text x="376" y="457" text-anchor="end" font-size="12">leaves</text>
+    <rect x="390" y="196" width="174" height="28" fill="#e7f2ed" stroke="#1d6b56" stroke-width="2"/>
+    <rect x="390" y="252" width="174" height="28" fill="#e7f2ed" stroke="#1d6b56" stroke-width="2"/>
+    <rect x="390" y="308" width="174" height="28" fill="#e7f2ed" stroke="#1d6b56" stroke-width="2"/>
+    <rect x="390" y="364" width="174" height="28" fill="#e7f2ed" stroke="#1d6b56" stroke-width="2"/>
+    <rect x="390" y="420" width="174" height="28" fill="#e7f2ed" stroke="#1d6b56" stroke-width="2"/>
+    <line x1="418" y1="485" x2="542" y2="485" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="480" y="516" text-anchor="middle" font-size="14" font-weight="700">same order per level</text>
+
+    <rect x="642" y="110" width="276" height="430" rx="6" fill="#ffffff" stroke="#263238" stroke-width="2"/>
+    <text x="780" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#172126">Case 3: root-heavy</text>
+    <text x="780" y="171" text-anchor="middle" font-size="13" fill="#40515a">f(n) polynomially larger</text>
+    <line x1="690" y1="205" x2="690" y2="468" stroke="#263238" stroke-width="2"/>
+    <text x="676" y="212" text-anchor="end" font-size="12">root</text>
+    <text x="676" y="457" text-anchor="end" font-size="12">leaves</text>
+    <rect x="690" y="196" width="210" height="28" fill="#fff0e8" stroke="#a84f2f" stroke-width="2"/>
+    <rect x="690" y="252" width="174" height="28" fill="#fff0e8" stroke="#a84f2f" stroke-width="2"/>
+    <rect x="690" y="308" width="126" height="28" fill="#fff0e8" stroke="#a84f2f" stroke-width="2"/>
+    <rect x="690" y="364" width="82" height="28" fill="#fff0e8" stroke="#a84f2f" stroke-width="2"/>
+    <rect x="690" y="420" width="48" height="28" fill="#fff0e8" stroke="#a84f2f" stroke-width="2"/>
+    <line x1="865" y1="485" x2="735" y2="485" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="800" y="516" text-anchor="middle" font-size="14" font-weight="700">work shrinks with depth</text>
+  </g>
+
+  <rect x="142" y="562" width="676" height="40" rx="5" fill="#f4f1e9" stroke="#777" stroke-width="1"/>
+  <text x="480" y="587" font-family="Verdana, sans-serif" text-anchor="middle" font-size="15" fill="#172126">Level pattern suggests the answer; polynomial gap and regularity justify the theorem case.</text>
+</svg>

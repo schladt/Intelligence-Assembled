@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="500" viewBox="0 0 820 500" role="img" aria-labelledby="title desc">
+  <title id="title">Jensen inequality shown by a chord above a convex curve</title>
+  <desc id="desc">A convex curve lies below the chord joining two points. At a weighted input, the curve value is below the weighted chord value. Dashed guide lines identify both values.</desc>
+  <defs>
+    <style>
+      .heading { font: 700 20px Georgia, serif; fill: #172126; }
+      .label { font: 15px Georgia, serif; fill: #172126; }
+      .axis { stroke: #59666d; stroke-width: 1.5; }
+      .curve { fill: none; stroke: #176b87; stroke-width: 5; }
+      .chord { stroke: #a33a2b; stroke-width: 4; }
+      .guide { stroke: #59666d; stroke-width: 1.5; stroke-dasharray: 7 6; }
+    </style>
+  </defs>
+  <rect width="820" height="500" fill="#f8f7f2"/>
+  <text x="410" y="32" text-anchor="middle" class="heading">Convex Jensen: the chord stays above the curve</text>
+  <line x1="80" y1="420" x2="750" y2="420" class="axis"/>
+  <line x1="100" y1="450" x2="100" y2="65" class="axis"/>
+  <text x="760" y="426" class="label">x</text>
+  <text x="108" y="72" class="label">f(x)</text>
+
+  <path d="M150 135 C260 355, 430 410, 690 105" class="curve"/>
+  <line x1="190" y1="200" x2="650" y2="145" class="chord"/>
+  <circle cx="190" cy="200" r="7" fill="#a33a2b"/>
+  <circle cx="650" cy="145" r="7" fill="#a33a2b"/>
+  <text x="168" y="186" class="label">(x₁, f(x₁))</text>
+  <text x="620" y="130" class="label">(x₂, f(x₂))</text>
+
+  <line x1="420" y1="420" x2="420" y2="172" class="guide"/>
+  <circle cx="420" cy="172" r="7" fill="#a33a2b"/>
+  <circle cx="420" cy="363" r="7" fill="#176b87"/>
+  <line x1="420" y1="172" x2="420" y2="363" stroke="#263238" stroke-width="3"/>
+  <text x="435" y="220" class="label">weighted output</text>
+  <text x="435" y="245" class="label">Σ wᵢ f(xᵢ)</text>
+  <text x="435" y="348" class="label">f(Σ wᵢxᵢ)</text>
+  <text x="420" y="445" text-anchor="middle" class="label">weighted input Σ wᵢxᵢ</text>
+  <text x="160" y="475" class="label">convex: function of mean ≤ mean of function; concave reverses</text>
+</svg>

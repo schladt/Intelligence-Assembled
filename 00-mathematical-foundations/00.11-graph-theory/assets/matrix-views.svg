@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 450" role="img" aria-labelledby="title desc">
+  <title id="title">Path graph translated into adjacency, incidence, and Laplacian matrices</title>
+  <desc id="desc">The path one to two to three appears beside its adjacency matrix, an edge-by-vertex signed incidence matrix for orientations one to two and two to three, and the resulting Laplacian equal to B transpose B.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#8b2f3c"/></marker>
+    <style>
+      .panel{fill:#f8f6ef;stroke:#273043;stroke-width:2}.edge{stroke:#176b6b;stroke-width:5}.orient{stroke:#8b2f3c;stroke-width:3;marker-end:url(#arrow)}.node{fill:#fff;stroke:#273043;stroke-width:3}.head{font:700 22px sans-serif;fill:#202633}.txt{font:18px monospace;fill:#202633}.label{font:17px sans-serif;fill:#202633}.v{font:700 17px sans-serif;fill:#202633;text-anchor:middle;dominant-baseline:middle}
+    </style>
+  </defs>
+  <rect width="1100" height="450" fill="#e8eef0"/>
+  <rect class="panel" x="25" y="45" width="245" height="350" rx="6"/>
+  <rect class="panel" x="290" y="45" width="240" height="350" rx="6"/>
+  <rect class="panel" x="550" y="45" width="240" height="350" rx="6"/>
+  <rect class="panel" x="810" y="45" width="265" height="350" rx="6"/>
+  <text class="head" x="147" y="82" text-anchor="middle">Path graph</text>
+  <line class="edge" x1="70" y1="220" x2="145" y2="220"/><line class="edge" x1="155" y1="220" x2="230" y2="220"/>
+  <line class="orient" x1="82" y1="198" x2="132" y2="198"/><line class="orient" x1="168" y1="198" x2="218" y2="198"/>
+  <circle class="node" cx="65" cy="220" r="23"/><circle class="node" cx="150" cy="220" r="23"/><circle class="node" cx="235" cy="220" r="23"/>
+  <text class="v" x="65" y="220">1</text><text class="v" x="150" y="220">2</text><text class="v" x="235" y="220">3</text>
+  <text class="label" x="147" y="285" text-anchor="middle">orient 1 to 2, 2 to 3</text>
+  <text class="head" x="410" y="82" text-anchor="middle">Adjacency A</text>
+  <text class="txt" x="330" y="160">[ 0  1  0 ]</text><text class="txt" x="330" y="205">[ 1  0  1 ]</text><text class="txt" x="330" y="250">[ 0  1  0 ]</text>
+  <text class="label" x="410" y="315" text-anchor="middle">neighbors and degrees</text>
+  <text class="head" x="670" y="82" text-anchor="middle">Incidence B</text>
+  <text class="txt" x="586" y="178">[ -1  1  0 ]</text><text class="txt" x="586" y="232">[  0 -1  1 ]</text>
+  <text class="label" x="670" y="315" text-anchor="middle">edge differences</text>
+  <text class="head" x="942" y="82" text-anchor="middle">Laplacian L</text>
+  <text class="txt" x="844" y="160">[  1 -1  0 ]</text><text class="txt" x="844" y="205">[ -1  2 -1 ]</text><text class="txt" x="844" y="250">[  0 -1  1 ]</text>
+  <text class="label" x="942" y="305" text-anchor="middle">L = D - A = B^T B</text>
+  <text class="label" x="942" y="338" text-anchor="middle">row sums are zero</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="title desc">
+  <title id="title">A reproducible run needs more than a seed</title>
+  <desc id="desc">Six labeled inputs for code, environment, data, random streams, process and hardware, and evidence converge on a run record. A seed is shown as one part of random stream construction.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#455a64"/></marker></defs>
+  <rect width="800" height="480" fill="#f6f8f4"/>
+  <text x="40" y="45" font-family="sans-serif" font-size="25" font-weight="700" fill="#17252a">Reproducible run record</text>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle">
+    <g fill="#d7eef2" stroke="#16697a" stroke-width="2"><rect x="45" y="90" width="190" height="62" rx="6"/><rect x="45" y="190" width="190" height="62" rx="6"/><rect x="45" y="290" width="190" height="62" rx="6"/></g>
+    <g fill="#f3e7c6" stroke="#9c6b1b" stroke-width="2"><rect x="565" y="90" width="190" height="62" rx="6"/><rect x="565" y="190" width="190" height="62" rx="6"/><rect x="565" y="290" width="190" height="62" rx="6"/></g>
+    <text x="140" y="118" font-weight="700">Code</text><text x="140" y="139" font-size="13">commit and dirty state</text>
+    <text x="140" y="218" font-weight="700">Environment</text><text x="140" y="239" font-size="13">interpreter and versions</text>
+    <text x="140" y="318" font-weight="700">Data</text><text x="140" y="339" font-size="13">origin, units, checksum</text>
+    <text x="660" y="118" font-weight="700">Random streams</text><text x="660" y="139" font-size="13">seed, algorithm, child role</text>
+    <text x="660" y="218" font-weight="700">Process and hardware</text><text x="660" y="239" font-size="13">workers, CPU, threads</text>
+    <text x="660" y="318" font-weight="700">Evidence</text><text x="660" y="339" font-size="13">tests, outputs, limits</text>
+    <rect x="300" y="160" width="200" height="145" rx="7" fill="#e4f3e8" stroke="#2e7d32" stroke-width="3"/>
+    <text x="400" y="205" font-size="21" font-weight="700">Run manifest</text>
+    <text x="400" y="235">one joined record</text><text x="400" y="260">for investigation</text>
+    <text x="400" y="285" font-size="13">JSON plus referenced artifacts</text>
+  </g>
+  <g fill="none" stroke="#455a64" stroke-width="2" marker-end="url(#arrow)"><path d="M235 121 C275 121 270 190 300 190"/><path d="M235 221 H295"/><path d="M235 321 C275 321 270 275 300 275"/><path d="M565 121 C525 121 530 190 500 190"/><path d="M565 221 H505"/><path d="M565 321 C525 321 530 275 500 275"/></g>
+  <rect x="275" y="390" width="250" height="48" rx="6" fill="#fde2df" stroke="#b23a48" stroke-width="2"/>
+  <text x="400" y="420" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#8e2430">seed(0) supplies only part of one box</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Catalan paths and the nonnegative boundary</title>
+  <desc id="desc">A solid path of up and down steps stays at or above height zero. A dashed path crosses below zero at a marked first bad step, illustrating the paths removed by reflection.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#263238"/>
+    </marker>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#a23b2a" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="600" fill="#fcfaf5"/>
+  <text x="48" y="52" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#172126">Balanced prefixes never cross below zero</text>
+  <text x="48" y="84" font-family="Verdana, sans-serif" font-size="15" fill="#40515a">An opening parenthesis steps up; a closing parenthesis steps down.</text>
+  <g stroke="#c5cbce" stroke-width="1">
+    <path d="M110 140 V500 M210 140 V500 M310 140 V500 M410 140 V500 M510 140 V500 M610 140 V500 M710 140 V500 M810 140 V500"/>
+    <path d="M110 200 H850 M110 300 H850 M110 400 H850 M110 500 H850"/>
+  </g>
+  <line x1="100" y1="400" x2="870" y2="400" stroke="#263238" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="90" y="405" font-family="Verdana, sans-serif" text-anchor="end" font-size="16">0</text>
+  <text x="90" y="305" font-family="Verdana, sans-serif" text-anchor="end" font-size="16">1</text>
+  <text x="90" y="205" font-family="Verdana, sans-serif" text-anchor="end" font-size="16">2</text>
+  <path d="M110 400 L210 300 L310 200 L410 300 L510 200 L610 300 L710 400" fill="none" stroke="#1d6b56" stroke-width="7"/>
+  <circle cx="110" cy="400" r="8" fill="#1d6b56"/><circle cx="710" cy="400" r="8" fill="#1d6b56"/>
+  <text x="475" y="165" font-family="Verdana, sans-serif" text-anchor="middle" font-size="18" font-weight="700" fill="#164d40">valid: (( ) ( ))</text>
+  <path d="M110 400 L210 300 L310 400 L410 500 L510 400 L610 300 L710 400" fill="none" stroke="#a23b2a" stroke-width="6" stroke-dasharray="12 8"/>
+  <circle cx="410" cy="500" r="18" fill="url(#hatch)" stroke="#a23b2a" stroke-width="4"/>
+  <text x="395" y="552" font-family="Verdana, sans-serif" text-anchor="middle" font-size="16" font-weight="700" fill="#7b291f">first step below zero</text>
+  <rect x="610" y="455" width="290" height="92" rx="6" fill="#ffffff" stroke="#263238" stroke-width="2"/>
+  <text x="755" y="486" font-family="Verdana, sans-serif" text-anchor="middle" font-size="16" font-weight="700">Reflection pairs invalid paths</text>
+  <text x="755" y="515" font-family="Verdana, sans-serif" text-anchor="middle" font-size="15">C(2n,n) - C(2n,n+1)</text>
+  <text x="755" y="538" font-family="Verdana, sans-serif" text-anchor="middle" font-size="15">= valid paths</text>
+</svg>

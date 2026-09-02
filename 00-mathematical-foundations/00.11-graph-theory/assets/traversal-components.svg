@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Traversal layers and connected components</title>
+  <desc id="desc">The left component begins at vertex a and shows BFS distance rings zero, one, and two. Solid discovery edges form one DFS tree. A separate dashed enclosure contains vertices e and f, which require a traversal restart.</desc>
+  <style>
+    .zone{fill:#f8f6ef;stroke:#2d3748;stroke-width:2}.separate{fill:#f8f6ef;stroke:#2d3748;stroke-width:3;stroke-dasharray:10 7}.ring{fill:none;stroke:#d18b28;stroke-width:3;stroke-dasharray:7 6}.edge{stroke:#64748b;stroke-width:3}.tree{stroke:#176b6b;stroke-width:5}.node{fill:#fff;stroke:#1f2937;stroke-width:3}.start{fill:#f4c95d}.txt{font:18px sans-serif;fill:#1f2937}.head{font:700 24px sans-serif;fill:#1f2937}.v{font:700 17px sans-serif;fill:#1f2937;text-anchor:middle;dominant-baseline:middle}
+  </style>
+  <rect width="960" height="430" fill="#e8eef0"/>
+  <text class="head" x="40" y="42">BFS layers from a and DFS discovery edges</text>
+  <rect class="zone" x="30" y="65" width="640" height="330" rx="6"/>
+  <rect class="separate" x="710" y="110" width="220" height="230" rx="6"/>
+  <ellipse class="ring" cx="260" cy="225" rx="65" ry="58"/>
+  <ellipse class="ring" cx="260" cy="225" rx="150" ry="125"/>
+  <ellipse class="ring" cx="260" cy="225" rx="235" ry="160"/>
+  <line class="tree" x1="260" y1="225" x2="155" y2="145"/>
+  <line class="edge" x1="260" y1="225" x2="365" y2="145"/>
+  <line class="tree" x1="155" y1="145" x2="85" y2="285"/>
+  <line class="edge" x1="365" y1="145" x2="85" y2="285"/>
+  <line class="tree" x1="85" y1="285" x2="445" y2="300"/>
+  <circle class="node start" cx="260" cy="225" r="24"/><circle class="node" cx="155" cy="145" r="24"/><circle class="node" cx="365" cy="145" r="24"/><circle class="node" cx="85" cy="285" r="24"/><circle class="node" cx="445" cy="300" r="24"/>
+  <text class="v" x="260" y="225">a</text><text class="v" x="155" y="145">b</text><text class="v" x="365" y="145">c</text><text class="v" x="85" y="285">d</text><text class="v" x="445" y="300">g</text>
+  <line class="tree" x1="775" y1="205" x2="865" y2="245"/>
+  <circle class="node" cx="775" cy="205" r="24"/><circle class="node" cx="865" cy="245" r="24"/>
+  <text class="v" x="775" y="205">e</text><text class="v" x="865" y="245">f</text>
+  <text class="txt" x="820" y="155" text-anchor="middle">restart here</text>
+  <text class="txt" x="55" y="385">solid teal: one DFS discovery tree</text>
+  <text class="txt" x="820" y="315" text-anchor="middle">second component</text>
+</svg>

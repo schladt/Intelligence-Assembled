@@ -1466,7 +1466,7 @@ You should now be able to:
 
 ## Where this leads
 
-Proof planning becomes more powerful when a claim is indexed by natural numbers, recursively defined structures, or program states. §0.07 **Induction, Recursion, and Invariants** develops those methods next. It is not yet published, so there is no forward link.
+Proof planning becomes more powerful when a claim is indexed by natural numbers, recursively defined structures, or program states. [§0.07 Induction, Recursion, and Invariants](../00.07-induction-recursion-invariants/README.md) develops those methods next.
 
 §0.08 will develop counting rules beyond the small double-counting preview here. Later modules use these proof habits for probability bounds, algorithm correctness, optimization guarantees, computability, verification, learning theory, and careful interpretation of empirical AI results.
 
@@ -1490,4 +1490,4 @@ Proof planning becomes more powerful when a claim is indexed by natural numbers,
 
 [9] Python Software Foundation, "`itertools` - Functions creating iterators for efficient looping" and "`math` - Mathematical functions," Python 3.14 documentation. PSF License Version 2. https://docs.python.org/3/library/itertools.html and https://docs.python.org/3/library/math.html#math.ceil. Accessed 2026-09-01.
 
-[Section home](../README.md) | Previous: [§0.05 Logic and Quantifiers](../00.05-logic-quantifiers/README.md) | Next: §0.07 Induction, Recursion, and Invariants (not yet published)
+[Section home](../README.md) | Previous: [§0.05 Logic and Quantifiers](../00.05-logic-quantifiers/README.md) | Next: [§0.07 Induction, Recursion, and Invariants](../00.07-induction-recursion-invariants/README.md)

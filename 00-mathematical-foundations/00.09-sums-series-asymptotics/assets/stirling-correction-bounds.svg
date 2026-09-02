@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Stirling log correction lies in a shrinking finite interval</title>
+  <desc id="desc">A schematic plot shows the exact log-factorial correction between an upper curve one over twelve n and a lower curve reduced by one over three hundred sixty n cubed. A magnified inset labels the interval width.</desc>
+  <defs>
+    <style>
+      .axis { stroke: #25313c; stroke-width: 2; }
+      .upper { fill: none; stroke: #9a3412; stroke-width: 3; stroke-dasharray: 9 6; }
+      .lower { fill: none; stroke: #2456a6; stroke-width: 3; }
+      .exact { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .band { fill: #dce8f7; opacity: 0.7; }
+      .inset { fill: #ffffff; stroke: #6b7280; stroke-width: 2; }
+      .label { fill: #18222d; font: 19px Georgia, serif; }
+      .small { fill: #374151; font: 16px Georgia, serif; }
+      .arrow { stroke: #6b7280; stroke-width: 2; marker-end: url(#end); marker-start: url(#start); }
+    </style>
+    <marker id="end" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#6b7280"/></marker>
+    <marker id="start" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8 0 L0 4 L8 8 Z" fill="#6b7280"/></marker>
+  </defs>
+  <rect width="900" height="500" fill="#fbfcf8"/>
+  <line class="axis" x1="80" y1="420" x2="830" y2="420"/>
+  <line class="axis" x1="80" y1="65" x2="80" y2="430"/>
+  <path class="band" d="M110 105 C220 205 360 275 520 322 C650 355 735 370 810 380 L810 395 C730 388 640 376 510 345 C350 305 215 245 110 155 Z"/>
+  <path class="upper" d="M110 105 C220 205 360 275 520 322 C650 355 735 370 810 380"/>
+  <path class="lower" d="M110 155 C215 245 350 305 510 345 C640 376 730 388 810 395"/>
+  <path class="exact" d="M110 128 C218 224 355 289 515 333 C645 365 732 380 810 388"/>
+  <text class="label" x="835" y="426">n</text>
+  <text class="label" x="20" y="74">log correction</text>
+  <text class="small" x="575" y="285">upper: 1/(12n)</text>
+  <text class="small" x="355" y="405">lower: 1/(12n) - 1/(360n^3)</text>
+  <text class="small" x="156" y="184">exact correction stays inside</text>
+  <rect class="inset" x="555" y="75" width="275" height="145" rx="4"/>
+  <line class="upper" x1="590" y1="110" x2="790" y2="110"/>
+  <line class="exact" x1="590" y1="145" x2="790" y2="145"/>
+  <line class="lower" x1="590" y1="185" x2="790" y2="185"/>
+  <line class="arrow" x1="805" y1="113" x2="805" y2="182"/>
+  <text class="small" x="575" y="101">magnified at fixed n</text>
+  <text class="small" x="605" y="139">ln(n!) - L_n</text>
+  <text class="small" x="600" y="211">width = 1/(360n^3)</text>
+  <text class="small" x="290" y="465">Schematic vertical scale: the interval shrinks faster than its height</text>
+</svg>

@@ -71,13 +71,13 @@ The arrows show the dominant flow, not a rigid semester sequence. In particular,
 | 0.04 | [Sets, Relations, and Functions](00.04-sets-relations-functions/README.md) | Draft | 2/5 | 6-11 hours |
 | 0.05 | [Logic and Quantifiers](00.05-logic-quantifiers/README.md) | Draft | 2/5 | 6-11 hours |
 | 0.06 | [Proof Techniques](00.06-proof-techniques/README.md) | Draft | 3/5 | 6-11 hours |
-| 0.07 | Induction, Recursion, and Invariants | Stub | 2/5 | 5-9 hours |
-| 0.08 | Counting and Combinatorics | Stub | 3/5 | 7-12 hours |
-| 0.09 | Sums, Series, and Asymptotics | Stub | 3/5 | 8-14 hours |
-| 0.10 | Inequalities | Stub | 3/5 | 5-9 hours |
-| 0.11 | Graph Theory | Stub | 3/5 | 8-14 hours |
-| 0.12 | Elementary Number Theory | Stub | 3/5 | 6-10 hours |
-| 0.13 | Programming and Scientific Computing | Stub | 2/5 | 10-18 hours |
+| 0.07 | [Induction, Recursion, and Invariants](00.07-induction-recursion-invariants/README.md) | Draft | 3/5 | 8-13 hours |
+| 0.08 | [Counting and Combinatorics](00.08-counting-combinatorics/README.md) | Draft | 3/5 | 8-13 hours |
+| 0.09 | [Sums, Series, and Asymptotics](00.09-sums-series-asymptotics/README.md) | Draft | 3/5 | 10-15 hours |
+| 0.10 | [Inequalities](00.10-inequalities/README.md) | Draft | 3/5 | 10-15 hours |
+| 0.11 | [Graph Theory](00.11-graph-theory/README.md) | Draft | 3/5 | 10-15 hours |
+| 0.12 | [Elementary Number Theory](00.12-elementary-number-theory/README.md) | Draft | 3/5 | 9-14 hours |
+| 0.13 | [Programming and Scientific Computing](00.13-programming-scientific-computing/README.md) | Draft | 2/5 | 10-18 hours |
 | 0.14 | Algorithms and Data Structures | Stub | 3/5 | 12-22 hours |
 | 0.15 | Computability and Complexity | Stub | 4/5 | 10-18 hours |
 
@@ -125,6 +125,9 @@ The file and content conventions live in the [style guide](../STYLE_GUIDE.md#mod
 
 ## Current Build Status
 
-The opening cluster, §0.01-§0.03, and the reasoning cluster, §0.04-§0.06, are published as complete draft learning packages. Entries from §0.07 onward remain roadmap stubs, not broken links. They will become links when real content exists.
+The opening cluster, §0.01-§0.03, the reasoning cluster, §0.04-§0.06, and
+§0.07-§0.13 are published as complete draft learning packages. Entries from
+§0.14 onward remain roadmap stubs, not broken links. They will become links when
+real content exists.
 
 This section will keep evolving as new modules test the structure. The point is not to freeze a perfect format before learning begins. The point is to build something worth learning from.

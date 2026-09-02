@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Simple graph, digraph, and multigraph contracts</title>
+  <desc id="desc">Three panels compare unordered simple edges, directed arcs with arrowheads, and a multigraph with parallel edges and a loop. The multigraph panel states that a loop contributes two to undirected degree.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#8b2f3c"/>
+    </marker>
+    <style>
+      .panel{fill:#f7f5ef;stroke:#273043;stroke-width:2}.edge{fill:none;stroke:#176b6b;stroke-width:4}.arc{fill:none;stroke:#8b2f3c;stroke-width:4;marker-end:url(#arrow)}.node{fill:#fff;stroke:#273043;stroke-width:3}.head{font:700 22px sans-serif;fill:#202633}.label{font:17px sans-serif;fill:#202633}.small{font:15px sans-serif;fill:#4b5563}.v{font:700 16px sans-serif;fill:#202633;text-anchor:middle;dominant-baseline:middle}
+    </style>
+  </defs>
+  <rect width="960" height="420" fill="#e9eef1"/>
+  <rect class="panel" x="30" y="38" width="280" height="340" rx="6"/>
+  <rect class="panel" x="340" y="38" width="280" height="340" rx="6"/>
+  <rect class="panel" x="650" y="38" width="280" height="340" rx="6"/>
+  <text class="head" x="170" y="76" text-anchor="middle">Simple graph</text>
+  <text class="head" x="480" y="76" text-anchor="middle">Digraph</text>
+  <text class="head" x="790" y="76" text-anchor="middle">Multigraph</text>
+  <path class="edge" d="M105 155 L235 155 M105 155 L170 275 M235 155 L170 275"/>
+  <circle class="node" cx="105" cy="155" r="22"/><circle class="node" cx="235" cy="155" r="22"/><circle class="node" cx="170" cy="275" r="22"/>
+  <text class="v" x="105" y="155">a</text><text class="v" x="235" y="155">b</text><text class="v" x="170" y="275">c</text>
+  <text class="label" x="170" y="330" text-anchor="middle">unordered, no repeats</text>
+  <text class="small" x="170" y="354" text-anchor="middle">no loops</text>
+  <path class="arc" d="M438 155 L512 155"/>
+  <path class="arc" d="M535 178 Q515 230 493 245"/>
+  <path class="arc" d="M468 251 Q438 220 518 178"/>
+  <circle class="node" cx="415" cy="155" r="22"/><circle class="node" cx="545" cy="155" r="22"/><circle class="node" cx="480" cy="275" r="22"/>
+  <text class="v" x="415" y="155">a</text><text class="v" x="545" y="155">b</text><text class="v" x="480" y="275">c</text>
+  <text class="label" x="480" y="330" text-anchor="middle">ordered arcs</text>
+  <text class="small" x="480" y="354" text-anchor="middle">indegree differs from outdegree</text>
+  <path class="edge" d="M725 151 Q790 107 855 151 M725 161 Q790 205 855 161 M725 170 L778 259 M801 259 L855 170 M773 267 C730 236 731 318 776 302"/>
+  <circle class="node" cx="725" cy="155" r="22"/><circle class="node" cx="855" cy="155" r="22"/><circle class="node" cx="790" cy="275" r="22"/>
+  <text class="v" x="725" y="155">a</text><text class="v" x="855" y="155">b</text><text class="v" x="790" y="275">c</text>
+  <text class="label" x="790" y="330" text-anchor="middle">edge instances stay distinct</text>
+  <text class="small" x="790" y="354" text-anchor="middle">loop adds 2 to degree</text>
+</svg>

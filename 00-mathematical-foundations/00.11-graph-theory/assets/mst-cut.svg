@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Minimum spanning tree cut certificate with tied edges</title>
+  <desc id="desc">A four-vertex weighted graph is divided by a dashed cut. Thick solid edges form one minimum spanning tree. Two different weight-three edges can connect vertex d, showing that tied weights can yield different MST edge sets with equal total weight.</desc>
+  <style>
+    .bg{fill:#f6f4ed}.edge{stroke:#87909c;stroke-width:3}.mst{stroke:#176b6b;stroke-width:7}.tie{stroke:#8b2f3c;stroke-width:5;stroke-dasharray:11 7}.cut{fill:none;stroke:#d18b28;stroke-width:4;stroke-dasharray:10 8}.node{fill:#fff;stroke:#273043;stroke-width:3}.head{font:700 24px sans-serif;fill:#202633}.txt{font:18px sans-serif;fill:#202633}.weight{font:700 17px sans-serif;fill:#202633;paint-order:stroke;stroke:#f6f4ed;stroke-width:5}.v{font:700 18px sans-serif;fill:#202633;text-anchor:middle;dominant-baseline:middle}
+  </style>
+  <rect width="960" height="430" class="bg"/>
+  <text class="head" x="40" y="44">One MST, one cut, and a tied alternative</text>
+  <path class="cut" d="M300 75 Q405 210 300 365"/>
+  <line class="mst" x1="180" y1="215" x2="450" y2="115"/>
+  <line class="mst" x1="180" y1="215" x2="450" y2="315"/>
+  <line class="mst" x1="450" y1="115" x2="750" y2="215"/>
+  <line class="tie" x1="450" y1="315" x2="750" y2="215"/>
+  <line class="edge" x1="450" y1="115" x2="450" y2="315"/>
+  <line class="edge" x1="180" y1="215" x2="750" y2="215"/>
+  <text class="weight" x="305" y="145">1</text><text class="weight" x="305" y="300">1</text><text class="weight" x="610" y="145">3</text><text class="weight" x="610" y="300">3</text><text class="weight" x="475" y="245">2</text><text class="weight" x="575" y="205">8</text>
+  <circle class="node" cx="180" cy="215" r="27"/><circle class="node" cx="450" cy="115" r="27"/><circle class="node" cx="450" cy="315" r="27"/><circle class="node" cx="750" cy="215" r="27"/>
+  <text class="v" x="180" y="215">a</text><text class="v" x="450" y="115">b</text><text class="v" x="450" y="315">c</text><text class="v" x="750" y="215">d</text>
+  <text class="txt" x="70" y="390">cut {a} | {b,c,d}: light crossing weight is 1</text>
+  <text class="txt" x="565" y="390">dashed red weight 3 can replace solid weight 3</text>
+</svg>

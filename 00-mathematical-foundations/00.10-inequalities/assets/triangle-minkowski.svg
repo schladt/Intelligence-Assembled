@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="500" viewBox="0 0 820 500" role="img" aria-labelledby="title desc">
+  <title id="title">Triangle and Minkowski compare a direct vector with a two-step path</title>
+  <desc id="desc">A coordinate plane shows vector x, then vector y translated to its endpoint, and their direct sum. A second aligned example shows when the two-step and direct lengths are equal.</desc>
+  <defs>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#176b87"/>
+    </marker>
+    <marker id="redArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a33a2b"/>
+    </marker>
+    <marker id="darkArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#263238"/>
+    </marker>
+    <style>
+      .heading { font: 700 20px Georgia, serif; fill: #172126; }
+      .label { font: 16px Georgia, serif; fill: #172126; }
+      .axis { stroke: #7b858a; stroke-width: 1.5; }
+      .xvec { stroke: #176b87; stroke-width: 5; fill: none; marker-end: url(#blueArrow); }
+      .yvec { stroke: #a33a2b; stroke-width: 5; fill: none; marker-end: url(#redArrow); stroke-dasharray: 9 6; }
+      .sum { stroke: #263238; stroke-width: 5; fill: none; marker-end: url(#darkArrow); }
+    </style>
+  </defs>
+  <rect width="820" height="500" fill="#f8f7f2"/>
+  <text x="410" y="32" text-anchor="middle" class="heading">Direct displacement is no longer than the two-step route</text>
+  <line x1="70" y1="400" x2="470" y2="400" class="axis"/>
+  <line x1="90" y1="445" x2="90" y2="75" class="axis"/>
+  <text x="485" y="406" class="label">coordinate 1</text>
+  <text x="98" y="80" class="label">coordinate 2</text>
+
+  <path d="M90 400 L270 300" class="xvec"/>
+  <path d="M270 300 L420 135" class="yvec"/>
+  <path d="M90 400 L420 135" class="sum"/>
+  <text x="205" y="365" class="label">x</text>
+  <text x="350" y="225" class="label">y</text>
+  <text x="205" y="215" class="label">x + y</text>
+  <text x="150" y="462" class="label">||x + y||ₚ ≤ ||x||ₚ + ||y||ₚ</text>
+
+  <rect x="555" y="90" width="220" height="300" rx="6" fill="#e7efe4" stroke="#263238" stroke-width="2"/>
+  <text x="665" y="125" text-anchor="middle" class="heading">Equality geometry</text>
+  <path d="M590 320 L660 255" class="xvec"/>
+  <path d="M660 255 L735 185" class="yvec"/>
+  <path d="M590 320 L735 185" class="sum"/>
+  <text x="665" y="355" text-anchor="middle" class="label">positive alignment</text>
+  <text x="665" y="378" text-anchor="middle" class="label">for 1 &lt; p &lt; ∞</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Same-order and opposite-order pairings in the rearrangement inequality</title>
+  <desc id="desc">Two panels show ascending values in left and right columns. Parallel solid connections pair small with small and large with large for the maximum. Crossing dashed connections pair small with large for the minimum.</desc>
+  <defs>
+    <style>
+      .heading { font: 700 20px Georgia, serif; fill: #172126; }
+      .label { font: 15px Georgia, serif; fill: #172126; }
+      .value { font: 700 16px Georgia, serif; fill: #172126; }
+      .node { fill: #f8f7f2; stroke: #263238; stroke-width: 2; }
+      .max { stroke: #176b87; stroke-width: 4; }
+      .min { stroke: #a33a2b; stroke-width: 4; stroke-dasharray: 9 7; }
+      .panel { fill: #f2efe7; stroke: #59666d; stroke-width: 2; rx: 6; }
+    </style>
+  </defs>
+  <rect width="900" height="520" fill="#f8f7f2"/>
+  <text x="450" y="32" text-anchor="middle" class="heading">Finite rearrangement compares pairings</text>
+
+  <rect x="35" y="60" width="390" height="410" class="panel"/>
+  <text x="230" y="93" text-anchor="middle" class="heading">Maximum: same order</text>
+  <text x="112" y="125" text-anchor="middle" class="label">a ascending</text>
+  <text x="348" y="125" text-anchor="middle" class="label">b ascending</text>
+  <line x1="125" y1="175" x2="335" y2="175" class="max"/>
+  <line x1="125" y1="255" x2="335" y2="255" class="max"/>
+  <line x1="125" y1="335" x2="335" y2="335" class="max"/>
+  <line x1="125" y1="415" x2="335" y2="415" class="max"/>
+
+  <rect x="475" y="60" width="390" height="410" class="panel"/>
+  <text x="670" y="93" text-anchor="middle" class="heading">Minimum: opposite order</text>
+  <text x="552" y="125" text-anchor="middle" class="label">a ascending</text>
+  <text x="788" y="125" text-anchor="middle" class="label">b ascending</text>
+  <line x1="565" y1="175" x2="775" y2="415" class="min"/>
+  <line x1="565" y1="255" x2="775" y2="335" class="min"/>
+  <line x1="565" y1="335" x2="775" y2="255" class="min"/>
+  <line x1="565" y1="415" x2="775" y2="175" class="min"/>
+
+  <g>
+    <circle cx="125" cy="175" r="20" class="node"/><text x="125" y="181" text-anchor="middle" class="value">a₁</text>
+    <circle cx="125" cy="255" r="20" class="node"/><text x="125" y="261" text-anchor="middle" class="value">a₂</text>
+    <circle cx="125" cy="335" r="20" class="node"/><text x="125" y="341" text-anchor="middle" class="value">a₃</text>
+    <circle cx="125" cy="415" r="20" class="node"/><text x="125" y="421" text-anchor="middle" class="value">a₄</text>
+    <circle cx="335" cy="175" r="20" class="node"/><text x="335" y="181" text-anchor="middle" class="value">b₁</text>
+    <circle cx="335" cy="255" r="20" class="node"/><text x="335" y="261" text-anchor="middle" class="value">b₂</text>
+    <circle cx="335" cy="335" r="20" class="node"/><text x="335" y="341" text-anchor="middle" class="value">b₃</text>
+    <circle cx="335" cy="415" r="20" class="node"/><text x="335" y="421" text-anchor="middle" class="value">b₄</text>
+    <circle cx="565" cy="175" r="20" class="node"/><text x="565" y="181" text-anchor="middle" class="value">a₁</text>
+    <circle cx="565" cy="255" r="20" class="node"/><text x="565" y="261" text-anchor="middle" class="value">a₂</text>
+    <circle cx="565" cy="335" r="20" class="node"/><text x="565" y="341" text-anchor="middle" class="value">a₃</text>
+    <circle cx="565" cy="415" r="20" class="node"/><text x="565" y="421" text-anchor="middle" class="value">a₄</text>
+    <circle cx="775" cy="175" r="20" class="node"/><text x="775" y="181" text-anchor="middle" class="value">b₁</text>
+    <circle cx="775" cy="255" r="20" class="node"/><text x="775" y="261" text-anchor="middle" class="value">b₂</text>
+    <circle cx="775" cy="335" r="20" class="node"/><text x="775" y="341" text-anchor="middle" class="value">b₃</text>
+    <circle cx="775" cy="415" r="20" class="node"/><text x="775" y="421" text-anchor="middle" class="value">b₄</text>
+  </g>
+  <text x="450" y="500" text-anchor="middle" class="label">Ties make some swaps cost zero; strict order makes the extrema unique.</text>
+</svg>

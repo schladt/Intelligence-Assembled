@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" role="img" aria-labelledby="title desc">
+  <title id="title">Inclusion-exclusion multiplicity ledger</title>
+  <desc id="desc">Three rows track objects lying in one, two, or three sets. Singleton additions, pair subtractions, and triple addition leave total contribution one in every row.</desc>
+  <rect width="960" height="590" fill="#fffdf8"/>
+  <text x="48" y="52" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#172126">Repair multiplicity one intersection layer at a time</text>
+  <text x="48" y="84" font-family="Verdana, sans-serif" font-size="15" fill="#40515a">Each row follows one object according to how many sets contain it.</text>
+  <g font-family="Verdana, sans-serif" text-anchor="middle" fill="#172126">
+    <rect x="55" y="125" width="850" height="350" rx="6" fill="#ffffff" stroke="#263238" stroke-width="3"/>
+    <line x1="55" y1="195" x2="905" y2="195" stroke="#263238" stroke-width="2"/>
+    <line x1="55" y1="285" x2="905" y2="285" stroke="#9aa3a8" stroke-width="2"/>
+    <line x1="55" y1="375" x2="905" y2="375" stroke="#9aa3a8" stroke-width="2"/>
+    <line x1="220" y1="125" x2="220" y2="475" stroke="#263238" stroke-width="2"/>
+    <line x1="405" y1="125" x2="405" y2="475" stroke="#263238" stroke-width="2"/>
+    <line x1="590" y1="125" x2="590" y2="475" stroke="#263238" stroke-width="2"/>
+    <line x1="760" y1="125" x2="760" y2="475" stroke="#263238" stroke-width="2"/>
+    <text x="138" y="168" font-size="17" font-weight="700">membership</text>
+    <text x="313" y="160" font-size="17" font-weight="700">add singletons</text>
+    <text x="498" y="160" font-size="17" font-weight="700">subtract pairs</text>
+    <text x="675" y="160" font-size="17" font-weight="700">add triples</text>
+    <text x="832" y="160" font-size="17" font-weight="700">total</text>
+    <text x="138" y="247" font-size="20">in 1 set</text><text x="313" y="247" font-size="28">+1</text><text x="498" y="247" font-size="28">0</text><text x="675" y="247" font-size="28">0</text><text x="832" y="247" font-size="30" font-weight="700">1</text>
+    <text x="138" y="337" font-size="20">in 2 sets</text><text x="313" y="337" font-size="28">+2</text><text x="498" y="337" font-size="28">-1</text><text x="675" y="337" font-size="28">0</text><text x="832" y="337" font-size="30" font-weight="700">1</text>
+    <text x="138" y="427" font-size="20">in 3 sets</text><text x="313" y="427" font-size="28">+3</text><text x="498" y="427" font-size="28">-3</text><text x="675" y="427" font-size="28">+1</text><text x="832" y="427" font-size="30" font-weight="700">1</text>
+  </g>
+  <text x="480" y="530" font-family="Verdana, sans-serif" text-anchor="middle" font-size="18" fill="#40515a">The alternating sum leaves every union member counted exactly once.</text>
+</svg>

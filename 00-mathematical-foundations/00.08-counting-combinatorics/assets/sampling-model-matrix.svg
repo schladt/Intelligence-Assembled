@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Four finite sampling models</title>
+  <desc id="desc">A two by two matrix separates ordered from unordered outcomes and replacement from no replacement. Each cell shows an example outcome and its counting formula.</desc>
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#65727a"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="620" fill="#fffdf8"/>
+  <text x="48" y="52" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#172126">Ask two questions before choosing a formula</text>
+  <text x="48" y="84" font-family="Verdana, sans-serif" font-size="15" fill="#40515a">Rows decide whether positions matter. Columns decide whether a type can appear again.</text>
+  <g font-family="Verdana, sans-serif" fill="#172126">
+    <text x="415" y="132" text-anchor="middle" font-size="19" font-weight="700">WITH REPLACEMENT</text>
+    <text x="735" y="132" text-anchor="middle" font-size="19" font-weight="700">WITHOUT REPLACEMENT</text>
+    <text x="78" y="270" font-size="18" font-weight="700">ORDERED</text>
+    <text x="56" y="475" font-size="18" font-weight="700">UNORDERED</text>
+    <g stroke="#263238" stroke-width="3">
+      <rect x="250" y="155" width="320" height="190" rx="6" fill="#e7f2ed"/>
+      <rect x="570" y="155" width="320" height="190" rx="6" fill="url(#dots)"/>
+      <rect x="250" y="345" width="320" height="190" rx="6" fill="#f8edda"/>
+      <rect x="570" y="345" width="320" height="190" rx="6" fill="#edf1f4"/>
+    </g>
+    <text x="410" y="208" text-anchor="middle" font-size="20" font-weight="700">sequence</text>
+    <text x="410" y="252" text-anchor="middle" font-size="25">(A, A, C)</text>
+    <text x="410" y="308" text-anchor="middle" font-size="30" font-weight="700">n<tspan baseline-shift="super" font-size="19">k</tspan></text>
+    <text x="730" y="208" text-anchor="middle" font-size="20" font-weight="700">injective sequence</text>
+    <text x="730" y="252" text-anchor="middle" font-size="25">(A, D, C)</text>
+    <text x="730" y="308" text-anchor="middle" font-size="28" font-weight="700">n! / (n-k)!</text>
+    <text x="410" y="398" text-anchor="middle" font-size="20" font-weight="700">multiset</text>
+    <text x="410" y="442" text-anchor="middle" font-size="25">{A, A, C}</text>
+    <text x="410" y="498" text-anchor="middle" font-size="28" font-weight="700">C(n+k-1, k)</text>
+    <text x="730" y="398" text-anchor="middle" font-size="20" font-weight="700">subset</text>
+    <text x="730" y="442" text-anchor="middle" font-size="25">{A, C, D}</text>
+    <text x="730" y="498" text-anchor="middle" font-size="28" font-weight="700">C(n, k)</text>
+  </g>
+  <text x="480" y="580" font-family="Verdana, sans-serif" text-anchor="middle" font-size="16" fill="#40515a">Counts describe outcome spaces, not probability weights.</text>
+</svg>

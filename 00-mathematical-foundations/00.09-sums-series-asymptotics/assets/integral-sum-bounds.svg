@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Integral rectangles bound a decreasing harmonic curve</title>
+  <desc id="desc">Two side-by-side panels show the decreasing curve y equals one over x. Dashed left-endpoint rectangles sit above the curve, while hatched right-endpoint rectangles sit below it.</desc>
+  <defs>
+    <style>
+      .axis { stroke: #24313b; stroke-width: 2; }
+      .curve { fill: none; stroke: #0f766e; stroke-width: 4; }
+      .upper { fill: none; stroke: #b45309; stroke-width: 2; stroke-dasharray: 7 5; }
+      .lower { fill: url(#hatch); stroke: #2456a6; stroke-width: 2; }
+      .label { fill: #18222d; font: 20px Georgia, serif; }
+      .small { fill: #374151; font: 16px Georgia, serif; }
+    </style>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse">
+      <path d="M0 9 L9 0" stroke="#9db9df" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="500" fill="#fbfcf8"/>
+  <text class="label" x="125" y="42">Left endpoints: upper rectangles</text>
+  <text class="label" x="518" y="42">Right endpoints: lower rectangles</text>
+  <line class="axis" x1="70" y1="420" x2="430" y2="420"/>
+  <line class="axis" x1="70" y1="75" x2="70" y2="425"/>
+  <line class="axis" x1="490" y1="420" x2="850" y2="420"/>
+  <line class="axis" x1="490" y1="75" x2="490" y2="425"/>
+  <g class="upper">
+    <rect x="100" y="110" width="58" height="310"/>
+    <rect x="158" y="265" width="58" height="155"/>
+    <rect x="216" y="317" width="58" height="103"/>
+    <rect x="274" y="342" width="58" height="78"/>
+    <rect x="332" y="358" width="58" height="62"/>
+  </g>
+  <path class="curve" d="M100 110 C125 180 145 235 158 265 C185 300 205 312 216 317 C245 331 262 338 274 342 C305 351 320 356 332 358 C355 364 375 368 390 370"/>
+  <g class="lower">
+    <rect x="520" y="265" width="58" height="155"/>
+    <rect x="578" y="317" width="58" height="103"/>
+    <rect x="636" y="342" width="58" height="78"/>
+    <rect x="694" y="358" width="58" height="62"/>
+    <rect x="752" y="368" width="58" height="52"/>
+  </g>
+  <path class="curve" d="M520 110 C545 180 565 235 578 265 C605 300 625 312 636 317 C665 331 682 338 694 342 C725 351 740 356 752 358 C775 364 795 368 810 370"/>
+  <text class="small" x="78" y="102">y = 1/x</text>
+  <text class="small" x="498" y="102">y = 1/x</text>
+  <text class="small" x="135" y="460">rectangle sum is above area</text>
+  <text class="small" x="558" y="460">rectangle sum is below area</text>
+</svg>

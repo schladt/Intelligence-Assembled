@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Alternating partial sums bracket a common limit</title>
+  <desc id="desc">Odd partial sums are circular points descending toward S from above. Even partial sums are square points rising toward S from below. Vertical arrows show the next-term gaps shrinking.</desc>
+  <defs>
+    <style>
+      .axis { stroke: #25313c; stroke-width: 2; }
+      .limit { stroke: #0f766e; stroke-width: 3; }
+      .oddline { fill: none; stroke: #9a3412; stroke-width: 2.5; stroke-dasharray: 8 5; }
+      .evenline { fill: none; stroke: #2456a6; stroke-width: 2.5; }
+      .odd { fill: #ffffff; stroke: #9a3412; stroke-width: 3; }
+      .even { fill: #dce8f7; stroke: #2456a6; stroke-width: 3; }
+      .gap { stroke: #6b7280; stroke-width: 2; marker-end: url(#arrow); marker-start: url(#arrowBack); }
+      .label { fill: #18222d; font: 20px Georgia, serif; }
+      .small { fill: #374151; font: 17px Georgia, serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#6b7280"/></marker>
+    <marker id="arrowBack" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8 0 L0 4 L8 8 Z" fill="#6b7280"/></marker>
+  </defs>
+  <rect width="900" height="500" fill="#fbfcf8"/>
+  <line class="axis" x1="80" y1="420" x2="830" y2="420"/>
+  <line class="axis" x1="80" y1="60" x2="80" y2="430"/>
+  <line class="limit" x1="80" y1="250" x2="830" y2="250"/>
+  <polyline class="oddline" points="140,90 320,155 500,190 680,210"/>
+  <polyline class="evenline" points="230,365 410,320 590,295 770,278"/>
+  <circle class="odd" cx="140" cy="90" r="9"/>
+  <circle class="odd" cx="320" cy="155" r="9"/>
+  <circle class="odd" cx="500" cy="190" r="9"/>
+  <circle class="odd" cx="680" cy="210" r="9"/>
+  <rect class="even" x="221" y="356" width="18" height="18"/>
+  <rect class="even" x="401" y="311" width="18" height="18"/>
+  <rect class="even" x="581" y="286" width="18" height="18"/>
+  <rect class="even" x="761" y="269" width="18" height="18"/>
+  <line class="gap" x1="320" y1="166" x2="320" y2="244"/>
+  <line class="gap" x1="590" y1="256" x2="590" y2="284"/>
+  <text class="label" x="840" y="426">N</text>
+  <text class="label" x="31" y="70">S_N</text>
+  <text class="label" x="795" y="240">S</text>
+  <text class="small" x="105" y="62">odd partial sums descend</text>
+  <text class="small" x="540" y="350">even partial sums rise</text>
+  <text class="small" x="275" y="205">distance to S ≤ next magnitude</text>
+</svg>

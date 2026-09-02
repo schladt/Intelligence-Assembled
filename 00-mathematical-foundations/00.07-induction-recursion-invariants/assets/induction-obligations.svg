@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Induction obligations and two base alignment failures</title>
+  <desc id="desc">A solid chain runs from the correct base P of n zero through successive cases. A dashed wrong-base route cannot enter the chain, and a step of two from one base reaches only even cases while odd cases remain uncovered.</desc>
+  <defs>
+    <pattern id="stripe" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#f7f3e8"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#b8613a" stroke-width="3"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#263238"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" fill="#fffdf7"/>
+  <text x="48" y="48" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#182126">A valid induction reaches every claimed case</text>
+  <text x="48" y="78" font-family="Verdana, sans-serif" font-size="15" fill="#40515a">Solid arrows are proved implications; numbered circles are established cases.</text>
+
+  <g font-family="Verdana, sans-serif" text-anchor="middle">
+    <rect x="48" y="120" width="150" height="72" rx="6" fill="#e7f2ed" stroke="#1d6b56" stroke-width="3"/>
+    <text x="123" y="150" font-size="14" font-weight="700" fill="#164d40">BASE</text>
+    <text x="123" y="176" font-size="18" fill="#182126">P(n₀)</text>
+    <line x1="198" y1="156" x2="268" y2="156" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="310" cy="156" r="39" fill="#ffffff" stroke="#1d6b56" stroke-width="3"/>
+    <text x="310" y="162" font-size="17" fill="#182126">n₀</text>
+    <line x1="349" y1="156" x2="421" y2="156" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="463" cy="156" r="39" fill="#ffffff" stroke="#1d6b56" stroke-width="3"/>
+    <text x="463" y="162" font-size="17" fill="#182126">n₀+1</text>
+    <line x1="502" y1="156" x2="574" y2="156" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="616" cy="156" r="39" fill="#ffffff" stroke="#1d6b56" stroke-width="3"/>
+    <text x="616" y="162" font-size="17" fill="#182126">n₀+2</text>
+    <line x1="655" y1="156" x2="727" y2="156" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="769" cy="156" r="39" fill="#ffffff" stroke="#1d6b56" stroke-width="3"/>
+    <text x="769" y="162" font-size="17" fill="#182126">n₀+3</text>
+    <text x="865" y="164" font-size="28" fill="#40515a">…</text>
+  </g>
+  <text x="377" y="113" font-family="Verdana, sans-serif" font-size="14" fill="#40515a">P(k) ⇒ P(k+1), for arbitrary k ≥ n₀</text>
+
+  <line x1="48" y1="230" x2="912" y2="230" stroke="#c7c2b7" stroke-width="1"/>
+  <text x="48" y="272" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#182126">Broken variant A: the base does not connect</text>
+  <rect x="48" y="298" width="138" height="62" rx="6" fill="url(#stripe)" stroke="#8c351f" stroke-width="3"/>
+  <text x="117" y="324" font-family="Verdana, sans-serif" text-anchor="middle" font-size="13" font-weight="700" fill="#6d2b1d">WRONG BASE</text>
+  <text x="117" y="347" font-family="Verdana, sans-serif" text-anchor="middle" font-size="17" fill="#182126">P(0)</text>
+  <line x1="186" y1="329" x2="286" y2="329" stroke="#8c351f" stroke-width="3" stroke-dasharray="10 7"/>
+  <line x1="246" y1="311" x2="270" y2="347" stroke="#8c351f" stroke-width="4"/>
+  <line x1="270" y1="311" x2="246" y2="347" stroke="#8c351f" stroke-width="4"/>
+  <rect x="302" y="298" width="222" height="62" rx="6" fill="#ffffff" stroke="#263238" stroke-width="2"/>
+  <text x="413" y="324" font-family="Verdana, sans-serif" text-anchor="middle" font-size="14" fill="#182126">step valid only for</text>
+  <text x="413" y="348" font-family="Verdana, sans-serif" text-anchor="middle" font-size="17" font-weight="700" fill="#182126">k ≥ 4</text>
+  <text x="558" y="336" font-family="Verdana, sans-serif" font-size="15" fill="#6d2b1d">No proved edge reaches P(4).</text>
+
+  <text x="48" y="414" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#182126">Broken variant B: one base plus a +2 step</text>
+  <g font-family="Verdana, sans-serif" text-anchor="middle">
+    <circle cx="105" cy="475" r="27" fill="#e7f2ed" stroke="#1d6b56" stroke-width="3"/>
+    <text x="105" y="481" font-size="15">P(0)</text>
+    <line x1="132" y1="475" x2="209" y2="475" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="239" cy="475" r="27" fill="#e7f2ed" stroke="#1d6b56" stroke-width="3"/>
+    <text x="239" y="481" font-size="15">P(2)</text>
+    <line x1="266" y1="475" x2="343" y2="475" stroke="#263238" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="373" cy="475" r="27" fill="#e7f2ed" stroke="#1d6b56" stroke-width="3"/>
+    <text x="373" y="481" font-size="15">P(4)</text>
+    <circle cx="540" cy="475" r="27" fill="url(#stripe)" stroke="#8c351f" stroke-width="3" stroke-dasharray="6 5"/>
+    <text x="540" y="481" font-size="15">P(1)</text>
+    <circle cx="674" cy="475" r="27" fill="url(#stripe)" stroke="#8c351f" stroke-width="3" stroke-dasharray="6 5"/>
+    <text x="674" y="481" font-size="15">P(3)</text>
+    <circle cx="808" cy="475" r="27" fill="url(#stripe)" stroke="#8c351f" stroke-width="3" stroke-dasharray="6 5"/>
+    <text x="808" y="481" font-size="15">P(5)</text>
+  </g>
+  <text x="700" y="520" font-family="Verdana, sans-serif" text-anchor="middle" font-size="13" fill="#6d2b1d">Odd cases need a second aligned base,</text>
+  <text x="700" y="540" font-family="Verdana, sans-serif" text-anchor="middle" font-size="13" fill="#6d2b1d">or the theorem must target only even indices.</text>
+</svg>
