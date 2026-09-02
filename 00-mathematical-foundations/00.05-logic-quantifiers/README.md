@@ -1218,7 +1218,7 @@ $$
 
 is affirming the consequent. Set $P=F,Q=T$. Both premises are true and the conclusion false, so the argument is invalid.
 
-### Example 10: Valid argument with false premises versus sound argument
+### Example 10: Valid argument with a false premise versus sound argument
 
 This argument is valid:
 
@@ -1226,7 +1226,7 @@ This argument is valid:
 2. $10$ is prime.
 3. Therefore $10$ is odd.
 
-It has modus ponens form, but both premises are false, so it is not sound in ordinary argument evaluation.
+It has modus ponens form, so it is valid. It is not sound because premise 2 is false: $10$ is not prime. Premise 1 is vacuously true, since a false hypothesis makes the implication true.
 
 This argument is sound:
 

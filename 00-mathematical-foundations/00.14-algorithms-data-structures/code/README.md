@@ -19,8 +19,8 @@ not a production container or graph library.
 | `binary_search_left` | half-open search boundary | $O(\log n)$ comparisons |
 | `merge_sort` | stable divide, solve, merge | $\Theta(n\log n)$ time, $\Theta(n)$ auxiliary space |
 | `MinHeap` | array-backed parent-child invariant | $O(\log n)$ push and pop |
-| `bfs_shortest_paths` | FIFO frontier and parent recovery | $\Theta(|V|+|E|)$ |
-| `dijkstra` | nonnegative weighted frontier | $O((|V|+|E|)\log|V|)$ |
+| `bfs_shortest_paths` | FIFO frontier and parent recovery | $\Theta(\lvert V\rvert+\lvert E\rvert)$ |
+| `dijkstra` | nonnegative weighted frontier | $O((\lvert V\rvert+\lvert E\rvert)\log\lvert V\rvert)$ |
 | `DisjointSet` | union by size and path compression | $O(m\alpha(n))$ per sequence |
 | `sparse_matvec` | visit stored nonzeros only | $\Theta(z)$ |
 | `knapsack_01` | recurrence table and witness recovery | $\Theta(nW)$ time and space |

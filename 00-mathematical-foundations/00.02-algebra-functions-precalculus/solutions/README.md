@@ -649,7 +649,7 @@ Separate algebraic facts, domain conditions, notation conventions, and historica
 | Every cubic has three distinct real roots | FTA counts complex roots with multiplicity | a cubic has three complex roots counted with multiplicity |
 | $f(x-2)$ shifts left | horizontal direction is reversed | it shifts recognizable features right by $2$ |
 | squaring has an inverse on $\mathbb{R}$ | squaring is not one-to-one | restrict to a branch before inverting |
-| $\sqrt{x^2}=x$ for all real $x$ | principal square root is nonnegative | $\sqrt{x^2}=|x|$ |
+| $\sqrt{x^2}=x$ for all real $x$ | principal square root is nonnegative | $\sqrt{x^2}=\lvert x\rvert$ |
 | angles have no units | numeric inputs require a convention | standard mathematical software uses radians unless documented otherwise |
 | $\sin(90)=1$ in ordinary software | $90$ is read as radians | $\sin(\pi/2)=1$, or convert degrees explicitly |
 | arcsine always undoes sine | arcsine returns a principal value | $\arcsin(\sin(3\pi/4))=\pi/4$ |

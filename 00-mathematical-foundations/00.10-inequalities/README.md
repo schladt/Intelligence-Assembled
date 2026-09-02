@@ -546,7 +546,7 @@ limit. The shared word does not make the theorems interchangeable.
 
 | Inequality | Inputs | Direction | Equality |
 |---|---|---|---|
-| absolute triangle | real $a,b$ | $|a+b|\le|a|+|b|$ | $ab\ge0$ |
+| absolute triangle | real $a,b$ | $\lvert a+b\rvert\le\lvert a\rvert+\lvert b\rvert$ | $ab\ge0$ |
 | weighted AM-GM | $x_i\ge0$, $w_i\ge0$, $\sum w_i=1$ | geometric $\le$ arithmetic | positive-weight values equal |
 | Cauchy-Schwarz | real vectors, same finite length | inner product magnitude $\le$ norm product | linear dependence |
 | Hölder | same length, conjugate $p,q$ | product sum $\le$ norm product | normalized powers proportional; endpoint support lies on maximum coordinates |

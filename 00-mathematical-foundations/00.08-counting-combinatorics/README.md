@@ -58,6 +58,8 @@ We will cover:
 - Fibonacci and Catalan objects as recursive counting families;
 - standard-library implementations, exhaustive small checks, and exact assertions.
 
+This module is explicitly **not**:
+
 - probability axioms, conditional probability, random variables, or distributions, which belong to §3;
 - a claim that all listed outcomes are equally likely;
 - infinite-series convergence or analytic manipulation of power series;
@@ -169,7 +171,7 @@ Without the story, the equality is only algebra. With it, both sides count the s
 | Symbol | Type | Meaning |
 |---|---|---|
 | $[n]$ | finite set | $\{1,2,\ldots,n\}$ for $n\ge0$ |
-| $|A|$ | nonnegative integer | cardinality of finite set $A$ |
+| $\lvert A\rvert$ | nonnegative integer | cardinality of finite set $A$ |
 | $n!$ | positive integer | factorial, with $0!=1$ |
 | $(n)_k$ | nonnegative integer | falling factorial $n(n-1)\cdots(n-k+1)$ |
 | $\binom{n}{k}$ | nonnegative integer | number of $k$-subsets of an $n$-set |

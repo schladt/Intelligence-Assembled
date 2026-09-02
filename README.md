@@ -106,7 +106,7 @@ That is fine. Knowing everything is not the goal. Understanding more than I did 
 
 ## Current Status
 
-🚧 **Very early development.** I am building this repository incrementally, so expect incomplete modules, reorganized directories, rewritten explanations, questionable first drafts, exercises without solutions, and occasional mathematical crimes. It will improve as I work through it.
+🚧 **Early development.** Section 0 (Mathematical Foundations) now exists as a complete first draft: fifteen modules with exercises, worked solutions, code, and figures. Everything after it is still stub or in progress, so expect incomplete modules, reorganized directories, rewritten explanations, questionable first drafts, and occasional mathematical crimes. It will improve as I work through it.
 
 ## Contributing
 

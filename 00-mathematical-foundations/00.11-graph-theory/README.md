@@ -203,7 +203,7 @@ cut. In both cases a global optimum can be certified at a boundary.
 |---|---|---|
 | $G=(V,E)$ | finite graph | vertices and undirected edges |
 | $D=(V,A)$ | finite digraph | vertices and directed arcs |
-| $n,m$ | nonnegative integers | $|V|$ and number of edge instances |
+| $n,m$ | nonnegative integers | $\lvert V\rvert$ and number of edge instances |
 | $d(v)$ | nonnegative integer | undirected degree, counting a loop twice |
 | $d^+(v),d^-(v)$ | nonnegative integers | outdegree and indegree |
 | $N(S)$ | subset of opposite part | neighbors of a vertex subset $S$ |
@@ -576,7 +576,7 @@ clustering, and graph neural networks belong later.
 
 ![One path graph translated into adjacency, signed incidence, and Laplacian matrices](assets/matrix-views.svg)
 
-> **Figure 8. Three matrix views preserve different graph facts.** Adjacency
+> **Figure 7. Three matrix views preserve different graph facts.** Adjacency
 > records neighbors, incidence records oriented edge differences, and the
 > Laplacian combines those differences without depending on orientation.
 > Original figure.
@@ -634,7 +634,7 @@ flowchart LR
   CUT["cut S={s}<br/>capacity 3+2=5"] -. certificate .-> S
 ```
 
-> **Figure 7. Flow value and cut capacity meet at five.** Labels are
+> **Figure 8. Flow value and cut capacity meet at five.** Labels are
 > flow/capacity. The cut certificate proves that no larger feasible flow exists.
 > Original diagram.
 

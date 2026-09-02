@@ -298,8 +298,8 @@ Starting from $y=f(x)$:
 |---|---|---|
 | vertical shift | $f(x)+k$ | up by $k$ |
 | horizontal shift | $f(x-h)$ | right by $h$ |
-| vertical scale | $af(x)$ | scale outputs by $|a|$; reflect if $a<0$ |
-| horizontal scale | $f(bx)$ | scale inputs by $1/|b|$; reflect if $b<0$ |
+| vertical scale | $af(x)$ | scale outputs by $\lvert a\rvert$; reflect if $a<0$ |
+| horizontal scale | $f(bx)$ | scale inputs by $1/\lvert b\rvert$; reflect if $b<0$ |
 
 The horizontal rules feel reversed because the change occurs before $f$ receives its input. To make $f$ see the old input $u$, solve $bx=u$, so the new coordinate is $x=u/b$.
 
@@ -364,7 +364,7 @@ Define
 $$
 \sinh x=\frac{e^x-e^{-x}}{2},\qquad
 \cosh x=\frac{e^x+e^{-x}}{2},\qquad
-  anh x=\frac{e^x-e^{-x}}{e^x+e^{-x}}.
+\tanh x=\frac{e^x-e^{-x}}{e^x+e^{-x}}.
 $$
 
 NIST records these definitions and their complex-variable relations to trigonometric functions [3]. Direct expansion gives

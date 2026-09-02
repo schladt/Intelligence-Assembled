@@ -756,14 +756,14 @@ In particular:
 
 ## References
 
-1. MIT OpenCourseWare, [6.045J Automata, Computability, and Complexity, Spring 2011](https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/). Course syllabus and calendar. CC BY-NC-SA 4.0.
-2. Carol Critchlow and David Eck, [*Foundations of Computation*, Version 2.3.2](https://math.hws.edu/FoundationsOfComputation/FoundationsOfComputation_2.3.2_6x9.pdf). CC BY-NC-SA 4.0.
-3. Boaz Barak, [*Introduction to Theoretical Computer Science*](https://introtcs.org/public/index.html). Online draft, 2023. CC BY-NC-ND 4.0.
-4. Clay Mathematics Institute, [P vs NP](https://www.claymath.org/millennium/p-vs-np/). Official Millennium Prize Problem overview.
-5. Jeff Erickson, [*Algorithms*, Chapter 12: NP-Hardness](https://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf). CC BY 4.0.
-6. David P. Williamson and David B. Shmoys, [*The Design of Approximation Algorithms*](https://www.designofapproxalgs.com/book.pdf). Cambridge University Press, 2011. Link for personal study; publisher manuscript terms apply.
-7. Scott Aaronson et al., [Complexity Zoo](https://complexityzoo.net/Complexity_Zoo). Reference catalog of complexity classes.
-8. Cornell CS 6810, [Parameterized Complexity notes](https://courses.cs.cornell.edu/cs6810/2023fa/Parameterized.pdf), Fall 2023.
+[1] MIT OpenCourseWare, [6.045J Automata, Computability, and Complexity, Spring 2011](https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/). Course syllabus and calendar. CC BY-NC-SA 4.0.
+[2] Carol Critchlow and David Eck, [*Foundations of Computation*, Version 2.3.2](https://math.hws.edu/FoundationsOfComputation/FoundationsOfComputation_2.3.2_6x9.pdf). CC BY-NC-SA 4.0.
+[3] Boaz Barak, [*Introduction to Theoretical Computer Science*](https://introtcs.org/public/index.html). Online draft, 2023. CC BY-NC-ND 4.0.
+[4] Clay Mathematics Institute, [P vs NP](https://www.claymath.org/millennium/p-vs-np/). Official Millennium Prize Problem overview.
+[5] Jeff Erickson, [*Algorithms*, Chapter 12: NP-Hardness](https://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf). CC BY 4.0.
+[6] David P. Williamson and David B. Shmoys, [*The Design of Approximation Algorithms*](https://www.designofapproxalgs.com/book.pdf). Cambridge University Press, 2011. Link for personal study; publisher manuscript terms apply.
+[7] Scott Aaronson et al., [Complexity Zoo](https://complexityzoo.net/Complexity_Zoo). Reference catalog of complexity classes.
+[8] Cornell CS 6810, [Parameterized Complexity notes](https://courses.cs.cornell.edu/cs6810/2023fa/Parameterized.pdf), Fall 2023.
 
 ---
 

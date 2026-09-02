@@ -269,8 +269,8 @@ bounds assume balanced height unless stated otherwise.
 | Hash table | expected $O(1)$ | expected $O(1)$ | expected $O(1)$ | worst case $O(n)$ |
 | Binary min-heap | $O(1)$ minimum | $O(\log n)$ | $O(\log n)$ minimum | arbitrary lookup $O(n)$ |
 | Balanced search tree | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | balance invariant required |
-| Adjacency list | scan neighbors $O(\deg(v))$ | representation-dependent | representation-dependent | space $\Theta(|V|+|E|)$ |
-| Adjacency matrix | edge test $O(1)$ | edge $O(1)$ | edge $O(1)$ | space $\Theta(|V|^2)$ |
+| Adjacency list | scan neighbors $O(\deg(v))$ | representation-dependent | representation-dependent | space $\Theta(\lvert V\rvert+\lvert E\rvert)$ |
+| Adjacency matrix | edge test $O(1)$ | edge $O(1)$ | edge $O(1)$ | space $\Theta(\lvert V\rvert^2)$ |
 
 Morin derives these kinds of bounds from concrete representations, including the
 $O(1)$ amortized resize cost over a sequence of dynamic-array operations [2].

@@ -37,7 +37,7 @@ Not every module needs all six. Some are pure derivation. Some are pure code. Bu
 | `complete` | Notes, derivations, and exercises all present |
 | `reviewed` | Been back over it with fresh eyes, or someone else has |
 
-Right now, essentially everything is `stub`. That is honest, and a stub is more useful than a dead link.
+Right now, Section 0 (Mathematical Foundations) is a complete draft and everything after it is still `stub`. That is honest, and a stub is more useful than a dead link.
 
 **Difficulty.** A 1 to 5 scale rendered as ★, plus a level tag (`undergraduate`, `advanced-undergraduate`, `graduate`). But the more useful signal is the prerequisite list, because "hard" is ambiguous and "requires §03.13 (measure theory)" is not.
 

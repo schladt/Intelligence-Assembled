@@ -195,7 +195,7 @@ noncoprime moduli, the views must agree where their cycles overlap.
 | $[a]_n$ | set | residue class of $a$ modulo $n$ |
 | $\mathbb{Z}/n\mathbb{Z}$ | set of $n$ classes | integers modulo $n$ |
 | $U(n)$ | subset of $\mathbb{Z}/n\mathbb{Z}$ | multiplicative units modulo $n$ |
-| $\varphi(n)$ | positive integer | $|U(n)|$ |
+| $\varphi(n)$ | positive integer | $\lvert U(n)\rvert$ |
 | $\mathbb{F}_p$ | field | $\mathbb{Z}/p\mathbb{Z}$ when $p$ is prime |
 
 The glyphs $\mathbb{Z}/n\mathbb{Z}$ and $\mathbb{F}_p$ name algebraic objects.

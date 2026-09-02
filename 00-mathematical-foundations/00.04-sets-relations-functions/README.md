@@ -207,7 +207,7 @@ Two sets have the same cardinality when a bijection pairs their elements exactly
 | $A/R$ | quotient set of equivalence classes |
 | $f(A_0)$ | image of $A_0$ under $f$ |
 | $f^{-1}(B_0)$ | preimage of $B_0$ under $f$ |
-| $|A|$ | cardinality of $A$ |
+| $\lvert A\rvert$ | cardinality of $A$ |
 
 We use ordinary uppercase letters such as $A,B,U$ for sets in this module because the same letters appear throughout standard discrete mathematics. Calligraphic letters remain useful for spaces and datasets elsewhere in the curriculum.
 
@@ -938,7 +938,7 @@ Thus $\mathbb{N}\times\mathbb{N}$ is countably infinite. An infinite grid is lis
 A simple list is
 
 $$
-0,1,-1,2,-2,3,-3,\ldots
+0,-1,1,-2,2,-3,3,\ldots
 $$
 
 One bijection $z:\mathbb{N}\to\mathbb{Z}$ is
@@ -1549,7 +1549,7 @@ The raw pairs $(1,2)$, $(2,4)$, and $(3,6)$ all denote $1/2$. Requiring positive
 
 ### Example 18: Cantor's missing binary sequence
 
-Suppose row $0$ begins $001\ldots$, row $1$ begins $101\ldots$, and row $2$ begins $110\ldots$. Complementing diagonal entries gives a new prefix beginning $110\ldots$. Regardless of later digits, the complete constructed sequence differs from row $n$ at position $n$ for every $n$. The infinite universal statement, not the three-row picture, establishes absence from the list.
+Suppose row $0$ begins $001\ldots$, row $1$ begins $101\ldots$, and row $2$ begins $110\ldots$. Complementing diagonal entries gives a new prefix beginning $111\ldots$. Regardless of later digits, the complete constructed sequence differs from row $n$ at position $n$ for every $n$. The infinite universal statement, not the three-row picture, establishes absence from the list.
 
 ### Example 19: Russell's boundary
 

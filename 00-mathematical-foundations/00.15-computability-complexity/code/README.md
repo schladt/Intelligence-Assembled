@@ -19,15 +19,15 @@ or replace optimized parsers and solvers.
 | Symbol | Teaching purpose | Main bound |
 |---|---|---|
 | `DFA` | total deterministic finite-state recognition | $O(n)$ transitions, constant model memory |
-| `CNFGrammar.accepts` | CYK context-free membership without epsilon rules | $O(n^3|G|)$ in direct analysis |
+| `CNFGrammar.accepts` | CYK context-free membership without epsilon rules | $O(n^3\lvert G\rvert)$ in direct analysis |
 | `TuringMachine` | explicit tape-machine contract | model definition |
 | `run_bounded` | separate accept, reject, and timeout | at most the requested steps |
-| `verify_subset_sum` | check an indexed subset certificate | $O(n+|c|)$ validation and summation |
+| `verify_subset_sum` | check an indexed subset certificate | $O(n+\lvert c\rvert)$ validation and summation |
 | `subset_sum_dp` | recover a nonnegative subset-sum witness | $O(nT)$ time, $O(T)$ sum states |
-| `verify_vertex_cover` | check an undirected cover certificate | $O(|V|+|E|)$ |
-| `independent_set_to_vertex_cover` | preserve YES answers through complement | $O(|V|+|E|)$ materialization |
-| `vertex_cover_fpt` | branch on an uncovered edge | $O(2^k poly(|V|+|E|))$ |
-| `vertex_cover_2approx` | maximal-matching endpoint cover | $O(|V|+|E|)$ after validation |
+| `verify_vertex_cover` | check an undirected cover certificate | $O(\lvert V\rvert+\lvert E\rvert)$ |
+| `independent_set_to_vertex_cover` | preserve YES answers through complement | $O(\lvert V\rvert+\lvert E\rvert)$ materialization |
+| `vertex_cover_fpt` | branch on an uncovered edge | $O(2^k poly(\lvert V\rvert+\lvert E\rvert))$ |
+| `vertex_cover_2approx` | maximal-matching endpoint cover | $O(\lvert V\rvert+\lvert E\rvert)$ after validation |
 
 Bounds describe the algorithms under the lesson's model. They are not measured
 Python timing guarantees.
