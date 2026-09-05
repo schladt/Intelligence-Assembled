@@ -2,7 +2,7 @@
 
 ### *From first principles to modern AI.*
 
-This document is the full curriculum for **Intelligence, Assembled**: fifteen sections, over 240 topic modules, running from set notation to reasoning models.
+This document is the full curriculum for **Intelligence, Assembled**: fifteen sections, 241 topic modules, running from set notation to reasoning models.
 
 It was built by working through what is actually taught at MIT, Stanford, Harvard, CMU, Berkeley, Cornell, Princeton, and NYU, cross-referenced against the standard texts and against every serious open-source attempt at the same thing. Where universities disagree about ordering, I picked the ordering that serves understanding of modern AI, and I say so.
 
@@ -20,45 +20,13 @@ Every module aims to move through six layers:
 
 Not every module needs all six. Some are pure derivation. Some are pure code. But that is the direction, and step three is the one almost nobody publishes.
 
-**Programming readiness.** The curriculum assumes basic programming ability, but §0.13 through §0.15 make the computational prerequisites explicit: Python and NumPy, testing and reproducibility, data structures and algorithms, and the limits of efficient computation. Modules whose titles include "On Demand" are optional depth rather than gates on the main path.
-
-**Possible routes.** The roadmap supports several natural paths without pretending they are separate projects: foundations (§0-§6), applied data and classical machine learning (§7-§8), neural networks through LLMs (§10-§13), computational intelligence (§9 and §14.10-§14.12), and classical AI with reinforcement learning (§14.01-§14.09). Their prerequisites overlap, but completing every earlier module is not required unless a local prerequisite says so.
+Use the [readiness checks and six learning routes](#readiness-and-learning-routes) to choose an entry point. For authoring, use the single canonical [module layout](CONTRIBUTING.md#module-file-structure).
 
 ### Conventions
 
-**Module IDs.** Sections are `00` through `14`. Modules within a section are `NN.MM`. Reference them as `§05.06` so links survive renames and reorganization. IDs are never reused and never renumbered. If something needs to be inserted, it gets appended and the reading order is fixed in the section table, not in the filesystem.
+**Module IDs.** Sections are `00` through `14`; module directories use zero-padded IDs such as `05.06`. Prose also uses the existing short section form, such as §0.01. IDs are never reused or renumbered. New approved topics are appended, with reading order set in the section index rather than by renaming existing modules.
 
-**Status labels.** Every module carries one:
-
-| Label | Meaning |
-|---|---|
-| `stub` | Listed here, nothing written yet |
-| `draft` | Content exists, rough |
-| `complete` | Notes, derivations, and exercises all present |
-| `reviewed` | Been back over it with fresh eyes, or someone else has |
-
-Right now, Section 0 (Mathematical Foundations) is a complete draft and everything after it is still `stub`. That is honest, and a stub is more useful than a dead link.
-
-**Difficulty.** A 1 to 5 scale rendered as ★, plus a level tag (`undergraduate`, `advanced-undergraduate`, `graduate`). But the more useful signal is the prerequisite list, because "hard" is ambiguous and "requires §03.13 (measure theory)" is not.
-
-**Learning objectives.** Written as "you should be able to…" with verifiable verbs: *derive, prove, implement, state the conditions under which, explain why X fails when.* Never *understand*, *know*, or *be familiar with*. Each objective should map to at least one exercise.
-
-**Per-module front matter.** Each topic README carries machine-readable YAML so the master index can be generated rather than hand-maintained:
-
-```yaml
-id: "05.06"
-title: "Unconstrained First-Order Methods"
-prerequisites: ["01.09", "02.08", "05.03"]
-difficulty: 3
-level: advanced-undergraduate
-estimated_hours: [4, 8]
-status: stub
-objectives:
-  - "Derive the gradient descent update from a first-order Taylor expansion"
-  - "Prove convergence for L-smooth convex objectives and state the rate"
-  - "Show why the condition number of the Hessian governs convergence speed"
-  - "Implement GD, momentum, and Adam and compare their trajectories on an ill-conditioned quadratic"
-```
+**Status.** Each authored section index owns its module statuses: `draft` means a lesson exists but remains under development; `complete` means its teaching and applicable verification are finished; `reviewed` additionally means another person has checked it. An unauthored roadmap entry is planned, not a directory to scaffold. Section 0 has fifteen drafts; the remaining 226 modules are planned.
 
 ---
 
@@ -76,7 +44,7 @@ These are the choices that make this curriculum different from the twenty or so 
 
 **5. Proofs and notation early, and in parallel.** No university makes proof technique a prerequisite for computational calculus. But being unable to read Σ notation fluently, or to negate a nested quantifier, is what actually stops people from following a derivation. Section 0 runs alongside everything.
 
-**6. Exercises ship with solutions.** This is the single largest gap in the field. *Dive into Deep Learning* has exercises at the end of every section and no answers, which is its most common complaint. Karpathy's exercises live in video descriptions. Solutions here go in a sibling `solutions/` directory so they are skippable, but they get committed.
+**6. Exercises ship with solutions.** This is the single largest gap in the field. *Dive into Deep Learning* has exercises at the end of every section and no answers, which is its most common complaint. Karpathy's exercises live in video descriptions. Solutions here follow their exercises in collapsed disclosures in the same lesson, so answers are skippable without sending you to another file.
 
 **7. Consistent notation across all fifteen sections.** A `NOTATION.md` that survives from measure-theoretic probability through to attention is a real contribution, cheap to maintain from day one and expensive to retrofit.
 
@@ -119,7 +87,235 @@ flowchart TD
 
 Each section below has its own prerequisite graph. Every graph terminates at the section it belongs to and answers one question: **what should I learn before I start this section?** Solid arrows indicate material needed at entry; dotted arrows indicate material needed later for advanced modules within the section.
 
-**Recommended interleaving.** The one deviation from reading top to bottom: do §1.01 through §1.08 (single-variable calculus), then all of §2.01 through §2.11 (linear algebra), then come back for §1.09 through §1.13 (multivariable), then §2.12 and §2.13 (matrix calculus and autodiff). Section 0 runs in parallel with everything from the start.
+For the calculus and linear-algebra interleaving, see the [recommended foundation sequence](#recommended-foundation-sequence).
+
+---
+
+## Readiness and Learning Routes
+
+Use the diagnostics below to choose where to start, what to learn alongside a section, and when to backfill a gap. The local background statement in each lesson gives its precise entry requirements. Modules titled "On Demand" are optional depth, not gates on the main path.
+
+### Types of Prerequisites
+
+#### Required
+
+You need this material to follow the module's central explanations, derivations, or implementation.
+
+Example: matrix multiplication is required before deriving backpropagation through a linear layer.
+
+#### Recommended
+
+The module remains usable without it, but the additional preparation improves depth or fluency.
+
+Example: Fourier analysis is recommended for spectral time-series methods but is not required for basic ARIMA forecasting.
+
+#### Needed Later
+
+You can start the section without it, but an advanced module within the section will require it. Dotted arrows in roadmap prerequisite graphs show this relationship.
+
+Example: you can begin Probability without multivariable change of variables, but §3.08 eventually needs it.
+
+#### Corequisite
+
+Two topics explain each other and may be studied together.
+
+Example: Data Analysis and introductory Machine Learning should reinforce each other rather than becoming one long gate.
+
+### Assumed Starting Point
+
+Section 0 has no formal prerequisites. It includes the mathematical, programming, and algorithmic foundations used later.
+
+You do not need to complete every Section 0 module before beginning calculus or linear algebra. In particular:
+
+- §0.01 through §0.03 support early mathematics;
+- §0.04 through §0.10 support proofs, probability, and theory;
+- §0.13 through §0.15 support implementation and algorithms;
+- §0.11 and §0.12 can be learned when graph or number-theoretic applications arise.
+
+The expected programming language is Python. The scientific-computing baseline is NumPy-style array programming, plotting, tests, environments, Git, and reproducibility.
+
+### Recommended Foundation Sequence
+
+The roadmap deliberately interleaves calculus and linear algebra:
+
+1. §0.01-§0.03: notation, algebra, exponentials, and logarithms
+2. §1.01-§1.08: single-variable calculus
+3. §2.01-§2.11: linear algebra
+4. §1.09-§1.13: multivariable calculus and optional analysis depth
+5. §2.12-§2.13: matrix calculus and automatic differentiation
+6. §2.14: Fourier and signal foundations when relevant
+
+This differs from programs that teach multivariable calculus before linear algebra. For this curriculum, linear algebra first makes gradients, Jacobians, Hessians, and multivariable chain rules easier to express and connect to machine learning.
+
+Section 0's proof and computational modules can run alongside this sequence.
+
+### Quick Self-Diagnostics
+
+These are routing questions, not exams. If one answer is uncertain, review the named module. If several are uncertain, begin there instead of trying to push through downstream notation.
+
+#### Programming and Algorithms
+
+Before implementation-heavy modules, can you:
+
+- write and test a Python function;
+- explain the shape of a NumPy array before and after broadcasting;
+- distinguish matrix multiplication from elementwise multiplication;
+- choose among a list, dictionary, set, queue, heap, and graph representation;
+- estimate the time and space complexity of a loop or basic algorithm;
+- reproduce a run using a recorded environment and seed?
+
+If not, begin with §0.13 and §0.14. Review §0.15 before complexity-heavy classical AI or theoretical ML.
+
+#### Single-Variable Calculus
+
+Before multivariable calculus or optimization, can you:
+
+- apply product, quotient, and chain rules;
+- interpret a derivative as a local linear approximation;
+- compute and interpret a definite integral;
+- write a second-order Taylor approximation;
+- explain what convergence of a sequence means?
+
+If not, review §1.01-§1.07.
+
+#### Linear Algebra
+
+Before matrix calculus, probability, or machine learning, can you:
+
+- multiply a matrix by a vector and predict the result shape;
+- explain span, independence, basis, and rank;
+- solve a small linear system;
+- interpret least squares as projection;
+- explain eigenvectors and singular vectors geometrically;
+- recognize a positive semidefinite matrix?
+
+If not, review §2.01-§2.09.
+
+#### Probability
+
+Before statistics or probabilistic machine learning, can you:
+
+- translate a verbal experiment into events and random variables;
+- use conditional probability and Bayes' theorem;
+- distinguish probability mass, density, and cumulative probability;
+- compute expectation and variance;
+- explain independence and conditional independence;
+- state what the law of large numbers and central limit theorem provide?
+
+If not, begin with §3.01.
+
+#### Statistics
+
+Before advanced machine learning evaluation, can you:
+
+- distinguish an estimator from an estimate;
+- explain likelihood as a function of parameters;
+- interpret a confidence interval correctly;
+- explain Type I error, Type II error, power, and a p-value;
+- distinguish a confidence interval from a credible interval;
+- design a train, validation, and test split without leakage?
+
+If not, review the relevant parts of §4 and §7.
+
+### Learning Routes
+
+These routes are suggestions, not separate curricula. Local prerequisite statements take precedence.
+
+#### Foundations and Theory
+
+Use when your goal is mathematical depth or learning theory.
+
+1. Section 0 foundations
+2. Sections 1 and 2 in the recommended interleaving
+3. Probability and Statistics
+4. Optimization and Information Theory
+5. Statistical Learning Theory in §8.16
+6. Optional analysis and measure-theory modules as needed
+
+#### Applied Data and Classical Machine Learning
+
+Use when your goal is principled model building and evaluation.
+
+1. §0.13-§0.14 programming foundations
+2. Core calculus, linear algebra, probability, and statistics
+3. Learn Section 7 alongside Section 8
+4. Prioritize model selection, evaluation, leakage, and practical ML
+5. Add specialized models as the problem demands
+
+#### Neural Networks and Large Language Models
+
+Use when your goal is modern deep learning.
+
+1. Programming and array foundations
+2. Differential and matrix calculus
+3. Linear algebra through SVD
+4. Core probability, cross-entropy, and gradient-based optimization
+5. §8.01-§8.05 for the learning setup and linear models
+6. Neural Networks, Deep Learning, Transformers, then LLMs
+7. Backfill specialized statistics, information theory, or systems material when required
+
+Do not skip the backpropagation and numerical-stability foundations merely to reach transformers faster.
+
+#### Evolutionary and Computational Intelligence
+
+Use when your goal is evolutionary algorithms, swarm methods, or fuzzy systems.
+
+1. Combinatorics, probability, and scientific computing
+2. Optimization framing and black-box methods
+3. Section 9
+4. §14.10-§14.12
+5. Add neural networks for neuroevolution and statistics for experimental methodology
+
+#### Classical AI and Reinforcement Learning
+
+Use when your goal is search, planning, sequential decisions, or agents.
+
+1. Graphs, algorithms, and complexity
+2. Probability and Markov chains
+3. Classical AI in §14.01
+4. Tabular RL in §14.02-§14.03
+5. Add optimization and neural networks before deep RL
+6. Continue to model-based, offline, multi-agent, and hierarchical RL
+
+#### Causality, Interpretability, and Safety
+
+These are advanced branches with different prerequisites:
+
+- Causality builds on probability, statistics, and graphical models.
+- Mechanistic interpretability builds on neural networks and transformers.
+- Alignment and safety draw from RL, LLMs, robustness, evaluation, and human-AI interaction.
+
+Do not treat `Beyond` as meaning `after everything else`. Its modules are parallel branches.
+
+### Skipping Material
+
+You may skip a prerequisite when you can demonstrate the relevant capability, not merely recognize the vocabulary.
+
+Good evidence includes:
+
+- solving the prerequisite check without notes;
+- deriving the key result;
+- implementing the central algorithm;
+- explaining assumptions and failure cases;
+- completing a representative exercise.
+
+If you are unsure, begin the downstream module and watch for friction. Repeated confusion about notation, unexplained algebra, or implementation mechanics usually signals a prerequisite gap rather than a lack of ability.
+
+### Remediation
+
+When you hit a gap:
+
+1. name the exact missing skill;
+2. follow the nearest module reference;
+3. use its readiness questions or a representative example;
+4. read only as far as needed to resolve the gap;
+5. do one representative exercise;
+6. return to the original module and confirm the blocked step now makes sense.
+
+For several accumulated gaps, stop and complete the relevant foundation sequence. Backfilling one concept at a time works until every paragraph requires a detour.
+
+
+Prerequisites are hypotheses about what readers need, not permanent facts. Revisit them when a dependency proves unnecessary, a gap repeatedly blocks learners, diagnostics fail, or a new route becomes useful. Name the exact needed concepts instead of requiring an entire earlier section.
 
 ---
 
@@ -969,7 +1165,7 @@ The honest state of it: a set of partial explanations, some of which contradict 
 The goal of this section is that by the end, the transformer feels like the obvious thing to have built, given everything in §10 and §11. Attention is derived, not presented. The √d_k scaling gets an argument. Every architectural choice gets a reason.
 
 **Prerequisites:** §10.16, §10.17, §11.
-**Anchor references:** Stanford CS224N and CS336 (Language Modeling from Scratch), CS25; Princeton COS 597R; CMU 11-667 and 11-711; Jurafsky & Martin *Speech and Language Processing* 3rd ed.; "The Illustrated Transformer"; "The Annotated Transformer"; Karpathy's nanoGPT.
+**Anchor references:** Stanford CS224N and CS336 (Language Modeling from Scratch), CS25; Princeton COS 597R; CMU 11-667 and 11-711; Jurafsky & Martin *Speech and Language Processing* 3rd ed.; Vaswani et al. "Attention Is All You Need"; "The Illustrated Transformer"; "The Annotated Transformer"; Karpathy's nanoGPT.
 
 **Prerequisite graph**
 
@@ -1216,16 +1412,18 @@ Stated explicitly, because scope creep is the failure mode of a project this siz
 
 ## Module Structure
 
-The [module file structure, directory responsibilities, metadata, and content layout](STYLE_GUIDE.md#module-file-structure) are defined in the style guide. Keeping that detail in one place avoids drift as the module format evolves.
+The [module file structure and content layout](CONTRIBUTING.md#module-file-structure) have one owner: the contribution guide. Each module is one instructional README, with separate executable code, notebooks, and assets only when useful.
 
-Repository-level files maintained from the start, because they are cheap now and expensive to retrofit: `NOTATION.md`, `GLOSSARY.md`, `PREREQUISITES.md`, `STYLE_GUIDE.md`, `SOURCES.md`, `CONTRIBUTING.md` with a topic template, and `ERRATA/`.
+The four public guides have distinct jobs: [README.md](README.md) introduces the project; this roadmap owns scope, routes, and section prerequisites; [NOTATION.md](NOTATION.md) owns notation and terminology; [CONTRIBUTING.md](CONTRIBUTING.md) owns authoring, sources, and review.
+
+### Canonical Starting Sources by Section
+
+Each section's **Anchor references** above supplies its starting texts, courses, and papers. These are a starter registry, not an exhaustive bibliography: individual lessons cite the particular chapters, lectures, versions, and papers they use.
 
 ---
 
 ## Current Status
 
-🚧 **Very early development.**
+**Early development.** [Section 0](00-mathematical-foundations/README.md) has fifteen drafted lessons with practice and complete worked solutions. The remaining 226 of the 241 roadmap modules are planned, not authored content. Section indexes own the detailed status of their authored modules.
 
-The roadmap above is a direction, not a claim that any of it is written. Nearly every module is a `stub`. Expect incomplete sections, reorganized directories, rewritten explanations, questionable first drafts, exercises without solutions, solutions without elegant explanations, and occasional mathematical crimes.
-
-The project will improve as I work through it. That is the whole idea.
+Expect rewritten explanations, questionable first drafts, and occasional mathematical crimes. The project will improve as I work through it. That is the whole idea.

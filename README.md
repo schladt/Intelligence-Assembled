@@ -6,6 +6,14 @@ Modern artificial intelligence sits on top of a surprisingly deep stack of ideas
 
 **Intelligence, Assembled** is my attempt to work through that stack from the ground up.
 
+## Start Here
+
+- Start with [§0.01 Mathematical Notation](00-mathematical-foundations/00.01-mathematical-notation/README.md), or browse the [Section 0 module index](00-mathematical-foundations/README.md).
+- Already have some background? Use the [readiness checks and six learning routes](ROADMAP.md#readiness-and-learning-routes).
+- Find the full curriculum and topic boundaries in [ROADMAP.md](ROADMAP.md).
+- Look up symbols, math-to-code conventions, and overloaded terms in [NOTATION.md](NOTATION.md).
+- Improve a lesson using [CONTRIBUTING.md](CONTRIBUTING.md), the authoring, source, and review guide.
+
 ---
 
 ## Why This Exists
@@ -52,7 +60,7 @@ The goal of this project is to keep asking **why** until there is nowhere useful
 
 ## The Stack
 
-The roadmap moves through fifteen sections, with each one building on what came before:
+The roadmap moves through fifteen connected sections. You can follow the main path or choose a route that fits what you want to learn:
 
 | # | Section | Focus |
 |---|---------|-------|
@@ -72,7 +80,7 @@ The roadmap moves through fifteen sections, with each one building on what came 
 | 13 | Large Language Models | Pretraining, RLHF, RAG, agents, reasoning |
 | 14 | Beyond | Reinforcement learning, causal inference, AI safety, and more |
 
-The full [roadmap](ROADMAP.md) goes much deeper: over 240 topic modules with granular subtopics, learning objectives, and a prerequisite graph. I built it by comparing what MIT, Stanford, Harvard, CMU, Berkeley, Cornell, and Princeton actually teach.
+The full [roadmap](ROADMAP.md) goes much deeper: 241 topic modules with granular subtopics, learning outcomes, and prerequisite graphs. I built it by comparing what MIT, Stanford, Harvard, CMU, Berkeley, Cornell, and Princeton actually teach.
 
 ## Philosophy
 
@@ -85,7 +93,7 @@ The full [roadmap](ROADMAP.md) goes much deeper: over 240 topic modules with gra
 
 ## Module Structure
 
-The [module file structure and content layout](STYLE_GUIDE.md#module-file-structure) live in the style guide so there is one source of truth as the project evolves. The general progression remains: **Intuition → Mathematics → Derivation → Implementation → Experimentation → Exercises**.
+Each module is one readable lesson, with explanations, derivations, examples, implementation guidance, practice, worked solutions, and references together. The general progression is **Intuition → Mathematics → Derivation → Implementation → Experimentation → Exercises**, adapted to the idea rather than forced into identical headings. The [authoring guide](CONTRIBUTING.md#module-file-structure) owns the layout.
 
 ## Who Is This For
 
@@ -106,13 +114,15 @@ That is fine. Knowing everything is not the goal. Understanding more than I did 
 
 ## Current Status
 
-🚧 **Early development.** Section 0 (Mathematical Foundations) now exists as a complete first draft: fifteen modules with exercises, worked solutions, code, and figures. Everything after it is still stub or in progress, so expect incomplete modules, reorganized directories, rewritten explanations, questionable first drafts, and occasional mathematical crimes. It will improve as I work through it.
+**Early development.** [Section 0: Mathematical Foundations](00-mathematical-foundations/README.md) has fifteen drafted modules with exercises, worked solutions, code, and figures. The remaining 226 roadmap modules are planned, not authored lessons. Expect rewritten explanations, questionable first drafts, and occasional mathematical crimes. It will improve as I work through it.
 
 ## Contributing
 
 I started this as a personal learning project, but it is public for a reason. Corrections, better explanations, additional exercises, alternative derivations, and thoughtful discussions are welcome.
 
 If something here is wrong, please [open an issue](https://github.com/schladt/Intelligence-Assembled/issues). I would much rather publicly correct a mistake than privately preserve one.
+
+See [Contributing](CONTRIBUTING.md) for focused changes, source and licensing safeguards, and AI-assistance disclosure.
 
 ## License
 

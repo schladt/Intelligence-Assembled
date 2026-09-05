@@ -2,7 +2,7 @@
 
 > The language everything else is written in.
 
-[Project home](../README.md) | [Roadmap](../ROADMAP.md) | [Prerequisites](../PREREQUISITES.md) | Next section: §1 Calculus (not yet published)
+[Project home](../README.md) | [Roadmap and learning routes](../ROADMAP.md#readiness-and-learning-routes) | Next section: §1 Calculus (not yet published)
 
 ## Why This Section Exists
 
@@ -29,8 +29,8 @@ You are in the right place if any of these questions cause friction:
 
 - What is the difference between the codomain and image of a function?
 - How do you reindex a sum without changing what it means?
-- Why does $\log(xy)=\log x+\log y$ matter to a computer?
-- How do you negate a statement containing both $\forall$ and $\exists$?
+- Why does $`\log(xy)=\log x+\log y`$ matter to a computer?
+- How do you negate a statement containing both $`\forall`$ and $`\exists`$?
 - What makes a proof by induction valid?
 - How do you choose between a list, hash table, heap, and graph?
 - What does NP-complete actually tell you about a problem?
@@ -62,25 +62,23 @@ The arrows show the dominant flow, not a rigid semester sequence. In particular,
 
 ## Modules
 
-| ID | Module | Status | Difficulty | Estimated effort |
-|---|---|---|---:|---:|
-| 0.01 | [Mathematical Notation and How to Read Mathematics](00.01-mathematical-notation/README.md) | Draft | 1/5 | 4-7 hours |
-| 0.02 | [Algebra, Functions, and Precalculus Backfill](00.02-algebra-functions-precalculus/README.md) | Draft | 2/5 | 6-10 hours |
-| 0.03 | [Exponents and Logarithms](00.03-exponents-logarithms/README.md) | Draft | 2/5 | 4-7 hours |
-| 0.04 | [Sets, Relations, and Functions](00.04-sets-relations-functions/README.md) | Draft | 2/5 | 6-11 hours |
-| 0.05 | [Logic and Quantifiers](00.05-logic-quantifiers/README.md) | Draft | 2/5 | 6-11 hours |
-| 0.06 | [Proof Techniques](00.06-proof-techniques/README.md) | Draft | 3/5 | 6-11 hours |
-| 0.07 | [Induction, Recursion, and Invariants](00.07-induction-recursion-invariants/README.md) | Draft | 3/5 | 8-13 hours |
-| 0.08 | [Counting and Combinatorics](00.08-counting-combinatorics/README.md) | Draft | 3/5 | 8-13 hours |
-| 0.09 | [Sums, Series, and Asymptotics](00.09-sums-series-asymptotics/README.md) | Draft | 3/5 | 10-15 hours |
-| 0.10 | [Inequalities](00.10-inequalities/README.md) | Draft | 3/5 | 10-15 hours |
-| 0.11 | [Graph Theory](00.11-graph-theory/README.md) | Draft | 3/5 | 10-15 hours |
-| 0.12 | [Elementary Number Theory](00.12-elementary-number-theory/README.md) | Draft | 3/5 | 9-14 hours |
-| 0.13 | [Programming and Scientific Computing](00.13-programming-scientific-computing/README.md) | Draft | 2/5 | 10-18 hours |
-| 0.14 | [Algorithms and Data Structures](00.14-algorithms-data-structures/README.md) | Draft | 3/5 | 12-22 hours |
-| 0.15 | [Computability and Complexity](00.15-computability-complexity/README.md) | Draft | 4/5 | 10-18 hours |
-
-The estimates include a careful read and a representative selection of exercises. They are planning ranges, not deadlines.
+| ID | Module |
+|---|---|
+| 0.01 | [Mathematical Notation and How to Read Mathematics](00.01-mathematical-notation/README.md) |
+| 0.02 | [Algebra, Functions, and Precalculus Backfill](00.02-algebra-functions-precalculus/README.md) |
+| 0.03 | [Exponents and Logarithms](00.03-exponents-logarithms/README.md) |
+| 0.04 | [Sets, Relations, and Functions](00.04-sets-relations-functions/README.md) |
+| 0.05 | [Logic and Quantifiers](00.05-logic-quantifiers/README.md) |
+| 0.06 | [Proof Techniques](00.06-proof-techniques/README.md) |
+| 0.07 | [Induction, Recursion, and Invariants](00.07-induction-recursion-invariants/README.md) |
+| 0.08 | [Counting and Combinatorics](00.08-counting-combinatorics/README.md) |
+| 0.09 | [Sums, Series, and Asymptotics](00.09-sums-series-asymptotics/README.md) |
+| 0.10 | [Inequalities](00.10-inequalities/README.md) |
+| 0.11 | [Graph Theory](00.11-graph-theory/README.md) |
+| 0.12 | [Elementary Number Theory](00.12-elementary-number-theory/README.md) |
+| 0.13 | [Programming and Scientific Computing](00.13-programming-scientific-computing/README.md) |
+| 0.14 | [Algorithms and Data Structures](00.14-algorithms-data-structures/README.md) |
+| 0.15 | [Computability and Complexity](00.15-computability-complexity/README.md) |
 
 ## Suggested Routes
 
@@ -118,14 +116,23 @@ After completing the modules relevant to your route, you should be able to:
 
 ## How to Use the Materials
 
-Each published module contains a primary lesson, worked examples, exercises, solutions, and annotated resources. Supporting notes, notebooks, code, and visual assets appear only when they improve the lesson.
+Each module is one complete reading document: the lesson, worked examples,
+optional practice with full worked solutions, annotated references, and any
+setup or run instructions are all in its `README.md`. Use its linked contents
+to read in order or return to a particular concept. Practice answers are
+expandable so you can attempt a problem before reading its solution.
 
-The file and content conventions live in the [style guide](../STYLE_GUIDE.md#module-file-structure). Mathematical conventions live in the [notation guide](../NOTATION.md). When those guides and a module disagree, the module should either be corrected or explain its local exception.
+Code, tests, and figures remain alongside the document as usable artifacts.
+The [contribution guide](../CONTRIBUTING.md#module-file-structure) owns the
+authoring conventions; the [notation and terminology guide](../NOTATION.md)
+owns shared mathematical conventions. A local exception must be explained.
 
-## Current Build Status
+## Availability
 
-All fifteen modules, §0.01-§0.15, are published as complete draft learning
-packages. The section now spans mathematical reading, proof, discrete structure,
-scientific programming, algorithms, computability, and complexity.
+All fifteen modules, §0.01-§0.15, are available as complete drafts, not
+independently reviewed editions. This section index is the source of truth for
+their publication status. The section spans mathematical reading, proof,
+discrete structure, scientific programming, algorithms, computability, and
+complexity.
 
 This section will keep evolving as new modules test the structure. The point is not to freeze a perfect format before learning begins. The point is to build something worth learning from.
